@@ -1,0 +1,2 @@
+Mô tả cú pháp: Git clone 
+Ý nghĩa: Dùng để sao chép 1 Repository có sẵn từ GitHub về máy của mình

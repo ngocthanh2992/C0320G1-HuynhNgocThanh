@@ -1,0 +1,8 @@
+Begin 
+	N = Random (0,9)
+	Input M
+	If (N==M)
+		Display "Dự đoán đúng"
+	Else
+		Display "Dự đoán sai"
+End

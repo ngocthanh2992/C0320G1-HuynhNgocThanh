@@ -1,0 +1,8 @@
+Mô tả ý nghĩa của các câu lệnh
+Git init: Khởi tạo 1 Repository mới
+Git remote add origin: kết nối tới Remote Repository
+Git add: Đưa file vào trong chỉ mục
+Git commit: Lưu lại các thay đổi
+Git commit -m: ghi 1 message đánh dấu cho thay đổi vừa rồi
+Git push: đẩy các thay đổi ở Local Reposity lên trên Remote Reposity
+Link: https://github.com/ngocthanh2992/new-project.git
