@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính</title>
+</head>
+<body>
+ <h3>Caculator <br></h3>
+ <input type ="text" id="number1">
+ <input type ="text" id="number2">
+<br>
+ <button onclick="tinhtoan('add');">Add(+)</button>
+ <button onclick="tinhtoan('sub');">Sub(-)</button>
+ <button onclick="tinhtoan('mut');">Mut(x)</button>
+ <button onclick="tinhtoan('div');">Div(/)</button>
+<script>
+    let number1= document.getElementById("number1");
+    let number2= document.getElementById("number2")
+    let result;
+    function tinhtoan(operation) {
+        if (operation==='add'){
+            result = parseInt(number1.value) + parseInt(number2.value);
+            alert(result);
+        } else if (operation==='sub'){
+            result= parseInt(number1.value) - parseInt(number2.value);
+            alert(result);
+        } else if (operation==='mut'){
+            result= parseInt(number1.value) * parseInt(number2.value);
+            alert(result);
+        } else if (parseInt(number2.value) === 0){
+            alert("Không thể chia một số cho 0");
+        } else {
+            result = parseInt(number1.value) / parseInt(number2.value)
+            alert(result);
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    Amount:
+    <input type = "text" id="amount">
+    From Currency:
+    <select id="fromCurrency">
+    <option>USD</option>
+    <option>VND</option>
+    <option>EUR</option>
+</select>
+    To Currency:
+    <select id="toCurrency">
+    <option>USD</option>
+    <option>VND</option>
+    <option>EUR</option>
+</select>
+    <button type="button"onclick="convert()">Convert </button>
+<p id="result"></p>
+    <script>
+        let amount = document.getElementById("amount");
+        let fromCurrency = document.getElementById("fromCurrency");
+        let toCurrency = document.getElementById("toCurrency");
+        function convert() {
+            let result;
+            if (fromCurrency.value==="USD" && toCurrency.value==="VND"){
+                result = amount.value * 23000;
+            } else if (fromCurrency.value==="USD" && toCurrency.value==="EUR"){
+                result = amount.value * 0.91;
+            } else if (fromCurrency.value==="VND" && toCurrency.value==="USD"){
+                result= amount.value / 23000;
+            }else if (fromCurrency.value==="VND" && toCurrency.value==="EUR"){
+                result= amount.value / 25000;
+            }else if (fromCurrency.value==="EUR" && toCurrency.value==="USD"){
+                result=amount.value *1.1;
+            }else if (fromCurrency.value==="EUR" && toCurrency.value==="VND"){
+                result=amount.value * 25000;
+            }else {
+                result = "Yeu cau chon loai tien"
+            }
+        document.getElementById("result").innerHTML=result
+        }
+    </script>
+</body>
+</html>
