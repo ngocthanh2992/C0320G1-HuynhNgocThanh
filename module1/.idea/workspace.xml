@@ -2,14 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efb425a6-8d3f-426d-9a10-3da121eb5e10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../firstsample/.idea/firstsample.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Thuc_Hanh/Thuc hanh kiem tra nam nhuan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Thuc_Hanh/Thuc hanh luyen tap voi cau truc if else 2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Thuc_Hanh/Thuc hanh luyen tap voi cau truc if else.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Thuc_Hanh/Thuc hanh luyen tap voi cau truc switch case 2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Thuc_Hanh/Thuc hanh luyen tap voi cau truc switch case 3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Thuc_Hanh/Thuc hanh luyen tap voi cau truc switch case.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Thuc_Hanh/Thuc hanh luyen tap voi toan tu 2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Thuc_Hanh/Thuc hanh luyen tap voi toan tu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bien_Va_Kieu_Du_Lieu/Bai_Tap/Ung dung chuyen doi tien te.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bien_Va_Kieu_Du_Lieu/Bai_Tap/Ung dung chuyen doi tien te.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bien_Va_Kieu_Du_Lieu/Bai_Tap/Ung dung may tinh.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bien_Va_Kieu_Du_Lieu/Bai_Tap/Ung dung may tinh.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -22,10 +38,16 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Untitled-1 (1).html" />
+  </component>
+  <component name="RecentsManager">
+    <key name="OPEN_URL_DIALOG">
+      <recent name="http://file:///C:/Users/Admin/Downloads/Untitled-1.html" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -41,6 +63,22 @@
       <workItem from="1584936049788" duration="93000" />
       <workItem from="1584954864008" duration="172000" />
       <workItem from="1584955501423" duration="8000" />
+      <workItem from="1585625057493" duration="224000" />
+      <workItem from="1585661613558" duration="2388000" />
+      <workItem from="1585703897053" duration="2604000" />
+      <workItem from="1585710079027" duration="798000" />
+      <workItem from="1585711402826" duration="4436000" />
+      <workItem from="1585723036256" duration="6412000" />
+      <workItem from="1585730769267" duration="1577000" />
+      <workItem from="1585732979556" duration="3131000" />
+      <workItem from="1585745765246" duration="1488000" />
+      <workItem from="1585751528888" duration="281000" />
+      <workItem from="1585789806669" duration="12016000" />
+      <workItem from="1585816084305" duration="367000" />
+      <workItem from="1585821756339" duration="41000" />
+      <workItem from="1585830144664" duration="729000" />
+      <workItem from="1585875526799" duration="8072000" />
+      <workItem from="1585884426316" duration="2033000" />
     </task>
     <servers />
   </component>
@@ -48,9 +86,13 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="462" y="107" key="FileChooserDialogImpl" timestamp="1584954964236">
+    <state x="462" y="107" key="FileChooserDialogImpl" timestamp="1585797783986">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="462" y="107" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584954964236" />
+    <state x="462" y="107" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1585797783986" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1585879843651">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1585879843650" />
   </component>
 </project>
