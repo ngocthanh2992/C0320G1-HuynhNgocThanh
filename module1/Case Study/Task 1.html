@@ -48,5 +48,20 @@
         <input type="reset" value="Nhập lại">
     </form>
 </fieldset>
+<script>
+    let name = prompt("Input name: ");
+    let cmnd = prompt("Input cmnd: ");
+    let birthday = prompt("Input birthday: ");
+    let email = prompt("Input email: ");
+    let address = prompt("Input address: ");
+    let typeCustomer = prompt("Input type customer: ");
+    let typeRoom = prompt("Input type room: ");
+    let discount = prompt("Input discount: ");
+    let quantityIncluded = prompt("Input quantity included: ");
+    let rentDay = prompt("Input rent day: ");
+    let typeService = prompt("Input type Service: ");
+    let totalpay = 300 * rentDay * (1 - discount/100);
+    alert("name " + name + "cmnd " + cmnd + "totalpay " + totalpay );
+</script>
 </body>
 </html>

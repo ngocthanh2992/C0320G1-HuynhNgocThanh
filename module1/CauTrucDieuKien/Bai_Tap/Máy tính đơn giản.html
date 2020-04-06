@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+      <th colspan="4"><input type="text" id="calculator" ></th>
+    </tr>
+    <tr>
+        <th><button type="button" onclick="operation('1')">1</button></th>
+        <th><button type="button" onclick="operation('2')">2</button></th>
+        <th><button type="button" onclick="operation('3')">3</button></th>
+        <th><button type="button" onclick="operation('add')">+</button></th>
+    </tr>
+    <tr>
+        <th><button type="button" onclick="operation('4')">4</button></th>
+        <th><button type="button" onclick="operation('5')">5</button></th>
+        <th><button type="button" onclick="operation('6')">6</button></th>
+        <th><button type="button" onclick="operation('sub')">-</button></th>
+    </tr>
+    <tr>
+        <th><button type="button" onclick="operation('7')">7</button></th>
+        <th><button type="button" onclick="operation('8')">8</button></th>
+        <th><button type="button" onclick="operation('9')">9</button></th>
+        <th><button type="button" onclick="operation('mut')">x</button></th>
+    </tr>
+    <tr>
+        <th><button type="button" onclick="operation('del')">C</button></th>
+        <th><button type="button" onclick="operation('0')">0</button></th>
+        <th><button type="button" onclick="operation('equal')">=</button></th>
+        <th><button type="button" onclick="operation('div')">/</button></th>
+    </tr>
+</table>
+<script>
+    let number1 = document.getElementById("calculator");
+    function operation(tinhtoan) {
+        if (tinhtoan === '1') {
+            document.getElementById("calculator").value = number1.value + 1;
+        } else if (tinhtoan === '2') {
+            document.getElementById("calculator").value = number1.value + 2;
+        } else if (tinhtoan === '3') {
+            document.getElementById("calculator").value = number1.value + 3;
+        } else if (tinhtoan === '4') {
+            document.getElementById("calculator").value = number1.value + 4;
+        } else if (tinhtoan === '5') {
+            document.getElementById("calculator").value = number1.value + 5;
+        } else if (tinhtoan === '6') {
+            document.getElementById("calculator").value = number1.value + 6;
+        } else if (tinhtoan === '7') {
+            document.getElementById("calculator").value = number1.value + 7;
+        } else if (tinhtoan === '8') {
+            document.getElementById("calculator").value = number1.value + 8;
+        } else if (tinhtoan === '9') {
+            document.getElementById("calculator").value = number1.value + 9;
+        } else if (tinhtoan === 'add') {
+            document.getElementById("calculator").value = number1.value + "+";
+        } else if (tinhtoan === 'sub') {
+            document.getElementById("calculator").value = number1.value + "-";
+        } else if (tinhtoan === 'mut') {
+            document.getElementById("calculator").value = number1.value + '*';
+        } else if (tinhtoan === 'div') {
+            document.getElementById("calculator").value = number1.value + "/";
+        } else if (tinhtoan === '0') {
+            document.getElementById("calculator").value = number1.value + 0;
+        } else if (tinhtoan === 'del'){
+            document.getElementById("calculator").value = onreset;
+        } else {
+            document.getElementById("calculator").value = eval(number1.value);
+        }
+    }
+</script>
+</body>
+</html>

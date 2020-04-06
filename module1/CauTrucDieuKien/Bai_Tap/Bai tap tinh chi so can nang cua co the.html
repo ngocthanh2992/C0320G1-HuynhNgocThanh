@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>BMI</h2>
+<form><label for="Weight">Nhập cân nặng (kg):</label>
+    <input type="text" id="Weight"><br><br>
+    <label for="Height">Nhập chiều cao (m):</label>
+    <input type="text" id="Height"><br><br>
+    <button type="button" onclick="tinhBMI()">BMI</button>
+</form>
+<script>
+    let a = document.getElementById("Weight");
+    let b = document.getElementById("Height");
+    let c = a / (b * b);
+
+    function tinhBMI() {
+        a = parseInt(document.getElementById("Weight").value);
+        b = parseFloat(document.getElementById("Height").value);
+        c = a / (b * b);
+        if (c < 18) {
+            document.write(c + "=>" + "Underweight");
+        } else if (c < 25.0) {
+           document.write(c + "=>" + "Normal");
+        } else if (c < 30.0) {
+            document.write(c + "=>" +"Overweight");
+        } else {
+            document.write(c + "=>" +"Obese");
+        }
+    }
+</script>
+</body>
+</html>

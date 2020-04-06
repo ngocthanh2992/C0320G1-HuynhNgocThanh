@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efb425a6-8d3f-426d-9a10-3da121eb5e10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Case Study/Task 1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Bai tap cau lenh switch case.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Bai tap tinh chi so can nang cua co the.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Máy tính đơn giản.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Ung dung good fast cheap.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Thuc_Hanh/Thuc hanh su kien ban phim.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Thuc_Hanh/Thuc hanh su kien chuot.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Case Study/Task 1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Case Study/Task 1.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +39,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Untitled-1.html" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="OPEN_URL_DIALOG">
@@ -69,7 +76,13 @@
       <workItem from="1585830144664" duration="729000" />
       <workItem from="1585875526799" duration="8072000" />
       <workItem from="1585884426316" duration="2033000" />
-      <workItem from="1585917219650" duration="2027000" />
+      <workItem from="1585917219650" duration="5357000" />
+      <workItem from="1585962435488" duration="11206000" />
+      <workItem from="1585989734172" duration="10888000" />
+      <workItem from="1586011159941" duration="20000" />
+      <workItem from="1586050735213" duration="4838000" />
+      <workItem from="1586082014039" duration="10352000" />
+      <workItem from="1586133988271" duration="2795000" />
     </task>
     <servers />
   </component>
@@ -77,13 +90,21 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="275" y="23" key="#Inspections" timestamp="1586053472209">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="23" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1586053472209" />
     <state x="462" y="107" key="FileChooserDialogImpl" timestamp="1585917466367">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="107" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1585917466367" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1585879843651">
+    <state x="184" y="8" key="SettingsEditor" timestamp="1585922394248">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1585879843650" />
+    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1585922394248" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1586006990988">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1586006990988" />
   </component>
 </project>
