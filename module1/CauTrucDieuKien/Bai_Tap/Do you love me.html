@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Do you love me?</h2>
+<input type="button" id="yes" onclick="dongY()" value="Yes">
+<input type="button" id="no" onmouseover="tuChoi()" value="No" style="position: relative;left: 0;top: 0">
+<script>
+    function dongY() {
+        alert("Nhưng tôi méo iu e, âu kê?");
+    }
+    function tuChoi() {
+        document.getElementById("no").style.left = Math.random() * window.innerWidth + 'px';
+        document.getElementById("no").style.top = Math.random() * window.innerHeight + 'px';
+        }
+</script>
+</body>
+</html>

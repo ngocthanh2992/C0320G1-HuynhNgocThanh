@@ -5,6 +5,25 @@
     <title>Title</title>
 </head>
 <body>
-
+<input type="checkbox" id="good" onchange="ketqua('Good')">
+<label for="good">Good</label><br>
+<input type="checkbox" id="fast" onchange="ketqua('Fast')">
+<label for="fast">Fast</label><br>
+<input type="checkbox" id="cheap" onchange="ketqua('Cheap')">
+<label for="cheap">Cheap</label>
+<script>
+    let good = document.getElementById("good");
+    let fast = document.getElementById("fast");
+    let cheap = document.getElementById("cheap");
+    function ketqua(tonghop) {
+        if (tonghop === 'Cheap'){
+            good.checked =false;
+        } else if (tonghop === 'Fast'){
+            cheap.checked = false;
+        } else {
+            fast.checked = false;
+        }
+    }
+</script>
 </body>
 </html>

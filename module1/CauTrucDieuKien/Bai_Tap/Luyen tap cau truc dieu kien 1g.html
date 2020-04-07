@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let cuocdt = parseInt(prompt("Nhập số phút gọi: "));
+    if (cuocdt <= 50){
+        alert("Số tiền bạn phải trả là: " + (25000 + cuocdt * 600)+ "VNĐ");
+    } else if (cuocdt <= 200){
+        alert("Số tiền bạn phải trả là: " + (25000 + 50*600 + (cuocdt - 50)*400) + "VNĐ");
+    } else {
+        alert("Số tiền bạn phải trả là: " + (25000 + 50*600 + 150*400 + (cuocdt-200)*200 + "VNĐ"));
+    }
+</script>
+</body>
+</html>

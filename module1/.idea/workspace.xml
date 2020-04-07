@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efb425a6-8d3f-426d-9a10-3da121eb5e10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Bai tap cau lenh switch case.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Bai tap tinh chi so can nang cua co the.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Máy tính đơn giản.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Ung dung good fast cheap.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Thuc_Hanh/Thuc hanh su kien ban phim.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Thuc_Hanh/Thuc hanh su kien chuot.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Do you love me.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Game puzzle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Luyen tap cau truc dieu kien 1a.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Luyen tap cau truc dieu kien 1b.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Luyen tap cau truc dieu kien 1d.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Luyen tap cau truc dieu kien 1e.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Luyen tap cau truc dieu kien 1f.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Luyen tap cau truc dieu kien 1g.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Luyen tap cau truc dieu kien 2a.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Luyen tạp cau truc dieu kien 1c.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Case Study/Task 1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Case Study/Task 1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Ung dung good fast cheap.html" beforeDir="false" afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Ung dung good fast cheap.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +42,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Untitled-1.html" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/GamePuzz.html" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
@@ -82,7 +86,10 @@
       <workItem from="1586011159941" duration="20000" />
       <workItem from="1586050735213" duration="4838000" />
       <workItem from="1586082014039" duration="10352000" />
-      <workItem from="1586133988271" duration="2795000" />
+      <workItem from="1586133988271" duration="7257000" />
+      <workItem from="1586144652372" duration="6685000" />
+      <workItem from="1586177361505" duration="6601000" />
+      <workItem from="1586221749595" duration="9344000" />
     </task>
     <servers />
   </component>
@@ -94,10 +101,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="23" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1586053472209" />
-    <state x="462" y="107" key="FileChooserDialogImpl" timestamp="1585917466367">
+    <state x="462" y="107" key="FileChooserDialogImpl" timestamp="1586177508096">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="462" y="107" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1585917466367" />
+    <state x="462" y="107" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586177508096" />
     <state x="184" y="8" key="SettingsEditor" timestamp="1585922394248">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

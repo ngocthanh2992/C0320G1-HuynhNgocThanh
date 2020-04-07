@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="Images/Hinh%201a.png" id="xe1a" onclick="thaydoi(1)" width="250 px" height="600 px">
+<img src="Images/Hinh%201b.png" id="xe1b" onclick="thaydoi(2)" width="250 px" height="600 px">
+<img src="Images/Hinh%201c.png" id="xe1c" onclick="thaydoi(3)" width="250 px" height="600 px">
+<img src="Images/Hinh%201d.png" id="xe1d" onclick="thaydoi(4)" width="250 px" height="600 px">
+<img src="Images/Hinh%201e.png" id="xe1e" onclick="thaydoi(5)" width="250 px" height="600 px">
+
+<script>
+    let a = document.getElementById("xe1a");
+    let b = document.getElementById("xe1b");
+    let c = document.getElementById("xe1c");
+    let d = document.getElementById("xe1d");
+    let e = document.getElementById("xe1e");
+    
+    function thaydoi(number) {
+        switch (number) {
+            case 1:
+                if (a.getAttribute("src") === "Images/Hinh%201a.png") {
+                    a.src = "Images/Hinh%202a.png";
+                } else if (a.getAttribute("src") === "Images/Hinh%202a.png"){
+                    a.src = "Images/Hinh%203a.png";
+                } else if (a.getAttribute("src") === "Images/Hinh%203a.png"){
+                    a.src = "Images/Hinh%201a.png";
+                }
+            break;
+            case 2:
+                if (b.getAttribute("src") === "Images/Hinh%201b.png") {
+                    b.src = "Images/Hinh%202b.png";
+                } else if (b.getAttribute("src") === "Images/Hinh%202b.png"){
+                    b.src = "Images/Hinh%203b.png";
+                } else if (b.getAttribute("src") === "Images/Hinh%203b.png"){
+                    b.src = "Images/Hinh%201b.png";
+                }
+            break;
+            case 3:
+                if (c.getAttribute("src") === "Images/Hinh%201c.png") {
+                    c.src = "Images/Hinh%202c.png";
+                } else if (c.getAttribute("src") === "Images/Hinh%202c.png"){
+                    c.src = "Images/Hinh%203c.png";
+                } else if (c.getAttribute("src") === "Images/Hinh%203c.png"){
+                    c.src = "Images/Hinh%201c.png";
+                }
+            break;
+            case  4:
+                if (d.getAttribute("src") === "Images/Hinh%201d.png") {
+                    d.src = "Images/Hinh%202d.png";
+                } else if (d.getAttribute("src") === "Images/Hinh%202d.png"){
+                    d.src = "Images/Hinh%203d.png";
+                } else if (d.getAttribute("src") === "Images/Hinh%203d.png"){
+                    d.src = "Images/Hinh%201d.png";
+                }
+            break;
+            case 5:
+                 if (e.getAttribute("src") === "Images/Hinh%201e.png") {
+                     e.src = "Images/Hinh%202e.png";
+                 } else if (e.getAttribute("src") === "Images/Hinh%202e.png"){
+                     e.src = "Images/Hinh%203e.png";
+                 } else if (e.getAttribute("src") === "Images/Hinh%203e.png") {
+                     e.src = "Images/Hinh%201e.png";
+                 }
+            break;
+        }
+        if (a.getAttribute("src") === "Images/Hinh%201a.png" && b.getAttribute("src") === "Images/Hinh%201b.png" && c.getAttribute("src") === "Images/Hinh%201c.png" && d.getAttribute("src") === "Images/Hinh%201d.png" && e.getAttribute("src") === "Images/Hinh%201e.png"){
+            alert("Chuẩn rồi");
+        } else if (a.getAttribute("src") === "Images/Hinh%202a.png" && b.getAttribute("src") === "Images/Hinh%202b.png" && c.getAttribute("src") === "Images/Hinh%202c.png" && d.getAttribute("src") === "Images/Hinh%202d.png" && e.getAttribute("src") === "Images/Hinh%202e.png"){
+            alert("Quá chuẩn");
+        } else if (a.getAttribute("src") === "Images/Hinh%203a.png" && b.getAttribute("src") === "Images/Hinh%203b.png" && c.getAttribute("src") === "Images/Hinh%203c.png" && d.getAttribute("src") === "Images/Hinh%203d.png" && e.getAttribute("src") === "Images/Hinh%203e.png"){
+            alert("Siêu chuẩn");
+        }
+    }
+</script>
+</body>
+</html>
