@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2> Giải phương trình bậc nhất</h2>
+<p id="ketqua"></p>
+<script>
+    let a = parseInt(prompt("Nhập số a: "));
+    let b = parseInt(prompt("Nhập số b: "));
+    if (a === 0 && b === 0){
+        document.getElementById("ketqua").innerHTML = "Phương trình có vô số nghiệm";
+    } else if (a === 0 && b !== 0 ){
+        document.getElementById("ketqua").innerHTML = "Phương trình vô nghiệm";
+    } else {
+        document.getElementById("ketqua").innerHTML = "Phương trình có nghiệm là: " + (-b/a);
+    }
+
+</script>
+</body>
+</html>

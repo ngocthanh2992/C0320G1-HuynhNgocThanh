@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhập chỉ số cũ: "));
+    let b = parseInt(prompt("Nhập chỉ số mới: "));
+    let c = b - a;
+    if (c <= 100){
+        alert("Tiền điện là: " + c*1000);
+    } else if (c <= 150){
+        alert("Tiền điện là: "+ (100*1000 + (c-100)*1200));
+    } else if(c <= 200){
+        alert("Tiền tiện là: "+ (100*1000+ 50*1200 + (c-150)*2000));
+    } else {
+        alert("Tiền điện là: "+ (100*1000+ 50*1200 + 50*2000+ (c-200)*2500));
+    }
+</script>
+</body>
+</html>

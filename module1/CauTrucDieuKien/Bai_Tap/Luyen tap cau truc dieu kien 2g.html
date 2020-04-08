@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Giải phương trình bậc 2</h1>
+<p id="delta"></p>
+<script>
+    let a = parseInt(prompt("Nhập số a (a khác không): "));
+    let b = parseInt(prompt("Nhập số b: "));
+    let c = parseInt(prompt("Nhập số c: "));
+    let d = b * b - (4 * a * c);
+    if (d < 0){
+        document.getElementById("delta").innerHTML = "Phương trình vô nghiệm"
+    } else if (a !== 0 && d === 0){
+        document.getElementById("delta").innerHTML = "Phương trình có nghiệm kép x1=x2= " + (-b / (2 *a));
+    } else {
+        document.getElementById("delta").innerHTML = "Phương trình có 2 nghiệm x1 = " + ((-b + Math.sqrt(d))/(2 *a)) + " và x2 = " + ((-b - Math.sqrt(d))/(2*a));
+    }
+</script>
+</body>
+</html>
