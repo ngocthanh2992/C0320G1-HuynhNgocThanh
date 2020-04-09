@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efb425a6-8d3f-426d-9a10-3da121eb5e10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Luyen tap cau truc dieu kien 2b.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Luyen tap cau truc dieu kien 2c.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Luyen tap cau truc dieu kien 2d.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Luyen tap cau truc dieu kien 2e.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Luyen tap cau truc dieu kien 2f.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Luyen tap cau truc dieu kien 2g.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Luyen tap cau truc dieu kien 2h.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Luyen tap cau truc dieu kien 2i.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Luyen tap cau truc dieu kien 2k.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Luyen tap cau truc dieu kien 2l.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Luyen tap cau truc dieu kien 2m.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai tap hien thi cac so nguyen to dau tien.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai tap sinh bang cuu chuong.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucLap/Thuc_Hanh/Thuc hanh su dung vong lap do while.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucLap/Thuc_Hanh/Thuc hanh su dung vong lap for 2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucLap/Thuc_Hanh/Thuc hanh su dung vong lap for.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucLap/Thuc_Hanh/Thuc hanh su dung vong lap long nhau.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucLap/Thuc_Hanh/Thuc hanh su dung vong lap while 2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucLap/Thuc_Hanh/Thuc hanh su dung vong lap while.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Luyen tap cau truc dieu kien 2a.html" beforeDir="false" afterPath="$PROJECT_DIR$/CauTrucDieuKien/Bai_Tap/Luyen tap cau truc dieu kien 2a.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +93,12 @@
       <workItem from="1586251640767" duration="736000" />
       <workItem from="1586261569382" duration="7177000" />
       <workItem from="1586308788850" duration="260000" />
+      <workItem from="1586311450933" duration="3804000" />
+      <workItem from="1586327755645" duration="6489000" />
+      <workItem from="1586348614576" duration="3127000" />
+      <workItem from="1586396131545" duration="1247000" />
+      <workItem from="1586397928408" duration="250000" />
+      <workItem from="1586398216318" duration="1652000" />
     </task>
     <servers />
   </component>
