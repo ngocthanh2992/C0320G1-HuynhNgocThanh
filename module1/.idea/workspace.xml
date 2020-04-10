@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efb425a6-8d3f-426d-9a10-3da121eb5e10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai tap hien thi cac so nguyen to dau tien.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai tap sinh bang cuu chuong.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucLap/Thuc_Hanh/Thuc hanh su dung vong lap do while.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucLap/Thuc_Hanh/Thuc hanh su dung vong lap for 2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucLap/Thuc_Hanh/Thuc hanh su dung vong lap for.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucLap/Thuc_Hanh/Thuc hanh su dung vong lap long nhau.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucLap/Thuc_Hanh/Thuc hanh su dung vong lap while 2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucLap/Thuc_Hanh/Thuc hanh su dung vong lap while.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai tap luyen tap vong lap 1a.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai tap luyen tap vong lap 1b.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai tap luyen tap vong lap 1c.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai tap luyen tap vong lap 1d.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai tap luyen tap vong lap 1e.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai tap luyen tap vong lap 1f.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai tap luyen tap vong lap 1g.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +97,14 @@
       <workItem from="1586348614576" duration="3127000" />
       <workItem from="1586396131545" duration="1247000" />
       <workItem from="1586397928408" duration="250000" />
-      <workItem from="1586398216318" duration="1652000" />
+      <workItem from="1586398216318" duration="2373000" />
+      <workItem from="1586401232647" duration="667000" />
+      <workItem from="1586401950289" duration="944000" />
+      <workItem from="1586404189873" duration="2815000" />
+      <workItem from="1586412566290" duration="7791000" />
+      <workItem from="1586433405402" duration="3513000" />
+      <workItem from="1586481524116" duration="1506000" />
+      <workItem from="1586484766527" duration="220000" />
     </task>
     <servers />
   </component>

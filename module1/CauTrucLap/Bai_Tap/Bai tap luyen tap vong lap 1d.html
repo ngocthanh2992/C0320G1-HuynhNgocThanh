@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i = 1;
+    while (fibonaci(i) % 5 === 0){
+        alert("số đó là: " + fibonaci(i));
+        i++;
+        break;
+    }
+    function fibonaci(n) {
+        if (n === 0 || n === 1){
+            return n;
+        }else {
+            return fibonaci(n-1) + fibonaci(n-2)
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    for ( let i = 0; i <20; i++){
+        document.write(fibonaci(i) + " ");
+    }
+    function fibonaci(n) {
+         if (n === 0 || n === 1){
+            return n;
+        }else {
+           return fibonaci(n-1) + fibonaci(n-2)
+            }
+        }
+
+</script>
+</body>
+</html>
