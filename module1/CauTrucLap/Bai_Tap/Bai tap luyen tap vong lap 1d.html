@@ -7,11 +7,14 @@
 <body>
 <script>
     let i = 1;
-    while (fibonaci(i) % 5 === 0){
-        alert("số đó là: " + fibonaci(i));
-        i++;
-        break;
+    while (true){
+        if (i % 5 === 0){
+            document.write("số đó là: " + fibonaci(i));
+            break;
+        }
+        i ++;
     }
+
     function fibonaci(n) {
         if (n === 0 || n === 1){
             return n;

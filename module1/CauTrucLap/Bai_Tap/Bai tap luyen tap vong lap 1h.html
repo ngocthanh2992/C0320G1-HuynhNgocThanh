@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Game Hãy thử đoán xem</h3>
+<input type="button" id="game" value="Chơi" onclick="letPlay()">
+<script>
+    function letPlay() {
+        let x = parseInt(prompt("Nhập khoảng min: "));
+        let y = parseInt(prompt("Nhập khoảng max: "));
+        let z = parseInt(prompt("Đoán xem nào: "));
+        let w = Math.floor(Math.random() * (y - x) + x);
+        for (let i = 1; i <= 3; i++) {
+                if (z === w) {
+                    alert("Chúc mừng");
+                    break;
+                } else if (z < w) {
+                    alert("Tăng xíu nào");
+                    z = parseInt(prompt("Cho đoán lại: "));
+                } else if (z > w) {
+                    alert("Giảm xíu nào");
+                    z = parseInt(prompt("Cho đoán lại: "));
+                }
+            }
+        }
+</script>
+</body>
+</html>
