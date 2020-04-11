@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efb425a6-8d3f-426d-9a10-3da121eb5e10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai tap luyen tap vong lap 1h.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai tap luyen tap vong lap 2a.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mang/Thuc_Hanh/Thuc hanh dao nguoc cac phan tu trong mang.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mang/Thuc_Hanh/Thuc hanh tao ban co caro don gian.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mang/Thuc_Hanh/Thuc hanh tao va thao tac voi mang.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mang/Thuc_Hanh/Thuc hanh tim gia tri lon nhat trong mang.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mang/Thuc_Hanh/Thuc hanh tim gia tri trong mang.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Case Study/Yeu cau 2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai luyen tap vong lap 2c1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai luyen tap vong lap 2c2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai luyen tap vong lap 2c3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai tap luyen tap vong lap 2b.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai tap luyen tap vong lap 1d.html" beforeDir="false" afterPath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai tap luyen tap vong lap 1d.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai tap luyen tap vong lap 2a.html" beforeDir="false" afterPath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai tap luyen tap vong lap 2a.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,6 +117,10 @@
       <workItem from="1586485030460" duration="4640000" />
       <workItem from="1586491774362" duration="2432000" />
       <workItem from="1586500222443" duration="3981000" />
+      <workItem from="1586518875534" duration="11420000" />
+      <workItem from="1586569930309" duration="5989000" />
+      <workItem from="1586595968813" duration="1527000" />
+      <workItem from="1586604939659" duration="3175000" />
     </task>
     <servers />
   </component>
