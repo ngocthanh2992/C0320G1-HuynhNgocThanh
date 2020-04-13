@@ -7,7 +7,10 @@
 <body>
 <script>
     for (let i = 0; i < 5; i++) {
-        for (let j = 0; j < 1 + i; j++) {
+        for (let j = 0; j <= i - 1; j++) {
+            document.write("&nbsp&nbsp");
+        }
+        for (let z = 0; z < 5-i; z++){
             document.write("*");
         }
         document.write("<br>");

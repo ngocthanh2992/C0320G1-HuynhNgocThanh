@@ -6,11 +6,13 @@
 </head>
 <body>
 <script>
-    for (i = 0; i < 4; i++) {
-        for (j = 0; j < 4-i ; j++) {
-            document.write("");
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j <= 3-i ; j++) {
+            document.write("&nbsp&nbsp");
         }
-        
+        for (z = 5; z >= 5 -i; z--){
+            document.write("*");
+        }
         document.write("<br>");
     }
 </script>

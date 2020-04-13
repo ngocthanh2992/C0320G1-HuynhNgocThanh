@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Từ điển Anh - Việt</h1>
+<input type="text" id="English" value="ABC">
+<input type="button" value="Tìm kiếm" id="Find" onclick="translate()">
+<p id="ketqua"></p>
+<script>
+    let eng = ['Hello','Goodbye','Goodluck'];
+    let viet = ['Xin chào','Tạm biệt','Chúc may mắn'];
+    function translate() {
+        let z = document.getElementById("English");
+        for (i = 0; i < eng.length; i++) {
+            if (z === 'Hello') {
+                document.getElementById("ketqua").innerText = viet[0];
+            }
+        }
+    }
+</script>
+</body>
+</html>
