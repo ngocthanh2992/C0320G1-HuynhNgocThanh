@@ -7,17 +7,25 @@
 <body>
 <h1> Từ điển Anh - Việt</h1>
 <input type="text" id="English" value="ABC">
-<input type="button" value="Tìm kiếm" id="Find" onclick="translate()">
+<input type="button" value="Tìm kiếm" id="Find" onclick="translate1()">
 <p id="ketqua"></p>
 <script>
-    let eng = ['Hello','Goodbye','Goodluck'];
-    let viet = ['Xin chào','Tạm biệt','Chúc may mắn'];
-    function translate() {
-        let z = document.getElementById("English");
+    let eng = ['Hello', 'Goodbye', 'Goodluck'];
+    let viet = ['Xin chào', 'Tạm biệt', 'Chúc may mắn'];
+    let check = false;
+    let z = document.getElementById("English");
+
+    function translate1() {
         for (i = 0; i < eng.length; i++) {
-            if (z === 'Hello') {
-                document.getElementById("ketqua").innerText = viet[0];
+            if (z.value === eng[i]) {
+                check = true;
+                break;
             }
+        }
+        if (check === true){
+            document.getElementById("ketqua").innerHTML = viet[i];
+        }else {
+            document.getElementById("ketqua").innerText = "Không tìm thấy";
         }
     }
 </script>

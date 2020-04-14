@@ -2,18 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efb425a6-8d3f-426d-9a10-3da121eb5e10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai tap luyen tap vong lap 2c4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai tap luyen tap vong lap 2d.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai tap luyen tap vong lap 2e.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai tap luyen tap vong lap 2f.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Bai tap Tu Dien.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Bai tap su dung cac ham co san cua mang 3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Bai tap su dung cac ham co san cua mang.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Bai tap su dung cac ham co san của mang 2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Luyen tap.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Bai tap Tic Tac Toe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Bai tap Ung dung vui Faking Textarea on Typing.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Luyen tap mang 1a.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Luyen tap mang 1b.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Luyen tap mang 1c.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Luyen tap mang 1d.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Luyen tap mang 1e.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Luyen tap mang 1f.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai luyen tap vong lap 2c1.html" beforeDir="false" afterPath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai luyen tap vong lap 2c1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai luyen tap vong lap 2c3.html" beforeDir="false" afterPath="$PROJECT_DIR$/CauTrucLap/Bai_Tap/Bai luyen tap vong lap 2c3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mang/Bai_Tap/Bai tap Tu Dien.html" beforeDir="false" afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Bai tap Tu Dien.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mang/Bai_Tap/Luyen tap.html" beforeDir="false" afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Luyen tap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mang/Thuc_Hanh/Thuc hanh tim gia tri trong mang.html" beforeDir="false" afterPath="$PROJECT_DIR$/Mang/Thuc_Hanh/Thuc hanh tim gia tri trong mang.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +128,10 @@
       <workItem from="1586604939659" duration="8912000" />
       <workItem from="1586659124472" duration="5083000" />
       <workItem from="1586694716315" duration="6751000" />
+      <workItem from="1586740455605" duration="22148000" />
+      <workItem from="1586781308241" duration="1288000" />
+      <workItem from="1586785533146" duration="1021000" />
+      <workItem from="1586827033708" duration="627000" />
     </task>
     <servers />
   </component>

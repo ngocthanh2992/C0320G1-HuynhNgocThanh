@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Type anything slowly</h2>
+<textarea id="message" rows="10" cols="20" onkeydown="letgo()"></textarea>
+<script>
+    let a = ["X","i","n"," ","C","h","à","o"," ","V","i","ệ","t"," ","N","a","m"];
+    function letgo() {
+        let text = document.getElementById("message");
+        let length = text.value.length;
+        text.value = "";
+        for (i = 0; i < length; i++){
+            text.value += a[i];
+            if (length === 18){
+                text.value ="";
+            }
+        }
+        setTimeout(letgo,1);
+    }
+</script>
+</body>
+</html>

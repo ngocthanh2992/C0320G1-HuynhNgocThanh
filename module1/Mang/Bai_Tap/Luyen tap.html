@@ -6,8 +6,20 @@
 </head>
 </body>
 <script>
-    let eng = ['Hello','Goodbye','Goodluck'];
-
+    function concatenate(fist,last) {
+        var full;
+        full = fist + last;
+        return document.write(full);
+    }
+    function secondFuntion() {
+        var result;
+        result = concatenate('Thanh','Huynh')
+        document.write(result);
+    }
 </script>
+<p>Click the following button to call the funtion</p>
+<form>
+    <input type="button" onclick="secondFuntion()" value="Call Funtion">
+</form>
 </body>
 </html>

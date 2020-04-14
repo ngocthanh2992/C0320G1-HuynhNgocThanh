@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let value = parseInt(prompt("Enter a number: "));
+    let a = [10, 12, 13, 8, 6, 4, 2, 1, 25, 46, 23, 45, 87, 97];
+    let check = false;
+    for (let i = 0; i < a.length; i++) {
+        if (value === a[i]) {
+            check = true;
+            break;
+        }
+    }
+    if (check === true) {
+    alert(value + " is in the array");
+    } else {
+     alert(value + " is not in the array");
+    }
+</script>
+</body>
+</html>
