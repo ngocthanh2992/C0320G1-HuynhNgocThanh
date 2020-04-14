@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [10, 12, 13, 8, 6, 4, 2, 1, 25, 46, 23, 45, 87, 97];
+    let value = parseInt(prompt("Enter a number: "));
+    for (i=0; i < a.length; i ++){
+        if (value === a[i]){
+            a[i+1] = a[i];
+            a.push(0);
+        }
+    }
+    document.write("Đã xóa "+ value + " ra khỏi mảng");
+    document.write(a);
+</script>
+</body>
+</html>
