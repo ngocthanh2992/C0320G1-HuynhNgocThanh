@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập 1 chuỗi: ");
+    let b = a.toString();
+    let x = [b[0]];
+    for (let i = 0; i < b.length;i++){
+        if (b[i]=== '-'){
+            x.push('_', b[i]);
+        }
+    }
+    alert(b);
+</script>
+</body>
+</html>

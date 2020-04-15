@@ -6,20 +6,16 @@
 </head>
 </body>
 <script>
-    function concatenate(fist,last) {
-        var full;
-        full = fist + last;
-        return document.write(full);
+    function swap(a, b) {
+        var temp = a;
+        a = b;
+        b = temp;
     }
-    function secondFuntion() {
-        var result;
-        result = concatenate('Thanh','Huynh')
-        document.write(result);
-    }
+
+    var a = 5;
+    var b = 10;
+    swap(a, b);
+    document.write("a = " + a + ", b = " + b);
 </script>
-<p>Click the following button to call the funtion</p>
-<form>
-    <input type="button" onclick="secondFuntion()" value="Call Funtion">
-</form>
 </body>
 </html>

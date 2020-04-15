@@ -10,11 +10,13 @@
     let value = parseInt(prompt("Enter a number: "));
     for (i=0; i < a.length; i ++){
         if (value === a[i]){
-            a[i+1] = a[i];
-            a.push(0);
+            for (j = i; j<a.length;j++) {
+                a[j] = a[j+1];
+            }
+            a[a.length-1]=0;
         }
     }
-    document.write("Đã xóa "+ value + " ra khỏi mảng");
+    document.write("Đã xóa "+ value + " ra khỏi mảng ");
     document.write(a);
 </script>
 </body>

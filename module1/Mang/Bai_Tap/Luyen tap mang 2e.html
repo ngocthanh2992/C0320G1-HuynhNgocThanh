@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập chuỗi a: ");
+    let b = prompt("Nhập chuỗi b: ");
+    let check = true;
+    if (a.length !== b.length){
+            alert("a và b khác nhau");
+    } else  if(a.length === b.length){
+        for (i=0;i<a.length;i++){
+                if (a[i] !== b[i]) {
+                    check = false;
+                    break;
+                }
+            }
+        }
+    if (check === true){
+        alert("a và b giống nhau");
+    }else {
+        alert("a và b khác nhau");
+    }
+</script>
+</body>
+</html>
