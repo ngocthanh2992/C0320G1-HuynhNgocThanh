@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i;
+
+    function isPalindrome(text) {
+        if (text.length <= 1) {
+            return true;
+        }
+        if (text[0] === text[text.length - 1]) {
+            text = text.substring(1, text.length - 1);
+            return isPalindrome(text);
+        } else {
+            return false;
+        }
+    }
+    alert(isPalindrome("rotor"))
+</script>
+</body>
+</html>
