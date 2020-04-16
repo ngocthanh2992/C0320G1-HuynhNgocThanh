@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập vào 1 chuỗi ký tự: ");
+    let i;
+    alert(checkNum(a));
+
+    function checkNum(text) {
+        for (i = 0; i < text.length; i++) {
+            if (text[i] >= "0" && text[i] <= "9") {
+                return  true;
+            }
+        }
+        return false;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = ['a','b','c','d','e','f'];
+    let b = prompt("Nhập ký tự: ");
+    let i;
+    let dem = 0;
+    function checkArr(arr,text) {
+        for (i = 0; i< arr.length,i++){
+            if (text === arr[i]){
+               dem ++;
+               return alert("Số lần xuất hiện của ký tự" + text + " trong chuỗi là " + dem);
+            }
+        }
+        return alert(-1);
+    }
+    checkArr(a,b);
+</script>
+</body>
+</html>

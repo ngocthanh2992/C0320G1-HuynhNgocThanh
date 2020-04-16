@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let b = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let check = false;
+    let c = prompt("Nhập tên chòm sao: ");
+    let i;
+     start(c);
+    function start(c) {
+        for (i = 0; i < a.length; i++) {
+            if (c === a[i]) {
+                check = true;
+                break;
+            }
+        }
+        if (check === true) {
+             alert("Chòm sao tương ứng của ngôi sao " + a[i] + " là " + b[i])
+        } else {
+            alert("Không tìm thấy chòm sao tương ứng");
+        }
+    }
+
+</script>
+</body>
+</html>

@@ -7,14 +7,12 @@
 <body>
 <script>
     let a = prompt("Nhập 1 chuỗi: ");
-    let b = a.toString();
-    let x = [b[0]];
-    for (let i = 0; i < b.length;i++){
-        if (b[i]=== '-'){
-            x.push('_', b[i]);
+    for (let i = 0; i < a.length;i++){
+        if (a[i] === '-'){
+            a = a.replace('-','_');
         }
     }
-    alert(b);
+    alert(a);
 </script>
 </body>
 </html>

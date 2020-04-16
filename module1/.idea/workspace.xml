@@ -2,20 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efb425a6-8d3f-426d-9a10-3da121eb5e10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Ham/Thuc_hanh/Thuc hanh chuyen doi nhiet do.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ham/Thuc_hanh/Thuc hanh tao va goi ham.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ham/Thuc_hanh/Thuc hanh tim gia tri nho nhat của mang.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Luyen tap mang 1h.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Luyen tap mang 1i.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Luyen tap mang 2a.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Luyen tap mang 2b.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Luyen tap mang 2c.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Luyen tap mang 2d.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Luyen tap mang 2e.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Luyen tap mang 2f.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ham/Bai_tap/Chuyen doi giua feet va meter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ham/Bai_tap/Ham kiem tra so nguyen to.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ham/Bai_tap/Luyen tap ham 1_ bai 1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ham/Bai_tap/Luyen tap ham 1_bai 2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ham/Bai_tap/Luyen tap ham 1_bai 3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ham/Bai_tap/Luyen tap ham 1_bai 4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ham/Bai_tap/Luyen tap ham 1_bai 5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ham/Bai_tap/Luyen tap ham 2_bai 1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ham/Bai_tap/Luyen tap ham 2_bai 2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ham/Bai_tap/Luyen tap ham 2_bai 3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ham/Bai_tap/Luyen tap ham 2_bai 4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ham/Bai_tap/Luyen tap ham 2_bai 5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ham/Bai_tap/Luyen tap ham 2_bai 6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ham/Bai_tap/Luyen tap ham 2_bai 7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ham/Bai_tap/Luyen tap ham 2_bai 8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ham/Bai_tap/Luyen tap ham 2_bai 9.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mang/Bai_Tap/Luyen tap mang 1g.html" beforeDir="false" afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Luyen tap mang 1g.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mang/Bai_Tap/Luyen tap.html" beforeDir="false" afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Luyen tap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mang/Bai_Tap/Luyen tap mang 2f.html" beforeDir="false" afterPath="$PROJECT_DIR$/Mang/Bai_Tap/Luyen tap mang 2f.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,6 +140,10 @@
       <workItem from="1586827033708" duration="14459000" />
       <workItem from="1586861025758" duration="148000" />
       <workItem from="1586861486815" duration="8239000" />
+      <workItem from="1586915070287" duration="14079000" />
+      <workItem from="1586953147839" duration="4399000" />
+      <workItem from="1586999045303" duration="2275000" />
+      <workItem from="1587001951498" duration="2860000" />
     </task>
     <servers />
   </component>
@@ -147,6 +155,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="23" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1586053472209" />
+    <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586940884223">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1586940884223" />
     <state x="462" y="107" key="FileChooserDialogImpl" timestamp="1586177508096">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -219,9 +231,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1585922394248" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1586006990988">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1586939785333">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1586006990988" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1586939785333" />
   </component>
 </project>

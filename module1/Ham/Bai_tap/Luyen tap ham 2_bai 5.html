@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function minofTree(num1, num2, num3) {
+        if (num1 < num2) {
+            if (num1 < num3) {
+                return alert("Số nhỏ nhất là " + num1);
+            } else {
+                return alert("Số nhỏ nhất là " + num3);
+            }
+        } else if (num2 < num3) {
+            return alert("Số nhỏ nhất là " + num2);
+        } else {
+            return alert("Số nhỏ nhất là " + num3);
+        }
+    }
+    let a = parseInt(prompt("Nhập số thứ 1: "));
+    let b = parseInt(prompt("Nhập số thứ 2: "));
+    let c = parseInt(prompt("Nhập số thứ 3: "));
+    minofTree(a,b,c);
+</script>
+</body>
+</html>
