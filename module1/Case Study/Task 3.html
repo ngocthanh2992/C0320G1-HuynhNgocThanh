@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let name;
+    let cmnd;
+    let birthday;
+    let email;
+    let address;
+    let typeCustomer;
+    let typeRoom;
+    let discount;
+    let quantityIncluded;
+    let rentDay;
+    let typeService;
+    let check = false;
+
+    let tempName = "";
+    name = prompt("Input name: ");
+    name = name.trim().toLowerCase();
+    for (let i =0; i < name.length; i++){
+        if (name.charAt(i) === "" && name.charAt(i+1)===""){
+            continue;
+        }
+        if (i === 0 || name.charAt(i-1)===""){
+            tempName += name.charAt(i).toUpperCase();
+            continue;
+        }
+        tempName += name.charAt(i)
+    }
+    name = tempName;
+    do {
+        cmnd = prompt("Input cmnd: ");
+        if (!isNaN(cmnd)) {
+            cmnd = Number.parseFloat(cmnd);
+        }
+        if (!Number.isInteger(cmnd)) {
+            alert("Nhập lại cmnd: ");
+            continue;
+        }
+        if (cmnd < 10000000 || cmnd > 99999999) {
+            alert("Nhập lại cmnd: ");
+            continue;
+        }
+        check = true;
+    } while (!check);
+    check = false;
+    do {
+        birthday = prompt("Input birthday: ");
+        if (birthday.charAt(2) === "/" && birthday.charAt(5) === "/") {
+            let day = birthday.substring(0, 2);
+            let month = birthday.substring(3, 5);
+            let year = birthday.substring(6, 10);
+            if (!isNaN(day) && !isNaN(month) && !isNaN(year)) {
+                day = Number.parseFloat(day);
+                month = Number.parseFloat(month);
+                year = Number.parseFloat(year);
+                if (Number.isInteger(day) && Number.isInteger(month) && Number.isInteger(year)) {
+                    if (day < 32 && month < 13 && year > 1950) {
+                        check = true;
+                    }
+                }
+            }
+        }
+        if (!check) {
+            alert("Ngày sinh không đúng định dạng: ");
+        }
+    } while (!check);
+    check = false;
+
+    do {
+        let coutA = 0;
+        let coutD = 0;
+        email = prompt("Input email: ");
+        for (let i = 0; i < email.length; i++) {
+            if (email.charAt(i) === "@") {
+                coutA++;
+                for (j = i + 1; j < email.length; j++) {
+                    if (email.charAt(j) === ".") {
+                        coutD++;
+                    }
+                }
+            }
+        }
+        if (coutA !== 1 || coutD < 1) {
+            alert("Nhập lại email: ");
+        } else {
+            check = true;
+        }
+    } while (!check);
+    check = false;
+
+    let tempAddress ="";
+    address = prompt("Input address: ");
+    address = address.trim().toUpperCase();
+    for (let i =0; i < address.length; i++){
+        if (address.charAt(i) === "" && address.charAt(i+1)===""){
+            continue;
+        }
+        if (i === 0 || address.charAt(i-1)===""){
+            tempAddress += address.charAt(i).toUpperCase();
+            continue;
+        }
+        tempAddress += address.charAt(i)
+    }
+    address = tempAddress;
+
+    let temptypeCustomer ="";
+    typeCustomer = prompt("Input type customer: ");
+    typeCustomer = typeCustomer.trim().toLowerCase();
+    for (let i = 0; i < typeCustomer.length;i++){
+        if (typeCustomer.charAt(i)===""&& typeCustomer.charAt(i+1)===""){
+            continue;
+        }
+        if (i === 0 || typeCustomer.charAt(i-1)===""){
+            temptypeCustomer += typeCustomer.charAt(i).toUpperCase();
+            continue;
+        }
+        temptypeCustomer += typeCustomer.charAt(i);
+    }
+    typeCustomer = temptypeCustomer;
+
+    typeRoom = prompt("Input type room: ");
+    discount = prompt("Input discount: ");
+    do {
+        quantityIncluded = prompt("Input quantity included: ");
+        if (!isNaN(quantityIncluded)) {
+            quantityIncluded = Number.parseFloat(quantityIncluded);
+            if (Number.isInteger(quantityIncluded) && quantityIncluded > 0) {
+                check = true;
+            }
+        }
+        if (!check){
+            alert("Số người đi kèm không phải số nguyên dương");
+        }
+    } while (!check);
+    check = false;
+
+    do {
+        rentDay = prompt("Input rent day: ");
+        if (!isNaN(rentDay)) {
+            rentDay = Number.parseFloat(rentDay);
+            if (Number.isInteger(rentDay) && rentDay > 0) {
+                check = true;
+            }
+        }
+        if (!check) {
+            alert("Rentday không phải là số nguyên dương");
+        }
+    } while (!check);
+    check = false;
+
+    typeService = prompt("Input type Service: ");
+</script>
+</body>
+</html>
