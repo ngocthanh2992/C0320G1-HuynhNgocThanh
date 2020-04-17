@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;" onmouseover="move()" style="position: absolute;left: 0;top: 0"></canvas>
+<script>
+    function myCircle(x, y, radius) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+    }
+
+    function getRandomHex() {
+        return Math.floor(Math.random() * 255);
+    }
+
+    function getRandomColour() {
+        var red = getRandomHex();
+        var blue = getRandomHex();
+        var green = getRandomHex();
+        return "rgb(" + red + "," + blue + "," + green + ")";
+    }
+
+    function createCircle() {
+        var ctx = document.getElementById("myCanvas").getContext("2d");
+        var radius = Math.floor(Math.random() * 80);
+        var colour = getRandomColour();
+        var x = Math.random() * window.innerWidth;
+        var y = Math.random() * window.innerHeight;
+        var circle = new myCircle(x, y, radius);
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+        ctx.fillStyle = colour;
+        ctx.fill();
+    }
+    function createMultipleCircle() {
+        for (var i = 0; i < 30; i++) {
+            createCircle();
+        }
+    }
+    function move() {
+           document.getElementById("myCanvas").style.left = Math.random() * windown.innerWidth + 'px';
+           document.getElementById("myCanvas").style.top = Math.random() * windown.innerHeight + 'px';
+    }
+    createMultipleCircle();
+</script>
+</body>
+</html>

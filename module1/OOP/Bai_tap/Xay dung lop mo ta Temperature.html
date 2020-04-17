@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(c) {
+            this.c = c;
+        }
+        getC() {
+            return this.c;
+        }
+        fromCtoF() {
+            return this.c * 1.8 + 32;
+        }
+        fromCtoKelvin() {
+            return this.c + 273.15;
+        }
+    }
+    let Temperature2 = parseInt(prompt("Nhập độ C: "));
+    for (let i = 0; i<=2;i++) {
+        if (Temperature2 > -273) {
+            let Temperature1 = new Temperature(Temperature2);
+            let dof = Temperature1.fromCtoF();
+            let dokel = Temperature1.fromCtoKelvin();
+            alert("Độ f là: " + dof + " và độ Kelvin là: " + dokel);
+            break;
+        } else {
+            alert("Đề nghị tăng nhiệt độ: ");
+            Temperature2 = parseInt(prompt("Nhập độ C: "));
+        }
+    }
+</script>
+</body>
+</html>

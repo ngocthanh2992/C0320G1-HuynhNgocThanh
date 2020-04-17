@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myRectangle" style="border:1px;"></canvas>
+<script>
+    class MyRectangle {
+        constructor(x, y, heigh, weigh) {
+            this.x = x;
+            this.y = y;
+            this.heigh = heigh;
+            this.weigh = weigh;
+        }
+
+        getHeigh() {
+            return this.heigh;
+        }
+
+        getWeigh() {
+            return this.weigh;
+        }
+
+        getArea() {
+            return this.heigh * this.weigh;
+        }
+
+        getPerimeter() {
+            return (this.weigh + this.heigh) * 2;
+        }
+
+        setHeigh(heigh) {
+            return this.heigh = heigh;
+        }
+
+        setWeigh(weigh) {
+            return this.weigh = weigh
+        }
+        createRectagle() {
+            var ctx = document.getElementById("myRectangle").getContext("2d");
+            ctx.fillStyle = "#FF0000";
+            ctx.fillRect(this.x, this.y, this.heigh, this.weigh);
+        }
+    };
+
+    let Rectagle = new MyRectangle(0, 0, 4000, 2000);
+    let weigh = Rectagle.getWeigh();
+    let heigh = Rectagle.getHeigh();
+    let area = Rectagle.getArea();
+    let perimeter = Rectagle.getPerimeter();
+
+    Rectagle.createRectagle();
+
+    alert("Chu vi hình chữ nhật: " + perimeter);
+    alert("Diện tích hình chữ nhật: "+ area);
+</script>
+</body>
+</html>
