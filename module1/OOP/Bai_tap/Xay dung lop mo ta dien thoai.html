@@ -5,6 +5,110 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    class Mobile {
+        constructor(pin, statusMobile, name) {
+            this.pin = pin;
+            this.statusMobile = statusMobile;
+            this.name = name;
+            this.smsSoanThao = [];
+            this.smsThuDen = [];
+            this.smsDaGui = [];
+        }
 
+        isStatus() {
+            if (this.statusMobile) {
+                return true;
+            } else {
+                alert("Điện thoại đang tắt, vui lòng bật điện thoại");
+                return false;
+            }
+        }
+
+        onorOffMode() {
+            if (this.isStatus()) {
+                this.statusMobile = false;
+            } else {
+                chargeMobile();
+                this.statusMobile = true;
+            }
+            this.pin--;
+        }
+        chargeMobile(){
+            if (this.pin < 5){
+                alert("Pin yếu, vui lòng sạc điện thoại");
+                while (this.pin <=100){
+                    this.pin += 0.001;
+                }
+            }
+        }
+        soanSMS(){
+            if (this.isStatus()){
+                this.chargeMobile();
+                let sms = prompt("Nhập nội dung tin nhắn");
+                this.smsSoanThao.push(sms);
+                this.pin --;
+            }
+        }
+        guiSMS(){
+            if (this.isStatus()){
+                this.chargeMobile();
+                if (this.smsSoanThao.length === 0){
+                    this.soanSMS();
+                    mobile.smsThuDen.push("Người gửi: "+ this.name + "."+ this.smsSoanThao[0]);
+                    this.smsDaGui.push(this.smsSoanThao[0]);
+                    this.smsSoanThao.splice(0,1);
+                } else {
+                    let temp ="";
+                    for (let i = 0; i < this.smsSoanThao.length;i++){
+                        temp += i +": " + this.smsSoanThao[i] +"\n";
+                    }
+                    let index = parseInt(prompt(temp + "\n"+ "Yêu cầu bạn chọn tin nhắn để gửi!"));
+                    mobile.smsThuDen.push("Người gửi: "+ this.name+"."+ this.smsSoanThao[index]);
+                    this.smsDaGui.push(this.smsSoanThao[index]);
+                    this.smsSoanThao.splice(index,1);
+                }
+                this.pin --;
+            }
+        }
+        xemSMS(){
+            if (this.isStatus()){
+                let temp = [];
+                let tempsms = [];
+                this.chargeMobile();
+                for (let i =0; i < this.smsThuDen.length;i++){
+                    let check = false;
+                    for (let j = 0; j <this.smsThuDen[i].length;j++){
+                        if (this.smsThuDen[i].charAt(j)===":"){
+                            let tempNguoigui = "";
+                            for (let k = j+1;k < this.smsThuDen[i].length;k++){
+                                if (this.smsThuDen[i].charAt(k)==="."){
+                                    temp.push(tempNguoigui);
+                                    check = true;
+                                    break;
+                                }else {
+                                    tempNguoigui += this.smsThuDen[i].charAt(k);
+                                }
+                            }
+                            if (check){
+                                break;
+                            }
+                        }
+                    }
+                }
+                for (let i = 0; i < temp.length; i++){
+                    tempsms += i + ": "+ temp[i]+ "\n";
+                }
+                let index = parseInt(prompt(tempsms + "\nChọn tin nhắn mà bạn muốn xem:"));
+                alert(this.smsThuDen[index]);
+                this.pin--;
+            }
+        }
+    }
+    let nokia = new Mobile(100,true,"Nokia");
+    let iphone = new Mobile(100,true,"Iphone");
+    nokia.guiSMS(iphone);
+    iphone.xemSMS();
+</script>
 </body>
 </html>

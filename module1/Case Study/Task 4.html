@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="getCus()">Add Name Customer</button>
+<button onclick="delCus()">Delete Customer</button>
+<script>
+    let arrNameCustomers = [];
+
+    function getCus() {
+        let cus = prompt("Nhập customer");
+        addCus(cus);
+    }
+
+    function addCus(cus) {
+        arrNameCustomers.push(cus);
+       document.write(arrNameCustomers);
+    }
+</script>
+</body>
+</html>

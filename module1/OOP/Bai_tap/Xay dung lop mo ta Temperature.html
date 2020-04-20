@@ -21,13 +21,14 @@
         }
     }
     let Temperature2 = parseInt(prompt("Nhập độ C: "));
-    for (let i = 0; i<=2;i++) {
+    let check = false;
+    while (!check){
         if (Temperature2 > -273) {
             let Temperature1 = new Temperature(Temperature2);
             let dof = Temperature1.fromCtoF();
             let dokel = Temperature1.fromCtoKelvin();
             alert("Độ f là: " + dof + " và độ Kelvin là: " + dokel);
-            break;
+            check = true;
         } else {
             alert("Đề nghị tăng nhiệt độ: ");
             Temperature2 = parseInt(prompt("Nhập độ C: "));

@@ -5,17 +5,54 @@
     <title>Title</title>
 </head>
 </body>
-<script>
-    function swap(a, b) {
-        var temp = a;
-        a = b;
-        b = temp;
-    }
 
-    var a = 5;
-    var b = 10;
-    swap(a, b);
-    document.write("a = " + a + ", b = " + b);
+
+<script>
+    let arr = [];
+
+    function display() {
+        document.body.innerHTML="";
+        let title = "Quản lý sản phẩm <br>"
+        let sout = "<input type='text' id='product'><button onclick='getPro()'>Add</button>";
+        sout += "<table>";
+        sout += "<tr>";
+        sout += "<th>Số thứ tự</th>";
+        sout += "<th>Tên sản phẩm</th>";
+        sout += "<th>Thêm sản phẩm</th>";
+        sout += "<th>Xóa sản phẩm</th>";
+        for (let i =0; i < arr.length;i++){
+            sout += "<tr>";
+            sout += "<td>" + (i+1)+"</td>";
+            sout += "<td>" + arr[i]+"</td>";
+            sout += "<td><button onclick='editPro("+i+")'>Edit</button>";
+            sout += "<td><button onclick='deletePro("+i+")'>Delete</button>";
+            sout += "<tr>";
+        }
+        sout += "</tr>";
+        sout += "<table>";
+        document.write(title);
+        document.write(sout);
+    }
+    function getPro() {
+    let pro = document.getElementById("product").value;
+    addPro(pro);
+    }
+    function addPro(pro) {
+        arr.push(pro);
+        display();
+    }
+    function editPro(index) {
+        let pro = prompt("Nhập tên sản phẩm: ");
+        arr[index] = pro;
+        display();
+    }
+    function deletePro(index) {
+        if (confirm("Bạn có thật sự muốn xóa?")){
+            arr.splice(index,1);
+        }
+        display();
+    }
+    display();
 </script>
 </body>
 </html>
