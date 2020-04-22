@@ -5,19 +5,49 @@
     <title>Title</title>
 </head>
 <body>
-<button onclick="getCus()">Add Name Customer</button>
-<button onclick="delCus()">Delete Customer</button>
 <script>
     let arrNameCustomers = [];
-
-    function getCus() {
-        let cus = prompt("Nhập customer");
-        addCus(cus);
-    }
-
-    function addCus(cus) {
-        arrNameCustomers.push(cus);
-       document.write(arrNameCustomers);
+    while (true) {
+        let choose = parseInt(prompt("1. Add new Customers" + "\n" + "2. Delete Customer"));
+        switch (choose) {
+            case 1: {
+                let number = parseInt(prompt("Enter number of Customer: "));
+                for (let i = 0; i < number; i++) {
+                    let nameCustomer = prompt("Enter name: ");
+                    arrNameCustomers.push(nameCustomer);
+                }
+                let result = "";
+                arrNameCustomers.sort();
+                for (let i = 0; i < arrNameCustomers.length; i++) {
+                    result += (i + 1) + "." + arrNameCustomers[i] + "\n";
+                }
+                alert(result);
+                break;
+            }
+             case 2:{
+                 let check  = false;
+                 let nameCustomer = prompt("Enter name of Customer: ");
+                 for (let i = 0; i < arrNameCustomers.length;i++){
+                     if (arrNameCustomers[i]=== nameCustomer){
+                         arrNameCustomers.splice(i,1);
+                         check = true;
+                     }
+                 }
+                 if (!check){
+                     alert("Tên bạn muốn xóa không có trong mảng");
+                 }
+                 let result = "";
+                 arrNameCustomers.sort();
+                 for (let i = 0; i < arrNameCustomers.length; i++) {
+                     result += (i + 1) + "." + arrNameCustomers[i] + "\n";
+                 }
+                 alert(result);
+                 break;
+             }
+            default: {
+                alert("Failed");
+            }
+        }
     }
 </script>
 </body>
