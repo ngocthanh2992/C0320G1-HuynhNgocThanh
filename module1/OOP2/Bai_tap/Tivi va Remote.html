@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Remote {
+        constructor(code,tivi) {
+            this.code = code;
+            this.tivi = tivi;
+        }
+        setChannel(channel) {
+            return this.tivi.channel = channel;
+        }
+
+        increaseVolumn() {
+            this.tivi.volumn++;
+        }
+
+        decreaseVolumn() {
+            this.tivi.volumn--;
+        }
+
+        turn0n_turnOff(status) {
+            this.tivi.status = !this.tivi.status;
+        }
+    }
+
+    class Tivi {
+        constructor(name, channel, volumn, status) {
+            this.name = name;
+            this.channel = channel;
+            this.volumn = volumn;
+            this.status = status;
+        }
+
+        getChannel() {
+            return this.channel;
+        }
+
+        getVolumn() {
+            return this.volumn;
+        }
+
+        getStatus() {
+            return this.status;
+        }
+
+        turnOn_turnOff() {
+            this.status = !this.status;
+        }
+
+        setChannell(channel) {
+            return this.channel = channel;
+        }
+
+        increaseVolumn() {
+            this.volumn++;
+        }
+
+        decreaseVolumn() {
+            this.volumn--;
+        }
+        checkOnOff() {
+            if (this.status === true) {
+                alert("Ti vi đã bật");
+            } else {
+                alert("Ti vi đã tắt");
+            }
+        }
+    }
+
+    let samsung = new Tivi("Sam Sung", 5, 60, false);
+    let remote = new Remote('SS',samsung);
+    samsung.checkOnOff();
+    alert("Ti vi " + samsung.name + " kênh hiện tại: " + samsung.channel + " volumn hiện tại: " + samsung.volumn);
+    samsung.turnOn_turnOff();
+    samsung.checkOnOff();
+    samsung.setChannell(7);
+    alert("Ti vi " + samsung.name + " kênh hiện tại: " + samsung.channel + " volumn hiện tại: " + samsung.volumn);
+    remote.setChannel(3);
+    alert("Ti vi " + samsung.name + " kênh hiện tại: " + samsung.channel + " volumn hiện tại: " + samsung.volumn);
+    remote.increaseVolumn(1);
+    alert("Ti vi " + samsung.name + " kênh hiện tại: " + samsung.channel + " volumn hiện tại: " + samsung.volumn);
+    samsung.increaseVolumn(1);
+    alert("Ti vi " + samsung.name + " kênh hiện tại: " + samsung.channel + " volumn hiện tại: " + samsung.volumn);
+    remote.turn0n_turnOff();
+    samsung.checkOnOff();
+</script>
+</body>
+</html>

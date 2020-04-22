@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="init()">
+<p id="game"></p>
+<script>
+    class Car {
+        constructor(speed, srcImg, top, left) {
+            this.speed = speed;
+            this.srcImg = srcImg;
+            this.top = top;
+            this.left = left;
+        }
+
+        displayCar() {
+            return '<img width="' + 30 + '"' +
+                ' height="' + 50 + '"' +
+                ' src="' + this.srcImg + '"' +
+                ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+        }
+
+        moveTop() {
+            this.top -= this.speed;
+        }
+
+        moveLeft() {
+            this.left -= this.speed;
+        }
+
+        moveDown() {
+            this.top += this.speed;
+        }
+
+        moveRight() {
+            this.left += this.speed;
+        }
+        hitTheWall(box) {
+            if (this.left === box.left || this.top === box.top){
+                alert("Bể đầu");
+            }
+        }
+    }
+    class Box{
+        constructor(top,left) {
+            this.top = top;
+            this.left = left;
+        }
+
+    }
+
+    let car = new Car(50, 'car.png', 500, 500);
+    let direction = "";
+    let box = new Box(window.innerHeight,window.innerWidth);
+    car.hitTheWall(box);
+
+    function move() {
+        switch (direction) {
+            case "top": {
+                car.moveTop();
+                break;
+            }
+            case "left": {
+                car.moveLeft();
+                break;
+            }
+            case "right": {
+                car.moveRight();
+                break;
+            }
+            case "down": {
+                car.moveDown();
+                break;
+            }
+        }
+        document.getElementById('game').innerHTML = car.displayCar();
+        setTimeout(move, 500);
+    }
+
+    function init() {
+        window.addEventListener("keydown", start);
+        move();
+    }
+
+    function start(evt) {
+        switch (evt.keyCode) {
+            case 38: {
+                direction = "top";
+                car.srcImg = "car.png";
+                break;
+            }
+            case 37: {
+                direction = "left";
+                car.srcImg = "carL.png";
+                break;
+            }
+            case 39: {
+                direction = "right";
+                car.srcImg = "carR.png";
+                break;
+            }
+            case 40: {
+                direction = "down";
+                car.srcImg = "carD.png";
+                break;
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
