@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let email = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
+    function validateEmail(str) {
+        if (email.test(str)){
+            alert("Email hợp lệ");
+        } else {
+            alert("Email không hợp lệ");
+        }
+    }
+    let str = "a@gmail.com";
+    let str1 = '@gmail.com';
+    validateEmail(str);
+    validateEmail(str1);
+</script>
+</body>
+</html>

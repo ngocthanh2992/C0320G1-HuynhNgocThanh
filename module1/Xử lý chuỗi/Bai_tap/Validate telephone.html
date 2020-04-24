@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let regExp;
+    regExp = /^\([0-9]{2}\)-\(0[0-9]{9}\)$/;
+    function validatePhone(str) {
+        if (regExp.test(str)){
+            alert("Số hợp lệ");
+        }else {
+            alert("Số không hợp lệ");
+        }
+    }
+    validatePhone('(84)-(0978489648)');
+    validatePhone('(84)-(2222222222)');
+</script>
+</body>
+</html>

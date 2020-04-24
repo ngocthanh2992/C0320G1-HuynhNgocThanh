@@ -12,15 +12,15 @@
             this.tivi = tivi;
         }
         setChannel(channel) {
-            return this.tivi.channel = channel;
+            this.tivi.setChannell(channel);
         }
 
         increaseVolumn() {
-            this.tivi.volumn++;
+            this.tivi.increaseVolumn();
         }
 
         decreaseVolumn() {
-            this.tivi.volumn--;
+            this.tivi.decreaseVolumn();
         }
 
         turn0n_turnOff(status) {
@@ -82,9 +82,9 @@
     alert("Ti vi " + samsung.name + " kênh hiện tại: " + samsung.channel + " volumn hiện tại: " + samsung.volumn);
     remote.setChannel(3);
     alert("Ti vi " + samsung.name + " kênh hiện tại: " + samsung.channel + " volumn hiện tại: " + samsung.volumn);
-    remote.increaseVolumn(1);
+    remote.increaseVolumn();
     alert("Ti vi " + samsung.name + " kênh hiện tại: " + samsung.channel + " volumn hiện tại: " + samsung.volumn);
-    samsung.increaseVolumn(1);
+    samsung.increaseVolumn();
     alert("Ti vi " + samsung.name + " kênh hiện tại: " + samsung.channel + " volumn hiện tại: " + samsung.volumn);
     remote.turn0n_turnOff();
     samsung.checkOnOff();

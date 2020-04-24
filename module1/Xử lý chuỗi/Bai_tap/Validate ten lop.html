@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let regExp = /^[CAP][0-9]{4}[GHIKLM]$/;
+    function validateClass(str) {
+        if (regExp.test(str)){
+            alert("Tên hợp lệ");
+        }else {
+            alert("Tên không hợp lệ");
+        }
+    }
+    validateClass('C0318G');
+    validateClass('P0323A');
+</script>
+</body>
+</html>
