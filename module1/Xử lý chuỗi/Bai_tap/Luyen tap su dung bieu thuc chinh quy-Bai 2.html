@@ -10,7 +10,7 @@
     let count = 0;
     function countA(str) {
         for (let i = 0; i < str.length;i++){
-            if (str.search(regExp)){
+            if (regExp.test(str)){
                 count++;
             }
         }

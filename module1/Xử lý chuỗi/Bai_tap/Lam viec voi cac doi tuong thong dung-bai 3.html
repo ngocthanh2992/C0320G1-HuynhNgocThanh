@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = "Tôi yêu ngôn ngữ lập trình Javascript";
+    let b = /a/g;
+    let result = a.match(b);
+    alert("Số lần xuất hiện của từ chữ 'a' trong chuỗi trên là: " + result.length + " lần");
+    let arr = a.split(" ");
+    alert("Tách chuỗi thành mảng: " + arr);
+    let c = /\s/g;
+    let result1 = a.match(c);
+    alert("Số lượng từ có trong chuỗi trên là: "+ (a.length - result1.length));
+    let d = a.replace("Javascript","Typescript");
+    alert("Thay Javacript bằng Typescript, kết quả là: "+ d);
+</script>
+</body>
+</html>

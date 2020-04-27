@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let day = new Date(1992,9,16,7,30,0,0);
+    let day1 = new Date();
+    alert(day);
+    alert(day1);
+    alert("Tôi đã sống được: "+ (day1.getFullYear()-day.getFullYear())+ " năm");
+    alert("Tôi đã sống được: "+ ((day1.getFullYear()-day.getFullYear())*12)+ " tháng");
+    alert("Tôi đã sống được: "+ ((day1.getFullYear()-day.getFullYear())*12*30)+ " ngày");
+    alert("Tôi đã sống được: "+ ((day1.getFullYear()-day.getFullYear())*12*30*24)+ " giờ");
+    alert("Tôi đã sống được: "+ ((day1.getFullYear()-day.getFullYear())*12*30*24*60)+ " phút");
+    alert("Tôi đã sống được: "+ ((day1.getFullYear()-day.getFullYear())*12*30*24*60*60)+ " giây");
+</script>
+</body>
+</html>

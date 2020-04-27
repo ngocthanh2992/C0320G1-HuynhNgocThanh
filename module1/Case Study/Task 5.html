@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrListCustomer =[];
+    function displayMainMenu() {
+        let choose = parseInt(prompt("1. Add new Customer" +"\n2. Display Information Customer"+
+            "\n3. Edit Information Customer"+"\n4. Delete Customer" + "\n5. Exit"));
+        switch (choose) {
+            case 1:{
+               addNewCustomer();
+                break;
+            }
+            case 2:{
+                break;
+            }
+            case 3:{
+                break;
+            }
+            case 4:{
+                break;
+            }
+            case 5:{
+                break;
+            }
+            default: {
+                alert("Failed");
+            }
+        }
+    }
+    function addNewCustomer() {
+        let cusInfo =[];
+        let name = prompt("Input name: ");
+        let cmnd = prompt("Input cmnd: ");
+        let birthday = prompt("Input birthday: ");
+        let email = prompt("Input email: ");
+        let address = prompt("Input address: ");
+        let typeCustomer = prompt("Input type customer: ");
+        let typeRoom = prompt("Input type room: ");
+        let discount = prompt("Input discount: ");
+        let quantityIncluded = prompt("Input quantity included: ");
+        let rentDay = prompt("Input rent day: ");
+        let typeService = prompt("Input type Service: ");
+
+        cusInfo.push(name);
+        cusInfo.push(cmnd);
+        cusInfo.push(birthday);
+        cusInfo.push(email);
+        cusInfo.push(address);
+        cusInfo.push(typeCustomer);
+        cusInfo.push(typeRoom);
+        cusInfo.push(discount);
+        cusInfo.push(quantityIncluded);
+        cusInfo.push(rentDay);
+        cusInfo.push(typeService);
+
+        arrListCustomer.push(cusInfo);
+
+        alert("Bạn đã thêm thành công");
+        displayMainMenu();
+    }
+    displayMainMenu();
+</script>
+</body>
+</html>
