@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [4,6,7,8,9,10,22,33,44,55,88,70];
+    let max = arr[0];
+    let max2 =0;
+    for (let i = 1;i < arr.length;i++){
+        if (arr[i]>max){
+            max = arr[i];
+        }
+    }
+    for (let i = 0; i < arr.length;i++){
+        if (max === arr[i]){
+            continue;
+        }else if (max2 < arr[i]){
+            max2 = arr[i]
+        }
+    }
+    alert(max2);
+</script>
+</body>
+</html>

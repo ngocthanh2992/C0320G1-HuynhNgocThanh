@@ -7,7 +7,7 @@
 <body>
 <script>
     let regExp;
-    regExp = /[01-31]{2}\/[01-12]{2}\/[0-9]{4}$/;
+    regExp = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
     function checkStr(str) {
         if (regExp.test(str)){
             alert("Đã đúng định dạng");
@@ -15,7 +15,7 @@
             alert("Không đúng định dạng");
         }
     }
-    checkStr("30/12/1990");
+    checkStr("33/12/1990");
     checkStr('22/10/2020');
 </script>
 </body>

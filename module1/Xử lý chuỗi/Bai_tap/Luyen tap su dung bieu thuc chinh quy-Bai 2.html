@@ -6,17 +6,18 @@
 </head>
 <body>
 <script>
-    let regExp = /[A-Za-z]/g;
+    let regExp = /^[A-Za-z0-9]$/;
     let count = 0;
     function countA(str) {
         for (let i = 0; i < str.length;i++){
-            if (regExp.test(str)){
+            if (regExp.test(str[i])){
                 count++;
             }
         }
         return count;
     }
-   alert(countA('abcvdrt'));
+   alert(countA('  abcvdrt   '));
+
 
 </script>
 </body>
