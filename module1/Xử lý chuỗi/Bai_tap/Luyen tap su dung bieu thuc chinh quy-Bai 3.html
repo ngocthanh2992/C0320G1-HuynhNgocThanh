@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let regExpVowel = /^[aeouiAEOUI]$/;
+    let regExpConsonal = /^[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]$/;
+    let count = 0;
+    let count1 =0;
+    function countConsonal(str) {
+        for (let i = 0; i < str.length; i++) {
+            if (regExpConsonal.test(str[i])) {
+                count1++;
+            }
+        }
+        return count1;
+    }
+
+    function countVowel(str) {
+        for (let i = 0; i < str.length; i++) {
+            if (regExpVowel.test(str[i])) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    alert("Nguyên âm trong chuỗi \'abceAEOUI123  \' là: "+ countVowel('abceAEOUI123  ') + "\nPhụ âm trong chuỗi \'abceAEOUI123  \' là: "+ countConsonal('abceAEOUI123  '));
+</script>
+</body>
+</html>

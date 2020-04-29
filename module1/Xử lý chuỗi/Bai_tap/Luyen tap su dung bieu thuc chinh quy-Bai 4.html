@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let regExp = /^[0-9]{4}$/;
+    function  checkPassWord(str) {
+        if (regExp.test(str)){
+            alert("Mã số bảo mật hợp lệ");
+        }else {
+            alert("Mã số bảo mật không hợp lệ");
+        }
+    }
+    checkPassWord('1234');
+    checkPassWord('abcd');
+</script>
+</body>
+</html>
