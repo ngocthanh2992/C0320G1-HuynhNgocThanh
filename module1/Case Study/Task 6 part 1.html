@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="Customer.js"></script>
+</head>
+<body>
+<script>
+    let listCustomer = [];
+    let regexEmail = /\S+@\S+\.\S+/;
+    let regexBirthday = /^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$/;
+    let regexCmnd = /^[\d]{8,8}$/;
+    function displayMainMenu() {
+        let choose = parseInt(prompt("1. Add new Customer" +"\n2. Display Information Customer"+
+            "\n3. Display total pays"+"\n4. Edit Information Customer"+"\n5. Delete Customer" + "\n6. Exit"));
+        switch (choose) {
+            case 1:{
+                addNewCustomer();
+                break;
+            }
+            case 3:{
+                displayTotalPay();
+                break;
+            }
+            default:{
+                alert("Failed");
+            }
+        }
+    }
+    function displayTotalPay() {
+        let temp = "";
+        for (let i = 0; i < listCustomer.length; i++) {
+            temp += i + " . Name: " + listCustomer[i].getName() + "\n";
+        }
+        let chooseDisplay = parseInt(prompt(temp));
+        alert("Total pay của bạn là: "+ listCustomer[chooseDisplay].totalPay())
+    }
+    function addNewCustomer() {
+        let checkValid = false;
+        let cus= new Customer();
+        let name = prompt("Input name: ");
+        let cmnd;
+        let birthday;
+        let email;
+        do {
+            cmnd = prompt("Input cmnd: ");
+            if (regexCmnd.test(cmnd)){
+                checkValid = true;
+            }else {
+                alert("Không hợp lệ");
+            }
+        }while (!checkValid);
+        checkValid = false;
+
+
+        do {
+            birthday = prompt("Input birthday: ");
+            if (regexBirthday.test(birthday)){
+                checkValid = true;
+            }else {
+                alert("Ngày sinh không đúng định dạng. Vui lòng nhập lại")
+            }
+        }while (!checkValid);
+        checkValid = false;
+
+        do {
+            email = prompt("Input email: ");
+            if (regexEmail.test(email)){
+                checkValid = true;
+            }else {
+                alert("Email không hợp lệ. Vui lòng nhập lại");
+            }
+        }while (!checkValid);
+        checkValid = false;
+
+        let address = prompt("Input address: ");
+        let typeCustomer = prompt("Input type customer: ");
+        let typeRoom = prompt("Input type room: ");
+        let discount = prompt("Input discount: ");
+        let quantityIncluded = prompt("Input quantity included: ");
+        let rentDay = prompt("Input rent day: ");
+        let typeService = prompt("Input type Service: ");
+        cus.setName(name);
+        cus.setCmnd(cmnd);
+        cus.setBirthday(birthday);
+        cus.setEmail(email);
+        cus.setAddress(address);
+        cus.setTypeCustomer(typeCustomer);
+        cus.setTypeRoom(typeRoom);
+        cus.setDiscount(discount);
+        cus.setQuantityIncluded(quantityIncluded);
+        cus.setRentDay(rentDay);
+        cus.setTypeService(typeService);
+        listCustomer.push(cus);
+        alert("Bạn đã thêm thành công");
+        displayMainMenu();
+    }
+displayMainMenu();
+</script>
+</body>
+</html>
