@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Đoán 1 số trong khoảng từ 1 - 100
+    let number =[82];
+    let check = false;
+    let num = parseInt(prompt("Nhập số: "));
+    function guessNum(arr) {
+       while (!check){
+           for (let i = 0; i < arr.length;i++){
+               if (num > arr[i]){
+                   alert("Số lớn quá");
+                   num = parseInt(prompt("Đoán lại xem:"));
+               } else if (num< arr[i]){
+                   alert("Số nhỏ quá.");
+                   num = parseInt(prompt("Đoán lại xem:"));
+               }else if (num === arr[i]){
+                   alert("Đúng rồi");
+                   check = true;
+                   break;
+               }
+           }
+       }
+       check = false;
+    }
+    function binSearch(arr,num,left,right) {
+        while (!check){
+                let mid = Math.floor((left+right)/2);
+                if (arr[mid] === num){
+                    check = true;
+                    alert("Đúng rồi");
+                    break;
+                } else if (arr[mid]> num){
+                    binSearch(arr,num,left,mid-1);
+                    alert("Số nhỏ quá");
+                    num = parseInt(prompt("Đoán lại xem: "));
+                    break;
+                } else if (arr[mid]<num){
+                    binSearch(arr,num,mid+1,right);
+                    alert("Số lớn quá");
+                    num = parseInt(prompt("Đoán lại xem: "));
+                    break;
+                }
+            }
+        }
+    binSearch(number,num,1,100);
+</script>
+</body>
+</html>

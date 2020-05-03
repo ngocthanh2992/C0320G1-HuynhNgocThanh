@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let regExpViettel = /^096|097|098|086|032|033|034|035|036|037|038|039[0-9]{7}$/;
+    function checkPhone(arr) {
+        let temp ="";
+        for (let i = 0; i < arr.length; i++) {
+            if (regExpViettel.test(arr[i])) {
+                temp += "Số điện thoại " + arr[i]+" là số thuộc Viettel"+ "\n";
+            }else {
+                temp += "Số điện thoại " + arr[i]+" không phải số thuộc Viettel"+ "\n"
+            }
+        }
+        alert(temp);
+    }
+    let arr = ['0397123234','0922017369','0977123123'];
+    checkPhone(arr);
+</script>
+</body>
+</html>

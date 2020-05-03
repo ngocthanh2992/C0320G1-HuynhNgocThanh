@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Giải quyết vấn đề về thuật toán/Bai_tap/debug" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/NhapMonLapTrinhCanBan/Bai_Tap/New Project" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/NhapMonLapTrinhCanBan/Thuc_Hanh/wf-hello" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/OOP2/Bai_tap/Game đơn giản - di chuyển đối tượng" vcs="Git" />
