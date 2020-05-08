@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500" style="border: 1px solid #000000;"></canvas>
+<br>
+<script>
+    // vẽ hình tròn
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(100, 100, 50, Math.PI, 2 * Math.PI);
+    ctx.stroke();
+    // vẽ hình chữ nhật
+    ctx.beginPath();
+    ctx.fillRect(0, 0, 150, 75);
+    // vẽ hình chữ nhật bằng dấu *
+    for (let i = 0; i < 6; i++) {
+        for (j = 0; j < 5; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+
+    // số chính phương
+    function so_chinh_phuong(a) {
+        // Ta dùng hàm Math.sqrt để lấy căn bậc 2
+        // sau đó chia lấy dư với 1, nếu bằng 0 thì là số chính phương,
+        // ngược lại thì không phải là số chính phương
+        if (Math.sqrt(a) % 1 === 0) {
+            alert(a + " là số chính phương");
+        } else {
+            alert(a + " không phải là số chính phương");
+        }
+    }
+
+    // số hoàn hảo
+    function checkSoHoanHao(num) {
+        let sum = 0;
+        for (let i = 0; i <= num / 2; i++) {
+            if (num % i === 0) {
+                sum += i;
+            }
+        }
+        if (sum === num) {
+            alert(num + " là số hoàn hảo");
+        } else {
+            alert(num + " không phải là số hoàn hảo");
+        }
+    }
+
+    checkSoHoanHao(6);
+// nhập mảng và thông báo
+    function mangprompt() {
+        var st = " ";
+        var n;
+        var a = [];
+
+        n = prompt("Nhập số phần tử: ");
+        for (i = 1; i <= n; i++) {
+            a[i] = prompt(" Phần tử thứ " + i + " là: ", "");
+            st = st + a[i] + " ";
+        }
+        alert("Bạn đã nhập:\n" + st);
+
+    }
+
+    mangprompt();
+
+        //Tạo một mảng rỗng, nhận 5 giá trị thuộc kiểu số nguyên được nhập bàn phím. Yêu cầu hiển thị mảng đã được sắp
+  //  xếp theo thứ tự tăng dần ra màn hình
+
+    let arr = new Array(0);
+    for (let i = 0; i < 5; i++) {
+        arr[i] = parseInt(prompt("Nhap vao mot so nguyen"));
+    }
+    arr = arr.sort(function (a, b) {
+        return a - b;
+    });
+    document.write(arr);
+
+//Viết hàm isMainNumber() để kiểm tra một số nguyên có phải là số chính phương hay không?
+
+    let n = parseInt(prompt("Nhap vao mot so"));
+    alert(isMainNumber(n));
+
+    function isMainNumber(n) {
+        let flag = false;
+        if (n > 0) {
+            if (n === Math.pow(Math.sqrt(n), 2)) {
+                flag = true;
+            }
+        }
+        return flag;
+    }
+//Cho một mảng lưu trữ danh sách điểm thi. Hãy viết hàm findMaxScore() với đầu vào là mảng điểm, đầu ra là điểm
+ //   số cao nhất được tìm thấy trong mảng đó và vị trí của điểm số cao nhất xuất hiện trong mảng.
+ //       Nếu có hai số trở lên là điểm cao nhất trong mảng thì phải in ra được vị trí cuối cùng của điểm số cao nhất được
+ //   tìm thấy.
+
+    let arrScore = [2, 4, 0, 5, 1,5];
+    findMaxScore(arrScore);
+
+    function findMaxScore(arrScore) {
+        let max = arrScore[0];
+        let index = 0;
+        for (let i = 1; i < arrScore.length; i++) {
+            if (max < arrScore[i] || max === arrScore[i]) {
+                max = arrScore[i];
+                index = i;
+            }
+        }
+        document.write("Diem so cao nhat la: " + max + "<br>" + "O vi tri: " + index);
+    }
+
+//Viết chương trình kiểm tra học lực của học sinh.
+
+    class HocSinh {
+        constructor(stt, hovaten, ngaysinh, diemtrungbinh) {
+            this.id = stt;
+            this.fullName = hovaten;
+            this.birthDay = ngaysinh;
+            this.midScore = diemtrungbinh;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        getFullName() {
+            return this.fullName;
+        }
+
+        getBirthDay() {
+            return this.birthDay;
+        }
+
+        getMidScore() {
+            return this.midScore;
+        }
+
+        setMidScore(score) {
+            this.average = score;
+        }
+    }
+
+    let Hieu = new HocSinh(1, "Tran Chi Hieu", "28/08/1997", 8.5);
+    displayInformation(Hieu);
+    checkLevel(Hieu);
+
+    function displayInformation(hocsinh) {
+        alert("1.So Thu Tu: " + hocsinh.getId() + "\n"
+            + "2.Ho Va Ten: " + hocsinh.getFullName() + "\n"
+            + "3.Ngay Sinh: " + hocsinh.getBirthDay() + "\n"
+            + "4.Diem Trung Binh: " + hocsinh.getMidScore() + "\n");
+    }
+
+    function checkLevel(hocsinh) {
+        let score = hocsinh.getMidScore();
+        if (score > 8) {
+            alert("Hoc Sinh Gioi");
+        } else if (score >= 6.5) {
+            alert("Hoc Sinh Kha");
+        } else if (score >= 5) {
+            alert("Hoc Sinh Trung Binh");
+        } else if (score >= 3.5) {
+            alert("Hoc Sinh Yeu");
+        } else {
+            alert("Hoc Sinh Kem");
+        }
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập 1 mảng số nguyên không quá 50 phần tử, đưa ra màn hình trung bình cộng các số chia hết cho 3 có trong mảng</title>
+</head>
+<body>
+<script>
+    let array = new Array(3);
+    let temp = "";
+    let sum = 0;
+    let count = 0;
+    for (let i = 0; i < array.length; i++){
+        array[i] = parseInt(prompt("Phần tử thứ "+ i + " là:"));
+        temp += array[i] + " ";
+        if (array[i]% 3 === 0){
+            sum += array[i];
+            count ++;
+        }
+    }
+    let trungbinhcong = sum / count;
+    alert("Bạn đã nhập:\n "+ temp);
+    alert("Trung bình cộng các số chia hết cho 3 là: " + trungbinhcong);
+</script>
+</body>
+</html>

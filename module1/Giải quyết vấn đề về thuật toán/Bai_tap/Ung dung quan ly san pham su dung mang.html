@@ -4,13 +4,7 @@
     <meta charset="UTF-8">
     <title>$Title$</title>
     <style type="text/css">
-        .container{
-            border-radius: 5px;
-            background-color: #f2f2f2;
-            padding: 20px;
-            width: 30%;
-        }
-        input[type=text]{
+        input[type=text] {
             width: 80%;
             padding: 12px;
             border-radius: 4px;
@@ -19,7 +13,8 @@
             margin-bottom: 16px;
             resize: vertical;
         }
-        input[type='submit'], button, [aria-label]{
+
+        input[type='submit'], button, [aria-label] {
             cursor: pointer;
             background-color: #4CAF50;
             color: white;
@@ -27,29 +22,81 @@
             border: none;
             border-radius: 4px;
         }
+
         input[type=submit]:hover {
             background-color: #45a049;
         }
+
         table {
             border-collapse: collapse;
             width: 50%;
         }
-        th{
+
+        th {
             text-align: center;
             padding: 8px;
             font-weight: bold;
         }
+
         td {
-            text-align: left;
+            text-align: center;
             padding: 8px;
         }
-        tr:nth-child(even){background-color: #f2f2f2}
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
     </style>
 </head>
 <body>
 <script>
-    let arrayProduct = ["Nokia","Samsung","Apple"];
+    let arrayProduct = ["Nokia", "Samsung", "Apple"];
 
+    function displayProduct() {
+        document.body.innerHTML = "";
+        let sout = "<input type='text' id='product'><button onclick='getProduct()'>Add</button>";
+        sout += "<table>";
+        sout += "<tr>";
+        sout += "<th>Số thứ tự</th>";
+        sout += "<th>Tên sản phẩm</th>";
+        sout += "<th>Sửa</th>";
+        sout += "<th>Xóa</th>";
+        sout += "<tr>";
+        for (let i = 0; i < arrayProduct.length; i++) {
+            sout += "<tr>";
+            sout += "<td>" + (i + 1) + "</td>";
+            sout += "<td>" + arrayProduct[i] + "</td>";
+            sout += "<td><button onclick='editProduct(" + i + ")'>Edit</button>";
+            sout += "<td><button onclick='deleteProduct(" + i + ")'>Delete</button>";
+            sout += "<tr>";
+        }
+        sout += "<table>";
+        document.write(sout);
+    }
+
+    function getProduct() {
+        let product = document.getElementById("product").value;
+        addProduct(product);
+    }
+
+    function addProduct(product) {
+        arrayProduct.push(product);
+        displayProduct();
+    }
+
+    function editProduct(index) {
+        let product1 = prompt("Nhập tên sản phẩm để sửa: ");
+        arrayProduct[index] = product1;
+        displayProduct();
+    }
+    function deleteProduct(index) {
+        if (confirm("Bạn có thật sự muốn xóa " + arrayProduct[index] + " hay không?")) {
+            arrayProduct.splice(index,1);
+        }
+        displayProduct();
+    }
+
+    displayProduct();
 </script>
 </body>
 </html>

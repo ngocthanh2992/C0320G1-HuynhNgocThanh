@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let day = prompt("Nhập ngày tháng năm: ");
+    let regExp;
+    regExp = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
+    function checkStr(str) {
+        if (regExp.test(str)){
+            alert("Đã đúng định dạng");
+        }else {
+            alert("Không đúng định dạng");
+        }
+    }
+    checkStr(day);
+    let day1 = day.substring(0,2);
+    day1 = Number.parseInt(day1);
+    let day2;
+    let month1 = day.substring(3,5);
+    month1 = Number.parseInt(month1);
+    let year1 = day.substring(6,10);
+    year1 = Number.parseInt(year1);
+    if (month1 === 2){
+       day2= day1 + 31;
+    }else if (month1 === 3){
+        day2 = day1 + 59;
+    }else if (month1 === 4){
+        day2 = day1 + 90;
+    }else if (month1 === 5){
+        day2 = day1 + 120;
+    }else if (month1 === 6){
+        day2 = day1 + 151;
+    } else if (month1 === 7){
+        day2 = day1 + 181;
+    }else if (month1 === 8){
+        day2 = day1 + 212;
+    }else if (month1 === 9){
+        day2 = day1 + 243;
+    } else if (month1 === 10){
+        day2 = day1 + 273;
+    }else if (month1 === 11){
+        day2 = day1 + 304
+    }else if (month1 === 12){
+        day2 = day1 + 334;
+    }else {
+        day2 = day1;
+    }
+    alert("Số ngày là: " + day2);
+</script>
+</body>
+</html>

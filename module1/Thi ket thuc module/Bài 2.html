@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm nhập vào 1 số nguyên dương, kiểm tra xem có phải số hoàn hảo hay không</title>
+</head>
+<body>
+<script>
+    function checkSoHoanhao(num) {
+        let sum = 0;
+        for (let i =0; i <=num/2;i++){
+            if (num % i === 0){
+                sum += i;
+            }
+        }
+        if (sum === num ){
+            return true;
+        }else {
+            return false;
+        }
+    }
+    let num = parseInt(prompt("Nhập vào 1 số nguyên dương: "));
+    alert(checkSoHoanhao(num));
+</script>
+</body>
+</html>

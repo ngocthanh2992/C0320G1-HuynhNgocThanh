@@ -96,7 +96,7 @@
 
     let tempAddress ="";
     address = prompt("Input address: ");
-    address = address.trim().toUpperCase();
+    address = address.trim().toLowerCase();
     for (let i =0; i < address.length; i++){
         if (address.charAt(i) === "" && address.charAt(i+1)===""){
             continue;

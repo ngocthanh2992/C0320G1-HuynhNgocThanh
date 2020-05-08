@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Congnhan{
+        constructor(stt,hovaten,ngaythangnamsinh,diachi,luong,chucvu) {
+            this.stt = stt;
+            this.hovaten = hovaten;
+            this.ngaythangnamsinh = ngaythangnamsinh;
+            this.diachi = diachi;
+            this.luong = luong;
+            this.chucvu = chucvu;
+        }
+        getSTT(){
+            return this.stt;
+        }
+        getHovaten(){
+            return this.hovaten;
+        }
+        getNgaythangnamsinh(){
+            return this.ngaythangnamsinh;
+        }
+        getDiachi(){
+            return this.diachi;
+        }
+        getLuong(){
+            return this.luong;
+        }
+        getChucvu(){
+            return this.chucvu;
+        }
+        setSTT(stt){
+            this.stt = stt;
+        }
+        setHovaten(hovaten){
+             this.hovaten = hovaten;
+        }
+        setNgaythangnamsinh(ngaythangnam){
+            this.ngaythangnamsinh = ngaythangnam;
+        }
+        setDiachi(diachi){
+            this.diachi = diachi;
+        }
+        setLuong(luong){
+            this.luong = luong;
+        }
+        setChucvu(chucvu){
+            this.chucvu = chucvu;
+        }
+    }
+    let arr = [];
+    function displayMainMenu() {
+        let choose = parseInt(prompt("1. Hiển thị danh sách công nhân." + "\n2. Thêm mới." +
+            "\n3. Chỉnh sửa." + "\n4. Xóa"));
+        switch (choose) {
+            case 1: {
+                displayInformation();
+                break;
+            }
+            case 2: {
+                addEmployee();
+                break;
+            }
+            case 3: {
+                editEmployee();
+                break;
+            }
+            case 4: {
+                deleteEmployee();
+                break;
+            }
+            default: {
+                alert("Failed");
+            }
+        }
+    }
+    function displayInformation() {
+        let sout;
+        sout += "<table>";
+        sout += "<tr>";
+        sout += "<th>Số thứ tự</th>";
+        sout += "<th>Họ và tên</th>";
+        sout += "<th>Ngày sinh</th>";
+        sout += "<th>Địa chỉ</th>";
+        sout += "<th>Lương</th>";
+        sout += "<th>Chức vụ</th>";
+        sout += "<tr>";
+        for (let i = 0; i < arr.length; i++) {
+            sout += "<tr>";
+            sout += "<td>" + arr[i].getSTT() + "</td>";
+            sout += "<td>" + arr[i].getHovaten() + "</td>";
+            sout += "<td>" + arr[i].getNgaythangnamsinh() + "</td>";
+            sout += "<td>" + arr[i].getDiachi() + "</td>";
+            sout += "<td>" + arr[i].getLuong() + "</td>";
+            sout += "<td>" + arr[i].getChucvu() + "</td>";
+            sout += "<tr>";
+        }
+        sout += "<table>";
+        document.write(sout);
+    }
+    function addEmployee() {
+        let employee = new Congnhan();
+        employee.setSTT(prompt("Enter STT: "));
+        employee.setHovaten(prompt("Enter Họ và Tên:"));
+        employee.setNgaythangnamsinh(prompt("Enter Ngày tháng năm sinh: "));
+        employee.setDiachi(prompt("Enter địa chỉ: "));
+        employee.setLuong(prompt("Enter lương: "));
+        employee.setChucvu(prompt("Enter chức vụ: "));
+        arr.push(employee);
+        alert("Bạn đã thêm thành công");
+        displayMainMenu();
+    }
+    function editEmployee() {
+
+    }
+    function deleteEmployee() {
+
+    }
+    displayMainMenu();
+</script>
+</body>
+</html>
