@@ -2,7 +2,7 @@ package mang_va_phuong_thuc_trong_java.thuc_hanh;
 
 import java.util.Scanner;
 
-public class ChuongTrinhChuyenDoiNhietDo {
+public class TemperatureConversionProgram {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         double fahrenheit;
