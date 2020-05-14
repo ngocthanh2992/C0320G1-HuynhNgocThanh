@@ -43,13 +43,13 @@ class QuadraticEquation {
         return (-b+Math.sqrt(this.getDiscriminant()))/(2*a);
     }
     public double getRoot2(){
-        return (-b-Math.pow(getDiscriminant(),0.5))/(2*a);
+        return (-b-Math.pow(this.getDiscriminant(),0.5))/(2*a);
         }
     public void display(){
         System.out.println( "a "+ this.getA() + " b "+ this.getB()+ " c "+ this.getC());
     }
 }
-public class Account{
+public class PhuongTrinhBacHai{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a: ");
