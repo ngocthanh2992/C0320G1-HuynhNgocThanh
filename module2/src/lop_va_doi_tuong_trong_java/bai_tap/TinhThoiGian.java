@@ -10,13 +10,14 @@ public class TinhThoiGian {
             sum +=i;
         }
         System.out.println(sum);
-        double end = stopWatch.startTime();
+        double end = stopWatch.endTime();
         System.out.println("End " + end);
         System.out.println(end - start);
     }
 }
 class StopWatch{
     private double startTime;
+    private double  endTime;
 
     public double getStartTime() {
         return startTime;
@@ -24,5 +25,8 @@ class StopWatch{
 
     public double startTime() {
          return this.startTime = System.currentTimeMillis();
+    }
+    public double endTime(){
+        return this.endTime = System.currentTimeMillis();
     }
 }
