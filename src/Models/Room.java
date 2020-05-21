@@ -11,11 +11,11 @@ public class Room extends Services {
         this.freeServce = freeServce;
     }
 
-    public String getFreeServce() {
+    public String getFreeService() {
         return freeServce;
     }
 
-    public void setFreeServce(String freeServce) {
+    public void setFreeSerivce(String freeServce) {
         this.freeServce = freeServce;
     }
 
