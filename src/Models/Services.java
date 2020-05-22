@@ -1,6 +1,7 @@
 package Models;
 
 public abstract class Services {
+    private String serviceCode;
     private String id;
     private String nameService;
     private int areaOfUse;
@@ -11,7 +12,16 @@ public abstract class Services {
     public Services() {
     }
 
-    public Services(String id, String nameService, int areaOfUse, int rentalCost, int maximumPeople, String typeOfRent) {
+    public String getServiceCode() {
+        return serviceCode;
+    }
+
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+    }
+
+    public Services(String serviceCode, String id, String nameService, int areaOfUse, int rentalCost, int maximumPeople, String typeOfRent) {
+        this.serviceCode = serviceCode;
         this.id = id;
         this.nameService = nameService;
         this.areaOfUse = areaOfUse;

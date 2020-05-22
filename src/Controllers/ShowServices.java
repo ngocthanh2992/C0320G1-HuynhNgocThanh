@@ -8,7 +8,9 @@ import Models.Room;
 import Models.Villa;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.TreeSet;
 
 import static Controllers.MainController.displayMainMenu;
 
@@ -33,6 +35,7 @@ public class ShowServices {
                 listVilla = FuncFileCSVVilla.getFileCsvToListVilla();
                 for (Villa villa: listVilla){
                     System.out.println("............................");
+                    System.out.println("Service code: "+ villa.getServiceCode());
                     System.out.println("ID: "+ villa.getId());
                     System.out.println("Name Service: "+ villa.getNameService());
                     System.out.println("Area of use: "+ villa.getAreaOfUse());
@@ -44,15 +47,16 @@ public class ShowServices {
                     System.out.println("Pool area: "+ villa.getPoolArea());
                     System.out.println("Number of floor: "+ villa.getNumberOfFloor());
                     System.out.println("............................");
-                    System.out.println("Enter to continue");
-                    scanner.nextLine();
-                    showServices();
                 }
+                System.out.println("Enter to continue");
+                scanner.nextLine();
+                showServices();
                 break;
             case 2:
                 listHouse = FuncFileCSVHouse.getFileCsvToListHouse();
                 for (House house: listHouse){
                     System.out.println("............................");
+                    System.out.println("Service code: "+ house.getServiceCode());
                     System.out.println("ID: "+ house.getId());
                     System.out.println("Name Service: "+ house.getNameService());
                     System.out.println("Area of use: "+ house.getAreaOfUse());
@@ -64,15 +68,16 @@ public class ShowServices {
                     System.out.println("Pool area: "+ house.getPoolArea());
                     System.out.println("Number of floor: "+ house.getNumberOfFloor());
                     System.out.println("............................");
-                    System.out.println("Enter to continue");
-                    scanner.nextLine();
-                    showServices();
                 }
+                System.out.println("Enter to continue");
+                scanner.nextLine();
+                showServices();
                 break;
             case 3:
                 listRoom = FuncFileCSVRoom.getFileCsvToListRoom();
                 for (Room room: listRoom){
                     System.out.println("............................");
+                    System.out.println("Service code: "+ room.getServiceCode());
                     System.out.println("ID: "+ room.getId());
                     System.out.println("Name Service: "+ room.getNameService());
                     System.out.println("Area of use: "+ room.getAreaOfUse());
@@ -81,10 +86,10 @@ public class ShowServices {
                     System.out.println("Type of rent: "+ room.getTypeOfRent());
                     System.out.println("Room Free Service: "+ room.getFreeService());
                     System.out.println("............................");
-                    System.out.println("Enter to continue");
-                    scanner.nextLine();
-                    showServices();
                 }
+                System.out.println("Enter to continue");
+                scanner.nextLine();
+                showServices();
                 break;
             case 4:
                 break;

@@ -13,7 +13,7 @@ public class FuncFileCSVRoom {
     private static final String NEW_LINE_SEPARATOR = "\n";
     private static final String fileNameRoom = "src/Data/Room.csv";
 
-    private static final String FILE_HEADER_HOUSE = "id,nameService,areaOfUse,rentalCost,maximumPeople,typeOfRent,freeService";
+    private static final String FILE_HEADER_HOUSE = "serviceCode,id,nameService,areaOfUse,rentalCost,maximumPeople,typeOfRent,freeService";
 
     public static void writeRoomToFileCSV(ArrayList<Room> listRoom) {
         FileWriter fileWriter = null;
@@ -22,6 +22,8 @@ public class FuncFileCSVRoom {
             fileWriter.append(FILE_HEADER_HOUSE);
             fileWriter.append(NEW_LINE_SEPARATOR);
             for (Room room: listRoom){
+                fileWriter.append(room.getServiceCode());
+                fileWriter.append(COMMA_DELIMITER);
                 fileWriter.append(room.getId());
                 fileWriter.append(COMMA_DELIMITER);
                 fileWriter.append(room.getNameService());
@@ -59,17 +61,18 @@ public class FuncFileCSVRoom {
 
             while ((line = br.readLine()) != null) {
                 String[] splitData = line.split(",");
-                if (splitData[0].equals("id")) {
+                if (splitData[0].equals("serviceCode")) {
                     continue;
                 }
                 Room room = new Room();
-                room.setId(splitData[0]);
-                room.setNameService(splitData[1]);
-                room.setAreaOfUse(Integer.parseInt(splitData[2]));
-                room.setRentalCost(Integer.parseInt(splitData[3]));
-                room.setMaximumPeople(Integer.parseInt(splitData[4]));
-                room.setTypeOfRent(splitData[5]);
-                room.setFreeSerivce(splitData[6]);
+                room.setServiceCode(splitData[0]);
+                room.setId(splitData[1]);
+                room.setNameService(splitData[2]);
+                room.setAreaOfUse(Integer.parseInt(splitData[3]));
+                room.setRentalCost(Integer.parseInt(splitData[4]));
+                room.setMaximumPeople(Integer.parseInt(splitData[5]));
+                room.setTypeOfRent(splitData[6]);
+                room.setFreeSerivce(splitData[7]);
                 listRoom.add(room);
             }
         }catch (Exception e){

@@ -14,7 +14,7 @@ public class FuncFileCSVHouse {
     private static final String NEW_LINE_SEPARATOR = "\n";
     private static final String fileNameHouse = "src/Data/House.csv";
 
-    private static final String FILE_HEADER_HOUSE = "id,nameService,areaOfUse,rentalCost,maximumPeople,typeOfRent,roomStandard,otherFacilities,poolArea,numberOfFloor";
+    private static final String FILE_HEADER_HOUSE = "serviceCode,id,nameService,areaOfUse,rentalCost,maximumPeople,typeOfRent,roomStandard,otherFacilities,poolArea,numberOfFloor";
 
     public static void writeHouseToFileCSV(ArrayList<House> listHouse) {
         FileWriter fileWriter = null;
@@ -23,6 +23,8 @@ public class FuncFileCSVHouse {
             fileWriter.append(FILE_HEADER_HOUSE);
             fileWriter.append(NEW_LINE_SEPARATOR);
             for (House house: listHouse){
+                fileWriter.append(house.getServiceCode());
+                fileWriter.append(COMMA_DELIMITER);
                 fileWriter.append(house.getId());
                 fileWriter.append(COMMA_DELIMITER);
                 fileWriter.append(house.getNameService());
@@ -66,20 +68,21 @@ public class FuncFileCSVHouse {
 
             while ((line = br.readLine()) != null) {
                 String[] splitData = line.split(",");
-                if (splitData[0].equals("id")) {
+                if (splitData[0].equals("serviceCode")) {
                     continue;
                 }
                 House house = new House();
-                house.setId(splitData[0]);
-                house.setNameService(splitData[1]);
-                house.setAreaOfUse(Integer.parseInt(splitData[2]));
-                house.setRentalCost(Integer.parseInt(splitData[3]));
-                house.setMaximumPeople(Integer.parseInt(splitData[4]));
-                house.setTypeOfRent(splitData[5]);
-                house.setRoomStandard(splitData[6]);
-                house.setOtherFacilities(splitData[7]);
-                house.setPoolArea(Integer.parseInt(splitData[8]));
-                house.setNumberOfFloor(Integer.parseInt(splitData[9]));
+                house.setServiceCode(splitData[0]);
+                house.setId(splitData[1]);
+                house.setNameService(splitData[2]);
+                house.setAreaOfUse(Integer.parseInt(splitData[3]));
+                house.setRentalCost(Integer.parseInt(splitData[4]));
+                house.setMaximumPeople(Integer.parseInt(splitData[5]));
+                house.setTypeOfRent(splitData[6]);
+                house.setRoomStandard(splitData[7]);
+                house.setOtherFacilities(splitData[8]);
+                house.setPoolArea(Integer.parseInt(splitData[9]));
+                house.setNumberOfFloor(Integer.parseInt(splitData[10]));
                 listHouse.add(house);
             }
         }catch (Exception e){
