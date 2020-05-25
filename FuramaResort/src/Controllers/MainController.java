@@ -9,6 +9,7 @@ import java.util.Scanner;
 import static Controllers.AddNewBooking.addNewBooking;
 import static Controllers.AddNewCustomer.addNewCustomer;
 import static Controllers.AddNewServices.addNewServices;
+import static Controllers.FindInformationOfEmployee.findInformationOfEmployee;
 import static Controllers.ShowInformationCustomer.showInformationOfCustomer;
 import static Controllers.ShowInformationEmployee.showInformationOfEmployee;
 import static Controllers.ShowInformationOf4D.showInformationOf4D;
@@ -62,9 +63,6 @@ public class MainController {
                     displayMainMenu();
             }
         }
-
-    private static void findInformationOfEmployee() {
-    }
 
     public static void main(String[] args) {
             displayMainMenu();
