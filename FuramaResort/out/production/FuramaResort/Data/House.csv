@@ -1,1 +1,2 @@
-
+serviceCode,id,nameService,areaOfUse,rentalCost,maximumPeople,typeOfRent,roomStandard,otherFacilities,poolArea,numberOfFloor
+SVHO-0000,3456,Housev,35,30,12,Vip,Vvip,no,50,2

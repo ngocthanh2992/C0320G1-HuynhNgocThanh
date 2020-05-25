@@ -1,6 +1,8 @@
 package Models;
 
-public class House extends Services {
+import java.util.Objects;
+
+public class House extends Services implements Comparable<House>{
     private String roomStandard;
     private String otherFacilities;
     private int poolArea;
@@ -57,5 +59,27 @@ public class House extends Services {
                 ", poolArea='" + poolArea + '\'' +
                 ", numberOfFloor=" + numberOfFloor +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        House house = (House) o;
+        return poolArea == house.poolArea &&
+                numberOfFloor == house.numberOfFloor &&
+                roomStandard.equals(house.roomStandard) &&
+                otherFacilities.equals(house.otherFacilities);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), roomStandard, otherFacilities, poolArea, numberOfFloor);
+    }
+
+    @Override
+    public int compareTo(House o) {
+        return this.getNameService().compareTo(o.getNameService());
     }
 }

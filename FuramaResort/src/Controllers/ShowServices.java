@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.TreeSet;
-import Exception.NameException;
 
 import static Controllers.MainController.displayMainMenu;
 
@@ -93,10 +92,25 @@ public class ShowServices {
                 showServices();
                 break;
             case 4:
+                ArrayList<Villa> listVilla1 = FuncFileCSVVilla.getFileCsvToListVilla();
+                TreeSet<Villa> treeSet = new TreeSet<>();
+                treeSet.addAll(listVilla1);
+                System.out.println(treeSet);
+                showServices();
                 break;
             case 5:
+                ArrayList<House> listHouse1 = FuncFileCSVHouse.getFileCsvToListHouse();
+                TreeSet<House> treeSet1 = new TreeSet<>();
+                treeSet1.addAll(listHouse1);
+                System.out.println(treeSet1);
+                showServices();
                 break;
             case 6:
+                ArrayList<Room> listRoom1 = FuncFileCSVRoom.getFileCsvToListRoom();
+                TreeSet<Room> treeSet2 = new TreeSet<>();
+                treeSet2.addAll(listRoom1);
+                System.out.println(treeSet2);
+                showServices();
                 break;
             case 7:
                 displayMainMenu();

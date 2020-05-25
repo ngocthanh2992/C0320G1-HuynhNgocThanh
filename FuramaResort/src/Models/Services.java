@@ -1,5 +1,7 @@
 package Models;
 
+import java.util.Objects;
+
 public abstract class Services {
     private String serviceCode;
     private String id;
@@ -90,5 +92,24 @@ public abstract class Services {
                 ", maximumPeople=" + maximumPeople +
                 ", typeOfRent='" + typeOfRent + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Services services = (Services) o;
+        return areaOfUse == services.areaOfUse &&
+                rentalCost == services.rentalCost &&
+                maximumPeople == services.maximumPeople &&
+                serviceCode.equals(services.serviceCode) &&
+                id.equals(services.id) &&
+                nameService.equals(services.nameService) &&
+                typeOfRent.equals(services.typeOfRent);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(serviceCode, id, nameService, areaOfUse, rentalCost, maximumPeople, typeOfRent);
     }
 }

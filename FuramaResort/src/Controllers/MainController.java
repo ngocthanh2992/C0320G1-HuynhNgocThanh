@@ -6,9 +6,12 @@ import Models.Villa;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static Controllers.AddNewBooking.addNewBooking;
 import static Controllers.AddNewCustomer.addNewCustomer;
 import static Controllers.AddNewServices.addNewServices;
 import static Controllers.ShowInformationCustomer.showInformationOfCustomer;
+import static Controllers.ShowInformationEmployee.showInformationOfEmployee;
+import static Controllers.ShowInformationOf4D.showInformationOf4D;
 import static Controllers.ShowServices.showServices;
 
 public class MainController {
@@ -21,10 +24,11 @@ public class MainController {
         System.out.println("4.\tShow Information of Customer");
         System.out.println("5.\tAdd New Booking");
         System.out.println("6.\tShow Information of Employee");
-        System.out.println("7.\tExit");
+        System.out.println("7.\tShow Information of 4D");
+        System.out.println("8.\tFind Information of Employee");
+        System.out.println("9.\tExit");
         System.out.println("Enter a number: ");
         int choice = Integer.parseInt(scanner.nextLine());
-        while (true) {
             switch (choice) {
                 case 1:
                     addNewServices();
@@ -45,6 +49,12 @@ public class MainController {
                     showInformationOfEmployee();
                     break;
                 case 7:
+                    showInformationOf4D();
+                    break;
+                case 8:
+                    findInformationOfEmployee();
+                    break;
+                case 9:
                     System.exit(0);
                 default:
                     System.out.println("No choice! Enter to continue");
@@ -52,16 +62,11 @@ public class MainController {
                     displayMainMenu();
             }
         }
-    }
 
-    private static void showInformationOfEmployee() {
+    private static void findInformationOfEmployee() {
     }
-
-    private static void addNewBooking() {
-    }
-
 
     public static void main(String[] args) {
-        displayMainMenu();
+            displayMainMenu();
     }
 }

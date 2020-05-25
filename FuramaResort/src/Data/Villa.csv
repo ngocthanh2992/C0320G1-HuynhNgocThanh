@@ -2,3 +2,6 @@ serviceCode,id,nameService,areaOfUse,rentalCost,maximumPeople,typeOfRent,roomSta
 SVVL-1234,12,Accv,35,20,15,Addf,Acc,goi om,36,2
 serviceCode,id,nameService,areaOfUse,rentalCost,maximumPeople,typeOfRent,roomStandard,otherFacilities,poolArea,numberOfFloor
 SVVL-5678,12,Bcv,36,15,10,Thanh,Bnn,Ko co,60,3
+serviceCode,id,nameService,areaOfUse,rentalCost,maximumPeople,typeOfRent,roomStandard,otherFacilities,poolArea,numberOfFloor
+SVVL-5678,12,Bcv,36,15,10,Thanh,Bnn,Ko co,60,3
+
