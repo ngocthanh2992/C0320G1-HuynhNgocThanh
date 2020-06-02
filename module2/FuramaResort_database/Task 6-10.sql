@@ -20,7 +20,7 @@
  /*Task9. Thực hiện thống kê doanh thu theo tháng, nghĩa là tương ứng với mỗi tháng trong năm 2019
  thì sẽ có bao nhiêu khách hàng thực hiện đặt phòng.*/
  select month(hopdong.NgayLamHopDong) as Tháng, count(*) as 'Tổng khách hàng đặt phòng', sum(hopdong.TongTien) as "Doanh Thu" from khachhang
- join hopdong on khachhang.IDKhachHang = hopdong.IDKhachHang
+join hopdong on khachhang.IDKhachHang = hopdong.IDKhachHang
 where year(hopdong.NgayLamHopDong)=2019
 group by month(hopdong.NgayLamHopDong)
 order by month(hopdong.NgayLamHopDong);
