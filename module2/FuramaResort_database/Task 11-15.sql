@@ -19,7 +19,7 @@ where exists(select hopdong.IDHopDong from hopdong where ( (hopdong.NgayLamHopDo
 and not exists (select hopdong.IDHopDong from hopdong where ( (hopdong.NgayLamHopDong between '2019-01-01' and '2019-06-30') and (hopdong.IDDichVu = dichvu.IDDichVu)));
 /*Task13. Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng
  đã đặt phòng. (Lưu ý là có thể có nhiều dịch vụ có số lần sử dụng nhiều như nhau).*/
- select dichvudikem.IDDichVuDiKem, dichvudikem.TenDichVuDiKem, sum(hopdongchitiet.SoLuong) as 'Tổng số lần sử dụng', count(hopdongchitiet.IDDichvudikem) as 'Số lần đặt' from dichvudikem
+ select dichvudikem.IDDichVuDiKem, dichvudikem.TenDichVuDiKem, sum(hopdongchitiet.SoLuong) as 'Tổng số lượng sử dụng', count(hopdongchitiet.IDDichvudikem) as 'Số lần đặt' from dichvudikem
  join hopdongchitiet on dichvudikem.IDDichVuDiKem = hopdongchitiet.IDDichVuDiKem
  group by dichvudikem.IDDichVuDiKem
  having sum(hopdongchitiet.SoLuong) > 6
