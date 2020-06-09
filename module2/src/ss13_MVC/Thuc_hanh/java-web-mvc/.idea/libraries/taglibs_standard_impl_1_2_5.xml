@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="taglibs-standard-impl-1.2.5">
+    <CLASSES>
+      <root url="jar://D:/apache-tomcat-9.0.35/webapps/examples/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar!/" />
+      <root url="jar://D:/apache-tomcat-9.0.35/webapps/examples/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar!/" />
+      <root url="file://D:/apache-tomcat-9.0.35/webapps/examples/WEB-INF" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://D:/apache-tomcat-9.0.35/webapps/examples/WEB-INF/classes" />
+      <root url="file://D:/apache-tomcat-9.0.35/webapps/examples/WEB-INF/jsp/applet" />
+    </SOURCES>
+  </library>
+</component>
