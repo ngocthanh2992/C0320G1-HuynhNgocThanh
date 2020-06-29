@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        header {
+            width: 100%;
+            height: 100vh;
+            background: url(https://www.danang.intercontinental.com/uploads/1366x780/room_categories/Sun_Peninsula_Residence_Villa_-_Hibiscus,_Frangipani_&_Ixora.jpg) no-repeat 50% 50%;
+            background-size: cover;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            clear: both;
+            text-align: center;
+            padding: 5px;
+        }
+    </style>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script type="text/javascript" th:src="@{/js/test.js}"></script>
+    <style type="text/css">
+        .example {
+            margin: 20px;
+        }
+    </style>
+    <link th:href="@{/css/test.css}" rel="stylesheet"/>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <nav>
+            <div class="menu-icon">
+                <i class="fa fa-bars fa-2x"></i>
+            </div>
+            <div class="logo">
+                <img src="https://furamavietnam.com/wp-content/uploads/2018/08/logo.png" height="80" width="95">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a th:href="@{/}">Home</a></li>
+                    <li><a th:href="@{/service/add}">Thêm Mới Dịch Vụ</a></li>
+                    <li><a href="/service/service">Danh Sách Dịch Vụ</a></li>
+                    <li><a href="/service/service">Đăng Ký Dịch Vụ</a></li>
+                    <li>
+                        Tìm Kiếm:
+                    </li>
+                    <li>
+                        <div class="mb-5 px-4">
+                            <form action="#" class="subscribe-form">
+                                <div class="form-group d-flex">
+                                    <div class="icon"><span class="icon-paper-plane"></span></div>
+                                    <input type="text" class="form-control" placeholder="Search" width="20">
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="content">
+        <p>
+            Chúng ta đã nghe nói nhiều về các resort ở Đà Nẵng. Vậy, bạn có biết resort <strong>FURAMA</strong>
+            không?
+            KHU NGHỈ DƯỠNG ĐẲNG CẤP THẾ GIỚI, FURAMA ĐÀ NẴNG, NỔI TIẾNG LÀ KHU NGHỈ DƯỠNG ẨM THỰC TẠI VIỆT NAM.
+        </p>
+        <p>
+        <li>Hướng ra bãi biển Đà Nẵng trải dài cát trắng, Furama Resort Đà Nẵng là cửa ngõ đến với 3 di sản văn hoá thế
+            giới:
+            Hội An (20 phút), Mỹ Sơn (90 phút) và Huế (2 tiếng. 196 phòng hạng sang cùng với 70 căn biệt thự từ hai đến
+            bốn phòng ngủ
+            có hồ bơi riêng đều được trang trí trang nhã, theo phong cách thiết kế truyền thống của Việt Nam và kiến
+            trúc thuộc địa của Pháp,
+            biến Furama thành khu nghỉ dưỡng danh giá nhất tại Việt Nam – vinh dự được đón tiếp nhiều người nổi tiếng,
+            giới hoàng gia,
+            chính khách, ngôi sao điện ảnh và các nhà lãnh đạo kinh doanh quốc tế.
+        </li>
+        <li>Khu nghỉ dưỡng có 196 phòng được thiết kế theo phong cách truyền thống Việt Nam kết hợp với phong cách Pháp,
+            2 tòa nhà 4 tầng có hướng nhìn ra biển, nhìn ra hồ bơi trong xanh và những khu vườn nhiệt đới xanh tươi mát.
+            Ngoài ra, khu nghỉ dưỡng Furama còn cung cấp các liệu pháp spa, phòng xông hơi ướt, phòng xông hơi khô,
+            dịch vụ mát-xa cạnh hồ bơi,
+            các dịch vụ thể thao dưới nước và các lớp tập yoga và Thái Cực Quyền trên bãi biển.
+        </li>
+        </p>
+    </div>
+</div>
+<footer>
+    Copyright &copy;
+    <script>document.write(new Date().getFullYear());</script>
+    All rights reserved by © ThanhHN
+</footer>
+</html>

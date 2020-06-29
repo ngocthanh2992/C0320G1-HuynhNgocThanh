@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Service</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .example {
+            margin: 20px;
+        }
+        p{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="example">
+    <div class="container">
+        <div class="row">
+            <h2>Create New Service</h2>
+            <a th:href="@{/service}" class="btn btn-primary">Back to Service</a>
+            <th:block th:if="${message}">
+                <p th:text="${message}"></p>
+            </th:block>
+            <form th:action="@{/service/add}" th:object="${service}" method="POST">
+                <div class="form-group">
+                    <label>Name Service</label>
+                    <input type="text" class="form-control" placeholder="Name Service" th:field="*{nameService}" >
+                </div>
+                <div class="form-group">
+                    <label>Number of floor</label>
+                    <input type="number" class="form-control" placeholder="Number" th:field="*{numberOfFloor}" >
+                </div>
+                <div class="form-group">
+                    <label>Maximum Customer</label>
+                    <input type="number" class="form-control" placeholder="Number" th:field="*{maximumCustomer}" >
+                </div>
+                <div class="form-group">
+                    <label>Area</label>
+                    <input type="number" class="form-control" placeholder="Number" th:field="*{area}">
+                </div>
+                <div class="form-group">
+                    <label>Rental Cost</label>
+                    <input type="text" class="form-control" placeholder="price" th:field="*{rentalCost}">
+                </div>
+               <button type="submit" class="btn btn-primary">Create</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

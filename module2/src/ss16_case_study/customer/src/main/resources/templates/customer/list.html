@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:https="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<header>
+    <div style="height: 80px;text-align: center;font-size: 40px;color: #1cff3c;font-style: italic;background-image: url(https://msmobile.com.vn/upload_images/images/hinh-nen-dep-cho-may-tinh-win-10-5.jpg)" )>CUSTOMER LIST</div>
+</header></br>
+<a href="/home/login" class="btn btn-primary">Back to Home</a></br>
+<body>
+<form style="position: absolute;left: 200px;top: 120px">
+    Search by name:
+    <input name="s" type="text">
+    Search by type customer:
+    <input name="type" type="text">
+    <input type="submit" value="search">
+</form> </br>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<table border="1" class="table">
+    <thead class="thead-light">
+    <tr>
+        <th>No</th>
+        <th>CustomerID</th>
+        <th>Name</th>
+        <th>Birthday</th>
+        <th>Gender</th>
+        <th>Phone_number</th>
+        <th>Cmnd</th>
+        <th>Email</th>
+        <th>Type_customer</th>
+        <th>address</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <th:block th:each="customer,num : ${customers}">
+        <tr>
+            <td th:text="${num.count}"></td>
+            <td th:text="${customer.id}"></td>
+            <td th:text="${customer.name}"></td>
+            <td th:text="${customer.birthday}"></td>
+            <td th:text="${customer.gender}"></td>
+            <td th:text="${customer.phone_number}"></td>
+            <td th:text="${customer.cmnd}"></td>
+            <td th:text="${customer.email}"></td>
+            <td th:text="${customer.typeCustomer}"></td>
+            <td th:text="${customer.address}"></td>
+            <td><a th:href="@{/customer/editCustomer/__${customer.id}__}">Edit</a></td>
+            <td><a th:href="@{/customer/deleteCustomer/__${customer.id}__ }">Delete</a></td>
+        </tr>
+    </th:block>
+</table>
+<div>
+    <a th:href="@{'/customer/customerList'(page=1,s=${s},type=${type})}">First</a>
+    <a th:href="@{'/customer/customerList'(page=${customers.number},s=${s},type=${type})}" th:if="${customers.hasPrevious()}">Previous</a>
+    <span th:text="${customers.number + 1}"></span>/<span th:text="${customers.totalPages}"></span>
+    <a th:href="@{'/customer/customerList'(page=${customers.number + 2},s=${s},type=${type})}" th:if="${customers.hasNext()}">Next</a>
+    <a th:href="@{'/customer/customerList'(page=${customers.totalPages},s=${s},type=${type})}">The End</a>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</html>
