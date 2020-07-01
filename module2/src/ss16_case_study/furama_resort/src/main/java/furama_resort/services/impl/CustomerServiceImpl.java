@@ -32,4 +32,15 @@ public class CustomerServiceImpl implements CustomerService {
     public Page<Customer> findAllByNameAndTypeCustomerAndBirthday(String name, String type, Date start, Date end, Pageable pageable) {
         return customerRepository.findAllByIsDeleteIsFalseAndNameContainingAndTypeCustomerContainingAndAndBirthdayBetween(name, type, start, end, pageable);
     }
+
+    @Override
+    public Customer getCustomerById(Long id) {
+        return customerRepository.findAllByIsDeleteIsFalseAndIdIs(id);
+    }
+
+    @Override
+    public void deleteCustomer(Customer customer) {
+        customer.setDelete(true);
+        customerRepository.save(customer);
+    }
 }

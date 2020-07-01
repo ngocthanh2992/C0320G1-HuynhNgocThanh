@@ -15,4 +15,8 @@ public interface CustomerService  {
     List<Customer> getAllCustomer();
 
     Page<Customer> findAllByNameAndTypeCustomerAndBirthday(String name, String type, Date start, Date end, Pageable pageable);
+
+    Customer getCustomerById(Long id);
+
+    void deleteCustomer(Customer customer);
 }

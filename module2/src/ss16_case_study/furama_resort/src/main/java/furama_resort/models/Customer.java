@@ -1,8 +1,11 @@
 package furama_resort.models;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 
 import javax.persistence.*;
+import javax.validation.constraints.Pattern;
+
 import java.sql.Date;
 import java.util.Set;
 
@@ -22,18 +25,22 @@ public class Customer {
     private String name;
 
     @Column(name = "birthday")
+    @DateTimeFormat(pattern = "dd/mm/yyyy")
     private Date birthday;
 
     @Column(name = "gender")
     private String gender;
 
     @Column(name = "id_card")
+    @Pattern(regexp = "^([\\d]{9}|[\\d]{12})$",message = "Id Card is not valid")
     private String idCard;
 
     @Column(name = "phone_number")
+    @Pattern(regexp = "^(090|091|\\+8491|\\+8490)([0-9]{7})\\b$",message = "Phone is not valid")
     private String phoneNumber;
 
     @Column(name = "email")
+    @Pattern(regexp = "^([a-zA-Z0-9]+\\@[a-zA-Z0-9]+(\\.[a-zA-Z0-9]+)+)$", message = "Email is not valid")
     private String email;
 
     @Column(name = "address")

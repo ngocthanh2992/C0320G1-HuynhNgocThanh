@@ -1,8 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:https="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>List Customer</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        table.table td a.edit {
+            color: #FFC107;
+        }
+        table.table td a.delete {
+            color: #E34724;
+        }
+    </style>
 </head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <header>
@@ -21,7 +33,7 @@
     <input type="submit" value="Search">
 </form> </br></br>
 <th:block th:if="${message}">
-    <p th:text="${message}"></p>
+    <p th:text="${message}" style="color: red"></p>
 </th:block>
 <table border="1" class="table">
     <thead class="thead-light">
@@ -35,9 +47,9 @@
         <th>ID Card</th>
         <th>Email</th>
         <th>Type_customer</th>
-        <th>address</th>
-        <th>Edit</th>
-        <th>Delete</th>
+        <th>Address</th>
+        <th></th>
+        <th></th>
     </tr>
     </thead>
     <th:block th:each="customer,num : ${customers}">
