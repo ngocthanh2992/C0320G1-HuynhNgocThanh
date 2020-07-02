@@ -1,6 +1,8 @@
 package furama_resort.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Pattern;
 import java.util.Set;
 
 @Entity
@@ -16,15 +18,19 @@ public class Service {
     private String nameService;
 
     @Column(name = "area")
+    @Min(value = 0)
     private Long area;
 
     @Column(name = "number_of_floor")
+    @Min(value = 0)
     private Long numberOfFloor;
 
     @Column(name = "maximum_customer")
+    @Min(value = 0)
     private Long maximumCustomer;
 
     @Column(name = "rental_cost")
+    @Pattern(regexp = "^[0-9]$",message = "Invalid price")
     private String rentalCost;
 
     @Column(name = "isStatus")

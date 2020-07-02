@@ -35,18 +35,22 @@
                 <div class="form-group">
                     <label>Number of floor</label>
                     <input type="number" class="form-control" placeholder="Number" th:field="*{numberOfFloor}" >
+                    <p th:if="${#fields.hasErrors('numberOfFloor')}" th:errors="*{numberOfFloor}"></p>
                 </div>
                 <div class="form-group">
                     <label>Maximum Customer</label>
                     <input type="number" class="form-control" placeholder="Number" th:field="*{maximumCustomer}" >
+                    <p th:if="${#fields.hasErrors('maximumCustomer')}" th:errors="*{maximumCustomer}"></p>
                 </div>
                 <div class="form-group">
                     <label>Area</label>
                     <input type="number" class="form-control" placeholder="Number" th:field="*{area}">
+                    <p th:if="${#fields.hasErrors('area')}" th:errors="*{area}"></p>
                 </div>
                 <div class="form-group">
                     <label>Rental Cost</label>
                     <input type="text" class="form-control" placeholder="price" th:field="*{rentalCost}">
+                    <p th:if="${#fields.hasErrors('rentalCost')}" th:errors="*{rentalCost}"></p>
                 </div>
                <button type="submit" class="btn btn-primary">Create</button>
             </form>

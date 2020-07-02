@@ -2,6 +2,9 @@ package furama_resort.models;
 
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.Errors;
+import org.springframework.validation.ValidationUtils;
+import org.springframework.validation.Validator;
 
 import javax.persistence.*;
 import javax.validation.constraints.Pattern;
@@ -10,8 +13,8 @@ import java.sql.Date;
 import java.util.Set;
 
 @Entity
-@Table(name="customers")
-public class Customer {
+@Table(name = "customers")
+public class Customer implements Validator{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,18 +28,17 @@ public class Customer {
     private String name;
 
     @Column(name = "birthday")
-    @DateTimeFormat(pattern = "dd/mm/yyyy")
     private Date birthday;
 
     @Column(name = "gender")
     private String gender;
 
     @Column(name = "id_card")
-    @Pattern(regexp = "^([\\d]{9}|[\\d]{12})$",message = "Id Card is not valid")
+    @Pattern(regexp = "^([\\d]{9}|[\\d]{12})$", message = "Id Card is not valid")
     private String idCard;
 
     @Column(name = "phone_number")
-    @Pattern(regexp = "^(090|091|\\+8491|\\+8490)([0-9]{7})\\b$",message = "Phone is not valid")
+    @Pattern(regexp = "^(090|091|\\+8491|\\+8490)([0-9]{7})\\b$", message = "Phone is not valid")
     private String phoneNumber;
 
     @Column(name = "email")
@@ -141,5 +143,19 @@ public class Customer {
 
     public void setContracts(Set<Contract> contracts) {
         this.contracts = contracts;
+    }
+
+    @Override
+    public boolean supports(Class<?> clazz) {
+        return Customer.class.isAssignableFrom(clazz);
+    }
+
+    @Override
+    public void validate(Object target, Errors errors) {
+        Customer customer = (Customer) target;
+        ValidationUtils.rejectIfEmpty(errors,"birthday","birthday.null");
+        if (customer.getBirthday() == null) {
+            errors.rejectValue("birthday", "birthday.convert");
+        }
     }
 }
