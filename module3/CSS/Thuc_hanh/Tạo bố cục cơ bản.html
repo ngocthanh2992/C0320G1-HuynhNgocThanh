@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo bố cục cơ bản</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial;
+        padding: 10px;
+        background: #e9d8f4;
+    }
+
+    .header {
+        padding: 10px;
+        text-align: center;
+        background: white;
+        color: #58257b;
+    }
+    .header h1 {
+        font-size: 40px;
+    }
+
+    .header p {
+        font-size: 20px;
+    }
+    .topnav {
+        overflow: hidden;
+        background-color: #58257b;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .topnav a:hover {
+        background-color: #db7093;
+        color: white;
+        font-weight: bold;
+    }
+    .leftcolumn {
+        float: left;
+        width: 75%;
+    }
+    .rightcolumn {
+        float: left;
+        width: 25%;
+        background-color: #e9d8f4;
+        padding-left: 20px;
+    }
+    .fakeimg {
+        background-color: #baa1cc;
+        width: 100%;
+        padding: 20px;
+    }
+    .card {
+        background-color: white;
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    @media screen and (max-width: 700px) {
+        .leftcolumn, .rightcolumn {
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 300px) {
+        .topnav a {
+            float: none;
+            width: 100%;
+        }
+    }
+
+    .footer {
+        padding: 10px;
+        text-align: center;
+        background: white;
+        margin-top: 10px;
+    }
+</style>
+<body>
+<div class="header">
+    <h1>Website</h1>
+</div>
+<div class="topnav">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+    <a href="#" style="float:right">Đăng ký</a>
+</div>
+<div class="row">
+    <div class="leftcolumn">
+        <div class="card">
+            <h2>Form - Biểu mẫu trong CSS</h2>
+            <h5>Quách Tỉnh, 14/02/2019</h5>
+            <div class="fakeimg" style="height:200px;">Ảnh</div>
+            <p>Form là một phần không thể thiếu trong bất kì loại website nào. </p>
+        </div>
+        <div class="card">
+            <h2>Attribute Selector trong CSS</h2>
+            <h5>Quách Tỉnh, 12/02/2019</h5>
+            <div class="fakeimg" style="height:200px;">Ảnh</div>
+            <p>Attribute selector là cách chọn các phần tử bạn muốn định kiểu trong
+                tài liệu HTML dựa vào thuộc tính của một hay nhiều thẻ HTML nào đó.</p>
+            <p>Attribute selector có thể chọn được các đối tượng mà không cần phải
+                khai báo thêm các Class hoặc ID vào trong thẻ HTML và vẫn có thể hướng
+                được đến các thành phần đó, giúp code gọn gàng hơn và mạch lạc hơn.</p>
+        </div>
+    </div>
+    <div class="rightcolumn">
+        <div class="card">
+            <h2>Giới thiệu</h2>
+            <div class="fakeimg" style="height:100px;">Ảnh</div>
+            <p>Quantrimang.com là mạng xã hội về khoa học công nghệ.</p>
+        </div>
+        <div class="card">
+            <h3>Nổi bật</h3>
+            <div class="fakeimg"><p>Ảnh</p></div>
+            <div class="fakeimg"><p>Ảnh</p></div>
+            <div class="fakeimg"><p>Ảnh</p></div>
+        </div>
+        <div class="card">
+            <h3>Follow Me</h3>
+            <p>Facebook</p>
+            <p>YouTube</p>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <h4>Giấy phép số 362/GP-BTTTT. Bộ TT&TT cấp ngày 30/06/2016.</h4>
+</div>
+
+</body>
+</html>
