@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .row .des {
+            padding: 5px;
+            text-align: center;
+        }
+        .row{
+            margin-right: 5px;
+            width: 24%;
+            border: 1px solid #ccc;
+            float: left;
+        }
+        .gallery img{
+            border: 1px solid #ccc;
+            width: 100%;
+            height: auto;
+        }
+        .clear{
+            clear: both;
+        }
+        @media screen and (max-width: 700px) {
+            .row{
+                width: 48%;
+                margin: 6px 3px;
+            }
+        }
+        @media screen and (max-width: 500px){
+            .row{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<h2>Responsive Image Gallery</h2>
+<h4>Resize the browser window to see the effect.</h4>
+<div class="row">
+    <div class="gallery">
+        <img src="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg" width="300" height="200">
+    </div>
+    <div class="des">
+        <p>Add a description of the image here.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="gallery">
+        <img src="https://demo.codegym.vn/web/15/gallery/img_forest.jpg" width="300" height="200">
+    </div>
+    <div class="des">
+        <p>Add a description of the image here.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="gallery">
+        <img src="https://demo.codegym.vn/web/15/gallery/img_lights.jpg" width="300" height="200">
+    </div>
+    <div class="des">
+        <p>Add a description of the image here.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="gallery">
+        <img src="https://demo.codegym.vn/web/15/gallery/img_mountains.jpg" width="300" height="200">
+    </div>
+    <div class="des">
+        <p>Add a description of the image here.</p>
+    </div>
+</div>
+<div class="clear"></div>
+<p>This example use media queries to re-arrange the images on different screen sizes:
+    for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px,
+    it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
+</body>
+</html>
