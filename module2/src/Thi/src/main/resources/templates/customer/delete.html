@@ -1,10 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Delete Customer</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .example {
+            margin: 20px;
+        }
+        p{
+            color: red;
+        }
+        h1{
+            color: red;
+        }
+    </style>
 </head>
 <body>
-$END$
+<div class="content">
+    <h1>Are you sure?</h1>
+    <form th:action="@{/delete}" th:object="${customer}" method="POST">
+        <input th:type="hidden" name="id" th:field="*{id}">
+        <input th:type="hidden" name="id" th:field="*{nameCustomer}">
+        <input th:type="hidden" name="id" th:field="*{birthday}">
+        <input th:type="hidden" name="id" th:field="*{email}">
+        <input th:type="hidden" name="id" th:field="*{address}">
+        <input th:type="hidden" name="id" th:field="*{gender}">
+        <input th:type="hidden" name="id" th:field="*{typeCustomer}">
+        <input th:type="hidden" name="id" th:field="*{customerCode}">
+        <input th:type="hidden" name="id" th:field="*{phoneNumber}">
+        <table  border="1">
+            <tr>
+                <td>Customer Code</td>
+                <td th:text="${customer.customerCode}"></td>
+            </tr>
+            <tr>
+                <td>Type Customer</td>
+                <td th:text="${customer.typeCustomer}"></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td th:text="${customer.nameCustomer}"></td>
+            </tr>
+            <tr>
+                <td>Birthday</td>
+                <td th:text="${customer.birthday}"></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td th:text="${customer.address}"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td th:text="${customer.gender}"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td th:text="${customer.email}"></td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td th:text="${customer.phoneNumber}"></td>
+            </tr>
+        </table>
+        <div>
+            <input type="submit" value="Delete Customer" class="btn btn-outline-danger" style="color: red">
+            <a th:href="@{/}" class="btn btn-outline-success">Return to Previous Page</a>
+        </div>
+    </form>
+</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </html>
