@@ -17,4 +17,3 @@ function add(a) {
 const addWith5 = add(5);
 console.log(addWith5(3));
 console.log(addWith5(15));
-//# sourceMappingURL=funtion.js.map

@@ -189,4 +189,3 @@ function getBooksAndAuthorFixed(authorId) {
     });
 }
 getBooksAndAuthorFixed('author-id-2');
-//# sourceMappingURL=Promise.js.map

@@ -31,4 +31,3 @@ x[5] = 100.25;
 // @ts-ignore
 console.log(x[5].toString());
 // OK, 'string' and 'number' both have 'toString'
-//# sourceMappingURL=array.js.map

@@ -32,4 +32,3 @@ class Rect extends Shape {
 const rect = new Rect(5, 5, 10, 20);
 console.log(rect.toString());
 console.log(rect.area());
-//# sourceMappingURL=object.js.map

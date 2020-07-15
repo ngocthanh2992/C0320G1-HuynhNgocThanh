@@ -7,7 +7,7 @@ interface IRepo {
 // @ts-ignore
 async function fetchRepo(): Promise<Array<ISingleRepo>> {
     // @ts-ignore
-    let res: Response | IRepos = await fetch('https://api.github.com/search/repositories?q=angular');
+    let res: Response | IRepos = await fetch('https://api.github.com/search/repositories?q=CGDN');
     // @ts-ignore
     res = await res.json() as IRepos;
     return res.items;
@@ -28,7 +28,7 @@ async function main() {
     // step 3: call hàm createItem sau đó truyền vào name của từng item ở mỗi vòng lặp
     // step 4: call hàm container.appendChild(item mà hàm createItem trả về)
     res.forEach((item: any) => {
-        const li = createItem(item.name);
+        const li = createItem(item.html_url);
         container.appendChild(li);
     });
 }

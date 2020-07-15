@@ -85,4 +85,3 @@ function main() {
 // function main() {}
 // tslint:enable
 main();
-//# sourceMappingURL=index.js.map
