@@ -1,0 +1,28 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Name</th>
+    <th scope="col">Email</th>
+    <th scope="col">Address</th>
+    <th scope="col">Batch</th>
+    <th scope="col">Mark</th>
+    <th scope="col">Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let student of students">
+    <th scope="row">{{student.id}}</th>
+    <td>{{student.name}}</td>
+    <td>{{student.email}}</td>
+    <td>{{student.address}}</td>
+    <td>{{student.batch}}</td>
+    <td>{{student.mark}}</td>
+    <td>
+      <button (click)="changeStudent(student)">Detail</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<h3 class="text-center">Detail Student</h3>
+<app-student-detail [studentDetail]="studentDetail" (changeMark)="getMark($event)"></app-student-detail>

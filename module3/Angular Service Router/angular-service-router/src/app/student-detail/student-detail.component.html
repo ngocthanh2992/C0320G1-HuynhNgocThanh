@@ -1,0 +1,35 @@
+<div *ngIf="studentDetail">
+  <table>
+    <tr>
+      <td><h5>Id: </h5></td>
+      <td>{{studentDetail.id}}</td>
+    </tr>
+    <tr>
+      <td><h5>Name: </h5></td>
+      <td>{{studentDetail.name}}</td>
+    </tr>
+    <tr>
+      <td><h5>Email: </h5></td>
+      <td>{{studentDetail.email}}</td>
+    </tr>
+    <tr>
+      <td><h5>Address: </h5></td>
+      <td>{{studentDetail.address}}</td>
+    </tr>
+    <tr>
+      <td><h5>Batch: </h5></td>
+      <td>{{studentDetail.batch}}</td>
+    </tr>
+    <tr>
+      <td><h5>Mark: </h5></td>
+      <td>{{studentDetail.mark}}</td>
+    </tr>
+    <tr>
+      <td><h5>Cho điểm: </h5></td>
+      <td>
+        <input type="number" max="10" min="0" (change)="setMark($event.target.value)">
+      </td>
+    </tr>
+  </table>
+</div>
+
