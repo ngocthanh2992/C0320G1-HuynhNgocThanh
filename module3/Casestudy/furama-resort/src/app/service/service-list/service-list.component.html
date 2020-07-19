@@ -1,0 +1,31 @@
+<div class="container">
+  <h1 class="title">Danh sách dịch vụ</h1>
+  <div>
+    <div>
+      <nav class="navbar navbar-light px-0">
+        <a class="btn btn-primary" [routerLink]="'/service/create'" role="button">Thêm mới dịch vụ</a>
+        <form class="form-inline" [formGroup]="searchServiceForm" (ngSubmit)="onSearch()">
+          <input class="form-control mr-sm-2 search" type="search"
+                 placeholder="Nhập mã dịch vụ hoặc tên dịch vụ"
+                 aria-label="Search" formControlName="key">
+          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Tìm kiếm</button>
+        </form>
+      </nav>
+    </div>
+  </div>
+  <table class="table">
+    <thead class="thead-light">
+    <tr>
+      <th scope="col">STT</th>
+      <th scope="col">Mã dịch vụ</th>
+      <th scope="col">Tên dịch vụ</th>
+      <th scope="col">Diện tích</th>
+      <th scope="col">Số tần</th>
+      <th scope="col">Số người tối đa</th>
+      <th scope="col">Giá thuê</th>
+      <th scope="col">Trạng thái</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+    </thead>
+  </table>

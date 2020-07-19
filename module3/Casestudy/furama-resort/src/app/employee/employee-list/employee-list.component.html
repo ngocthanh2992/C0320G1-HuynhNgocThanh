@@ -1,0 +1,29 @@
+<div class="container">
+  <h1 class="title">Danh sách nhân viên</h1>
+  <div>
+    <div>
+      <nav class="navbar navbar-light px-0">
+        <a class="btn btn-primary" [routerLink]="'/employee/create'" role="button">Thêm mới nhân viên</a>
+        <form class="form-inline" [formGroup]="searchEmployeeForm" (ngSubmit)="onSearch()">
+          <input class="form-control mr-sm-2 search" type="search"
+                 placeholder="Nhập tên nhân viên"
+                 aria-label="Search" formControlName="key">
+          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Tìm kiếm</button>
+        </form>
+      </nav>
+    </div>
+  </div>
+  <table class="table">
+    <thead class="thead-light">
+    <tr>
+      <th scope="col">STT</th>
+      <th scope="col">Mã nhân viên</th>
+      <th scope="col">Tên nhân viên</th>
+      <th scope="col">Số chứng minh thư</th>
+      <th scope="col">Số điện thoại</th>
+      <th scope="col">Địa chỉ</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+    </thead>
+  </table>

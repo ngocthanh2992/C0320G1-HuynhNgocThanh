@@ -1,0 +1,33 @@
+
+.outborder {
+  height: 100vh;
+}
+
+.leftshape {
+  height: 100%;
+  width: 36vh;
+  border-right: 2px solid #394984;
+}
+
+.rightshape {
+  height: 100%;
+  margin-left: 16.6%;
+}
+
+.listQL {
+  padding-left: 31px;
+}
+
+.borderimg {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.logo {
+  width: 60%;
+  height: auto;
+}
