@@ -1,17 +1,17 @@
 <h1 class="title">Danh sách khách hàng</h1>
-<div>
-  <div>
-    <nav class="navbar navbar-light px-0">
-      <a class="btn btn-primary" [routerLink]="'/customer/create'" role="button">Thêm mới khách hàng</a>
-      <form class="form-inline" [formGroup]="searchCustomerForm" (ngSubmit)="onSearch()">
-        <input class="form-control mr-sm-2 search" type="search"
-               placeholder="Nhập tên khách hàng"
-               aria-label="Search" formControlName="key">
-        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Tìm kiếm</button>
-      </form>
-    </nav>
-  </div>
-</div>
+<!--<div>-->
+<!--  <div>-->
+<!--    <nav class="navbar navbar-light px-0">-->
+<a class="btn btn-primary" [routerLink]="'/customer/create'" role="button">Thêm mới khách hàng</a>
+<!--      <form class="form-inline" [formGroup]="searchCustomerForm" (ngSubmit)="onSearch()">-->
+<!--        <input class="form-control mr-sm-2 search" type="search"-->
+<!--               placeholder="Nhập tên khách hàng"-->
+<!--               aria-label="Search" formControlName="key">-->
+<!--        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Tìm kiếm</button>-->
+<!--      </form>-->
+<!--    </nav>-->
+<!--  </div>-->
+<!--</div>-->
 <table class="table">
   <thead class="thead-light">
   <tr>
@@ -21,10 +21,25 @@
     <th scope="col">Số chứng minh thư</th>
     <th scope="col">Số điện thoại</th>
     <th scope="col">Địa chỉ</th>
-    <th scope="col"></th>
-    <th scope="col"></th>
+
+    <th scope="col" class="text-center">Action</th>
+
   </tr>
   </thead>
+  <tbody>
+  <tr *ngFor="let customer of customers">
+    <th scope="row">{{customer.idCustomer}}</th>
+    <td>{{customer.customerCode}}</td>
+    <td>{{customer.name}}</td>
+    <td>{{customer.idCard}}</td>
+    <td>{{customer.phoneNumber}}</td>
+    <td>{{customer.address}}</td>
+    <td class="text-center">
+      <i class="material-icons mx-3" title="View">visibility</i>
+      <i class="material-icons text-warning mr-3" title="Edit">create</i>
+      <i class="material-icons text-danger" title="Delete">delete_outline</i></td>
+  </tr>
+  </tbody>
 </table>
 
 

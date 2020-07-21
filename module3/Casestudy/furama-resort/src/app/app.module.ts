@@ -8,14 +8,8 @@ import { CustomerListComponent } from './customer/customer-list/customer-list.co
 import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeListComponent } from './employee/employee-list/employee-list.component';
 import { ServiceComponent } from './service/service.component';
-import { ServiceListComponent } from './service/service-list/service-list.component';
 import { ContractComponent } from './contract/contract.component';
-import { ContractListComponent } from './contract/contract-list/contract-list.component';
-import { CustomerCreateComponent } from './customer/customer-create/customer-create.component';
-import { EmployeeCreateComponent } from './employee/employee-create/employee-create.component';
-import { ServiceCreateComponent } from './service/service-create/service-create.component';
-import { ContractCreateComponent } from './contract/contract-create/contract-create.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ContractDetailCreateComponent } from './contract/contract-detail-create/contract-detail-create.component';
 
 
@@ -24,23 +18,15 @@ import { ContractDetailCreateComponent } from './contract/contract-detail-create
   declarations: [
     AppComponent,
     CustomerComponent,
-    CustomerListComponent,
     EmployeeComponent,
-    EmployeeListComponent,
     ServiceComponent,
-    ServiceListComponent,
-    ContractComponent,
-    ContractListComponent,
-    CustomerCreateComponent,
-    EmployeeCreateComponent,
-    ServiceCreateComponent,
-    ContractCreateComponent,
-    ContractDetailCreateComponent
+    ContractComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

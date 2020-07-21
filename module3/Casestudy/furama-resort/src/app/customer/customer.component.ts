@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CUSTOMER} from "../interface/CustomerDao";
 
 @Component({
   selector: 'app-customer',
@@ -6,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./customer.component.css']
 })
 export class CustomerComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {

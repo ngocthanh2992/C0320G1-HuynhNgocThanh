@@ -110,7 +110,6 @@
           <span *ngIf="createServiceForm.get('rent').hasError('pattern')">
             Chi phí thuê phải là số dương và lớn hơn 0</span>
         </div>
-
         <div class="form-group row">
           <label class="col">
             Kiểu thuê
@@ -143,7 +142,7 @@
         </div>
 
         <div class="form-group">
-          <button class="btn btn-info" [disabled]="createServiceForm.invalid" type="submit">Thêm Mới</button>
+          <button class="btn btn-info" type="submit">Thêm Mới</button>
         </div>
       </form>
     </div>

@@ -97,25 +97,26 @@
              *ngIf="createCustomerForm.get('address').invalid && createCustomerForm.get('address').touched">
           <span *ngIf="createCustomerForm.get('address').hasError('required')">
             Địa chỉ không được để trống</span>
-        <div class="form-group row">
-          <label class="col">
-            Loại khách hàng
-            <select formControlName="idTypeCustomer" class="form-control">
-              <option value="">Chọn</option>
-              <ng-container *ngFor="let typecustomer of TypeCustomerList">
-                <option value="{{typecustomer.id}}">{{typecustomer.nameTypeId}}</option>
-              </ng-container>
-            </select>
-          </label>
         </div>
-        <div class="alert alert-danger" role="alert"
-             *ngIf="createCustomerForm.get('idTypeCustomer').invalid && createCustomerForm.get('idTypeCustomer').touched">
-           <span *ngIf="createCustomerForm.get('idTypeCustomer').hasError('required')">
-            Loại khách hàng không được để trống</span>
-        </div>
-        <div class="form-group">
-          <button class="btn btn-info" [disabled]="createCustomerForm.invalid" type="submit">Thêm Mới</button>
-        </div>
+<!--          <div class="form-group row">-->
+<!--            <label class="col">-->
+<!--              Loại khách hàng-->
+<!--              <select formControlName="idTypeCustomer" class="form-control">-->
+<!--                <option value="">Chọn</option>-->
+<!--                <ng-container *ngFor="let typecustomer of TypeCustomerList">-->
+<!--                  <option value="{{typecustomer.id}}">{{typecustomer.nameTypeId}}</option>-->
+<!--                </ng-container>-->
+<!--              </select>-->
+<!--            </label>-->
+<!--          </div>-->
+<!--          <div class="alert alert-danger" role="alert"-->
+<!--               *ngIf="createCustomerForm.get('idTypeCustomer').invalid && createCustomerForm.get('idTypeCustomer').touched">-->
+<!--           <span *ngIf="createCustomerForm.get('idTypeCustomer').hasError('required')">-->
+<!--            Loại khách hàng không được để trống</span>-->
+<!--          </div>-->
+          <div class="form-group">
+            <button class="btn btn-info" type="submit">Thêm Mới</button>
+          </div>
       </form>
     </div>
   </div>

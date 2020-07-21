@@ -1,4 +1,3 @@
-
 .outborder {
   height: 100vh;
 }
@@ -19,7 +18,7 @@
 }
 
 .borderimg {
-  width: 100%;
+  width: 80%;
   height: auto;
   text-align: center;
   color: black;
@@ -30,4 +29,7 @@
 .logo {
   width: 60%;
   height: auto;
+}
+.material-icons{
+  cursor: pointer;
 }
