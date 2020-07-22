@@ -17,13 +17,13 @@
         <div class="form-group row">
           <label class="col">
             Mã khách hàng
-            <input class="form-control" formControlName="id">
+            <input class="form-control" formControlName="customerCode">
           </label>
         </div>
         <div class="alert alert-danger" role="alert"
-             *ngIf="createCustomerForm.get('id').invalid && createCustomerForm.get('id').touched">
-          <span *ngIf="createCustomerForm.get('id').hasError('required')">Mã khách hàng không được để trống</span>
-          <span *ngIf="createCustomerForm.get('id').hasError('pattern')">Mã khách hàng có dạng KH-XXXX</span>
+             *ngIf="createCustomerForm.get('customerCode').invalid && createCustomerForm.get('customerCode').touched">
+          <span *ngIf="createCustomerForm.get('customerCode').hasError('required')">Mã khách hàng không được để trống</span>
+          <span *ngIf="createCustomerForm.get('customerCode').hasError('pattern')">Mã khách hàng có dạng KH-XXXX</span>
         </div>
         <div class="form-group row">
           <label class="col">
