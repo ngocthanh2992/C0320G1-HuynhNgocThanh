@@ -11,6 +11,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from "@angular/common/http";
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import {NgxPaginationModule} from 'ngx-pagination';
+import {MaterialModule} from "./material.module";
+import {CustomerModule} from "./customer/customer.module";
+import {EmployeeModule} from "./employee/employee.module";
+import {ServiceModule} from "./service/service.module";
+import { HomeComponent } from './home/home.component';
+import {ContractModule} from "./contract/contract.module";
 
 
 @NgModule({
@@ -19,7 +25,9 @@ import {NgxPaginationModule} from 'ngx-pagination';
     CustomerComponent,
     EmployeeComponent,
     ServiceComponent,
-    ContractComponent
+    ContractComponent,
+    HomeComponent
+
   ],
   imports: [
     BrowserModule,
@@ -29,7 +37,12 @@ import {NgxPaginationModule} from 'ngx-pagination';
     BrowserAnimationsModule,
     HttpClientModule,
     Ng2SearchPipeModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    MaterialModule,
+    CustomerModule,
+    EmployeeModule,
+    ServiceModule,
+    ContractModule
   ],
   providers: [],
   bootstrap: [AppComponent]

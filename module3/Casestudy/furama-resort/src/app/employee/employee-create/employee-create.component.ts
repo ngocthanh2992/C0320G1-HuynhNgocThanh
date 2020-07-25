@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {EmployeeService} from "../../services/employee.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-employee-create',
@@ -8,14 +10,17 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 })
 export class EmployeeCreateComponent implements OnInit {
   createEmployeeForm: FormGroup;
-  constructor(private fb: FormBuilder) { }
+  private maxDate = new Date();
+  private minDate = new Date(1900,0,1);
+  constructor(private fb: FormBuilder,
+              private employeeService: EmployeeService,
+              private router: Router) { }
 
   ngOnInit() {
     this.createEmployeeForm = this.fb.group({
-      id: ['', [Validators.required, Validators.pattern('^(NV\-)[0-9]{4}$')]],
+      employeeCode: ['', [Validators.required, Validators.pattern('^(NV\-)[0-9]{4}$')]],
       name: ['',Validators.required],
-      birthday: ['', [Validators.required,
-        Validators.pattern('^(0[1-9]|[12][0-9]|3[01])[-\/](0[1-9]|1[012])[-\/](19|20)\d\d$')]],
+      birthday: ['', Validators.required],
       idCard: ['', [Validators.required,
         Validators.pattern('^([1-9]{1}[0-9]{8}|[1-9]{1}[0-9]{11})$')]],
       phoneNumber: ['', [Validators.required,
@@ -23,15 +28,18 @@ export class EmployeeCreateComponent implements OnInit {
       email: ['', [Validators.required,
         Validators.pattern('^[a-zA-Z]{1}[a-zA-Z0-9\\_]{1,100}\\@[a-zA-Z]{2,10}\\.[a-zA-Z]{2,10}$')]],
       address: ['', Validators.required],
-      idPosition: ['', Validators.required],
-      idLevel: ['', Validators.required],
-      idPart: ['', Validators.required],
+      position: ['', Validators.required],
+      level: ['', Validators.required],
+      part: ['', Validators.required],
       salary: ['', [Validators.required,
         Validators.pattern('^[1-9]{1}[0-9]+$')]],
     })
   }
   onSubmit(){
-    console.log(this.createEmployeeForm);
+    this.employeeService.addNewEmployee(this.createEmployeeForm.value).subscribe(data =>{
+      this.router.navigateByUrl('employee/list');
+      alert("Thêm mới nhân viên thành công!")
+    });
   }
 }
 

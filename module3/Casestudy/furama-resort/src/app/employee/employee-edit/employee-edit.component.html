@@ -1,0 +1,176 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4 mt-2">
+      <a [routerLink]="'/employee/list'" class="btn btn-primary">
+        <span class="badge badge-light">< </span> Trở về trang danh sách
+      </a>
+    </div>
+    <div class="col-8">
+      <div class="col-md-12 col-lg-12 col-sm-12">
+        <h1 class="title">Chỉnh Sửa Thông tin Nhân Viên</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 col-lg-12 col-sm-12">
+      <form [formGroup]="editEmployeeForm" (ngSubmit)="onSubmit()" class="col-md-6 offset-md-3">
+        <div class="form-group row">
+          <label class="col">
+            Mã nhân viên
+            <input class="form-control" formControlName="employeeCode">
+          </label>
+        </div>
+        <div class="alert alert-danger" role="alert"
+             *ngIf="editEmployeeForm.get('employeeCode').invalid && editEmployeeForm.get('employeeCode').touched">
+          <span
+            *ngIf="editEmployeeForm.get('employeeCode').hasError('required')">Mã nhân viên không được để trống</span>
+          <span *ngIf="editEmployeeForm.get('employeeCode').hasError('pattern')">Mã nhân viên có dạng NV-XXXX</span>
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Tên nhân viên
+            <input class="form-control" formControlName="name">
+          </label>
+        </div>
+        <div class="alert alert-danger" role="alert"
+             *ngIf="editEmployeeForm.get('name').invalid && editEmployeeForm.get('name').touched">
+          <span *ngIf="editEmployeeForm.get('name').hasError('required')">Tên nhân viên không được để trống</span>
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Ngày sinh
+          </label>
+        </div>
+        <mat-form-field>
+          <input  [min]="minDate" [max]="maxDate" matInput [matDatepicker]="myDatepicker" class="form-control" formControlName="birthday" placeholder="dd/mm/yyyy">
+          <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+          <mat-datepicker #myDatepicker></mat-datepicker>
+        </mat-form-field>
+        <div class="alert alert-danger" role="alert"
+             *ngIf="editEmployeeForm.get('birthday').invalid && editEmployeeForm.get('birthday').touched">
+          <span *ngIf="editEmployeeForm.get('birthday').hasError('required')">
+            Ngày sinh phải đúng với số ngày trong tháng hoặc số tháng trong năm và không được để trống</span>
+          <!--          <span *ngIf="createCustomerForm.get('birthday').hasError('pattern')">-->
+          <!--            Ngày sinh khách hàng không đúng định dạng dd/MM/yyyy</span>-->
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Số chứng minh nhân dân
+            <input class="form-control" formControlName="idCard">
+          </label>
+        </div>
+        <div class="alert alert-danger" role="alert"
+             *ngIf="editEmployeeForm.get('idCard').invalid && editEmployeeForm.get('idCard').touched">
+          <span *ngIf="editEmployeeForm.get('idCard').hasError('required')">
+            Số chứng minh nhân dân không được để trống</span>
+          <span *ngIf="editEmployeeForm.get('idCard').hasError('pattern')">
+            Số chứng minh nhân dân chỉ bao gồm số và có 9 hoặc 12 ký tự</span>
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Số điện thoại
+            <input class="form-control" formControlName="phoneNumber">
+          </label>
+        </div>
+        <div class="alert alert-danger" role="alert"
+             *ngIf="editEmployeeForm.get('phoneNumber').invalid && editEmployeeForm.get('phoneNumber').touched">
+          <span *ngIf="editEmployeeForm.get('phoneNumber').hasError('required')">
+            Số điện thoại không được để trống</span>
+          <span *ngIf="editEmployeeForm.get('phoneNumber').hasError('pattern')">
+            Số điện thoại phải đúng định dạng 090xxxxxxx hoặc 091xxxxxxx hoặc (84)+90xxxxxxx hoặc (84)+91xxxxxxx</span>
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Địa chỉ email
+            <input class="form-control" formControlName="email">
+          </label>
+        </div>
+        <div class="alert alert-danger" role="alert"
+             *ngIf="editEmployeeForm.get('email').invalid && editEmployeeForm.get('email').touched">
+          <span *ngIf="editEmployeeForm.get('email').hasError('required')">
+            Email không được để trống</span>
+          <span *ngIf="editEmployeeForm.get('email').hasError('pattern')">
+            Email không đúng định dạng</span>
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Địa chỉ
+            <input class="form-control" formControlName="address">
+          </label>
+        </div>
+        <div class="alert alert-danger" role="alert"
+             *ngIf="editEmployeeForm.get('address').invalid && editEmployeeForm.get('address').touched">
+          <span *ngIf="editEmployeeForm.get('address').hasError('required')">
+            Địa chỉ không được để trống</span>
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Lương
+            <input class="form-control" formControlName="salary">
+          </label>
+        </div>
+        <div class="alert alert-danger" role="alert"
+             *ngIf="editEmployeeForm.get('salary').invalid && editEmployeeForm.get('salary').touched">
+          <span *ngIf="editEmployeeForm.get('salary').hasError('required')">
+            Lương không được để trống</span>
+          <span *ngIf="editEmployeeForm.get('salary').hasError('pattern')">
+            Lương là số dương</span>
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Vị trí
+            <select formControlName="position" class="form-control">
+              <option value="" disable>Chọn</option>
+              <option value="Lễ Tân">Lễ Tân</option>
+              <option value="Phục Vụ">Phục Vụ</option>
+              <option value="Chuyên Viên">Chuyên Viên</option>
+              <option value="Giám Sát">Giám Sát</option>
+              <option value="Quản Lý">Quản Lý</option>
+              <option value="Giám Đốc">Giám Đốc</option>
+            </select>
+          </label>
+        </div>
+        <div class="alert alert-danger" role="alert"
+             *ngIf="editEmployeeForm.get('position').invalid && editEmployeeForm.get('position').touched">
+          Vị trí không được để trống
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Trình độ
+            <select formControlName="level" class="form-control">
+              <option value="" disable>Chọn</option>
+              <option value="Trung Cấp">Trung Cấp</option>
+              <option value="Cao Đẳng">Cao Đẳng</option>
+              <option value="Đại Học">Đại Học</option>
+              <option value="Sau Đại Học">Sau Đại Học</option>
+            </select>
+          </label>
+        </div>
+        <div class="alert alert-danger" role="alert"
+             *ngIf="editEmployeeForm.get('level').invalid && editEmployeeForm.get('level').touched">
+          Trình độ không được để trống
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Bộ phận làm việc
+            <select formControlName="part" class="form-control">
+              <option value="" disable>Chọn</option>
+              <option value="Sale – Marketing">Sale – Marketing</option>
+              <option value="Hành Chính">Hành Chính</option>
+              <option value="Phục vụ">Phục vụ</option>
+              <option value="Quản lý">Quản lý</option>
+            </select>
+          </label>
+        </div>
+        <div class="alert alert-danger" role="alert"
+             *ngIf="editEmployeeForm.get('part').invalid && editEmployeeForm.get('part').touched">
+          Bộ phận làm việc không được để trống
+        </div>
+        <div class="form-group">
+          <button class="btn btn-info" type="submit" [disabled] ="editEmployeeForm.invalid">Chỉnh sửa</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+

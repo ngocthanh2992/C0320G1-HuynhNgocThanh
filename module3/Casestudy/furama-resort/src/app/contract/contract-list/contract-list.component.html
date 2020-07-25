@@ -5,27 +5,43 @@
       <nav class="navbar navbar-light px-0">
         <a class="btn btn-primary" [routerLink]="'/contract/create'" role="button">Thêm mới hợp đồng</a>
         <a class="btn btn-primary" [routerLink]="'/contract/contractdetailcreate'" role="button">Thêm mới hợp đồng chi tiết</a>
-<!--        <form class="form-inline" [formGroup]="searchContractForm" (ngSubmit)="onSearch()">-->
-<!--          <input class="form-control mr-sm-2 search" type="search"-->
-<!--                 placeholder="Nhập tên khách hàng"-->
-<!--                 aria-label="Search" formControlName="key">-->
-<!--          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Tìm kiếm</button>-->
-<!--        </form>-->
+        <div class="p-2 bd-highlight">
+          <input class="form-control search p-2 bd-highlight" type="search"
+                 placeholder="Nhập tên hợp đồng"
+                 aria-label="Search" [(ngModel)]="term">
+        </div>
+        <div class="p-2 bd-highlight">
+          <button class="btn btn-outline-primary" type="submit">Tìm kiếm</button>
+        </div>
       </nav>
     </div>
   </div>
+</div>
   <table class="table">
     <thead class="thead-light">
     <tr>
       <th scope="col">STT</th>
-      <th scope="col">Mã hợp đồng</th>
-      <th scope="col">Tên nhân viên</th>
-      <th scope="col">Tên khách hàng</th>
-      <th scope="col">Tên dịch vụ sử dụng</th>
+      <th scope="col">Mã dịch vụ</th>
+      <th scope="col">Mã nhân viên</th>
+      <th scope="col">Mã khách hàng</th>
+      <th scope="col">Tạm ứng</th>
       <th scope="col">Tổng tiền</th>
-      <th scope="col"></th>
-      <th scope="col"></th>
-      <th scope="col"></th>
+      <th scope="col"  class="text-center">Action</th>
     </tr>
     </thead>
+    <tbody>
+    <tr *ngFor="let contract of contracts |filter:term |paginate: { itemsPerPage: 5, currentPage: p }">
+      <th>{{contracts.indexOf(contract)+1}}</th>
+      <td>{{contract.serviceCode}}</td>
+      <td>{{contract.employeeCode}}</td>
+      <td>{{contract.customerCode}}</td>
+      <td>{{contract.deposit}}</td>
+      <td>{{contract.totalAmount}}</td>
+      <td class="text-center">
+        <i class="material-icons mx-3" title="View" (click)="openView(contract.id)">visibility</i>
+        <a  [routerLink]="['/contract/edit/',contract.id]"><i class="material-icons text-warning mr-3" title="Edit">create</i></a>
+        <i class="material-icons text-danger" title="Delete" (click)="openDialog(contract.id)">delete_outline</i>
+      </td>
+    </tr>
+    </tbody>
   </table>

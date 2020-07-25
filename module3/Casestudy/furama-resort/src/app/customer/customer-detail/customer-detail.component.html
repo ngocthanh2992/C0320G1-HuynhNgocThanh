@@ -1,0 +1,43 @@
+<h1 class="title">Chi tiết khách hàng</h1>
+<table>
+  <tr>
+    <th scope="col">ID: </th>
+    <td>{{customerDetail.id}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Mã khách hàng: </th>
+    <td>{{customerDetail.customerCode}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Tên khách hàng: </th>
+    <td>{{customerDetail.name}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Số chứng minh thư: </th>
+    <td>{{customerDetail.idCard}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Số điện thoại: </th>
+    <td>{{customerDetail.phoneNumber}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Địa chỉ: </th>
+    <td>{{customerDetail.address}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Ngày sinh: </th>
+    <td>{{customerDetail.birthday |date: 'dd/MM/yyyy'}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Email: </th>
+    <td>{{customerDetail.email}}</td>
+  </tr>
+  <tr>
+    <th scope="col">TypeCustomer: </th>
+    <td>{{customerDetail.typeCustomer}}</td>
+  </tr>
+</table>
+<div class="wrapper d-flex justify-content-center">
+<button mat-dialog-close class="btn btn-primary " >Close</button>
+</div>
+

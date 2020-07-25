@@ -26,20 +26,22 @@
   </thead>
   <tbody>
   <tr *ngFor="let customer of customers |filter:term |paginate: { itemsPerPage: 5, currentPage: p }">
-    <th scope="row">{{customer.id}}</th>
+    <th>{{customers.indexOf(customer)+1}}</th>
     <td>{{customer.customerCode}}</td>
     <td>{{customer.name}}</td>
     <td>{{customer.idCard}}</td>
     <td>{{customer.phoneNumber}}</td>
     <td>{{customer.address}}</td>
     <td class="text-center">
-      <i class="material-icons mx-3" title="View">visibility</i>
-      <i class="material-icons text-warning mr-3" title="Edit">create</i>
-      <i class="material-icons text-danger" title="Delete">delete_outline</i></td>
+      <i class="material-icons mx-3" title="View" (click)="openView(customer.id)">visibility</i>
+      <a  [routerLink]="['/customer/edit/',customer.id]"><i class="material-icons text-warning mr-3" title="Edit">create</i></a>
+      <i class="material-icons text-danger" title="Delete" (click)="openDialog(customer.id)">delete_outline</i>
+    </td>
   </tr>
   </tbody>
 </table>
-
-<pagination-controls (pageChange)="p = $event"></pagination-controls>
+<div class="d-flex justify-content-center">
+  <pagination-controls (pageChange)="p = $event" ></pagination-controls>
+</div>
 
 

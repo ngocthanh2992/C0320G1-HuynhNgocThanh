@@ -1,12 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {AbstractControl, FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {ServiceService} from "../../services/service.service";
+import {CustomerService} from "../../services/customer.service";
+import {Router} from "@angular/router";
 
-function compareID(c: AbstractControl) {
-  const v = c.value;
-  return (v.id === v.idTypeService) ? null : {
-    idmatch: true
-  };
-}
 
 @Component({
   selector: 'app-service-create',
@@ -15,15 +12,15 @@ function compareID(c: AbstractControl) {
 })
 export class ServiceCreateComponent implements OnInit {
   createServiceForm: FormGroup;
-  constructor(private fb: FormBuilder) {
+
+  constructor(private fb: FormBuilder,
+              public serviceService: ServiceService,
+              public router: Router) {
   }
 
   ngOnInit() {
     this.createServiceForm = this.fb.group({
-      idGroup: this.fb.group({
-        idTypeService: ['',Validators.required],
-        id: ['', [Validators.required, Validators.pattern('^(DV\-)[0-9]{4}$')]],
-      }, {validator: compareID}),
+      serviceCode: ['', [Validators.required, Validators.pattern('^DV\-[0-9]{4}$')]],
       name: ['', [Validators.required]],
       area: ['', [Validators.required,
         Validators.pattern('^[1-9]{1}[0-9]{0,3}$')]],
@@ -32,12 +29,17 @@ export class ServiceCreateComponent implements OnInit {
       maximumPeople: ['', [Validators.required,
         Validators.pattern('^[1-9]{1}[0-9]{0,3}$')]],
       rent: ['', [Validators.required,
-        Validators.pattern('^[1-9]{1}[0-9]{0,5}$')]],
-      idTypeRent: ['', [Validators.required]],
+        Validators.pattern('^[1-9]{1}[0-9]{1,}$')]],
+      typeRent: ['', [Validators.required]],
       status: ['', Validators.required],
+      typeService: ['', [Validators.required]]
     })
   }
-onSubmit(){
-    console.log(this.createServiceForm);
-}
+
+  onSubmit() {
+    this.serviceService.addNewService(this.createServiceForm.value).subscribe(data=>{
+      this.router.navigateByUrl('service/list');
+      alert("Thêm mới thành công!")
+    });
+  }
 }

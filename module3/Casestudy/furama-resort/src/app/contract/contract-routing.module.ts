@@ -3,6 +3,7 @@ import {Routes, RouterModule} from '@angular/router';
 import {ContractListComponent} from "./contract-list/contract-list.component";
 import {ContractCreateComponent} from "./contract-create/contract-create.component";
 import {ContractDetailCreateComponent} from "./contract-detail-create/contract-detail-create.component";
+import {ContractEditComponent} from "./contract-edit/contract-edit.component";
 
 
 const routes: Routes = [
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'contract/contractdetailcreate',
     component: ContractDetailCreateComponent
+  },
+  {
+    path: 'contract/edit/:id',
+    component: ContractEditComponent
   }
 ];
 

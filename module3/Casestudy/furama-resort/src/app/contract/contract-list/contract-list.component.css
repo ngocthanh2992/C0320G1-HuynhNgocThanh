@@ -40,3 +40,6 @@
 .addcontractdetail {
   width: 228px;
 }
+.material-icons{
+  cursor: pointer;
+}

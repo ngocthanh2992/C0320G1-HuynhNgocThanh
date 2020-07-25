@@ -1,0 +1,125 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4 mt-2">
+      <a [routerLink]="'/contract/list'" class="btn btn-primary">
+        <span class="badge badge-light">< </span> Trở về trang danh sách
+      </a>
+    </div>
+    <div class="col-8">
+      <div class="col-md-12 col-lg-12 col-sm-12">
+        <h1 class="title">Chỉnh sửa Hợp Đồng</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 col-lg-12 col-sm-12">
+      <form [formGroup]="editContractForm" (ngSubmit)="onSubmit()" class="col-md-6 offset-md-3">
+        <div class="form-group row">
+          <label class="col">
+            Nhân viên tạo hợp đồng
+            <select formControlName="employeeCode" class="form-control">
+              <option value="">Chọn</option>
+              <ng-container *ngFor="let employee of EmployeeList">
+                <option value="{{employee.employeeCode}}">{{employee.name}}</option>
+              </ng-container>
+            </select>
+          </label>
+        </div>
+        <div class="alert alert-danger" role="alert"
+             *ngIf="editContractForm.get('employeeCode').invalid && editContractForm.get('employeeCode').touched">
+          Nhân viên tạo hợp đồng không được để trống
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Khách hàng sử dụng dịch vụ
+            <select formControlName="customerCode" class="form-control">
+              <option value="">Chọn</option>
+              <ng-container *ngFor="let customer of CustomerList">
+                <option value="{{customer.customerCode}}">{{customer.name}}</option>
+              </ng-container>
+            </select>
+          </label>
+        </div>
+        <div class="alert alert-danger" role="alert"
+             *ngIf="editContractForm.get('customerCode').invalid && editContractForm.get('customerCode').touched">
+          Khách hàng sử dụng dịch vụ không được để trống
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Dịch vụ sử dụng
+            <select formControlName="serviceCode" class="form-control">
+              <option value="">Chọn</option>
+              <ng-container *ngFor="let service of ServiceList">
+                <option value="{{service.serviceCode}}">{{service.name}}</option>
+              </ng-container>
+            </select>
+          </label>
+        </div>
+        <div class="alert alert-danger" role="alert"
+             *ngIf="editContractForm.get('serviceCode').invalid && editContractForm.get('serviceCode').touched">
+          Dịch vụ sử dụng không được để trống
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Ngày làm hợp đồng
+          </label>
+        </div>
+        <mat-form-field>
+          <input matInput [matDatepicker]="myDatepicker" class="form-control" formControlName="dateMakeContract" placeholder="dd/mm/yyyy">
+          <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+          <mat-datepicker #myDatepicker></mat-datepicker>
+        </mat-form-field>
+        <div class="alert alert-danger" role="alert"
+             *ngIf="editContractForm.get('dateMakeContract').invalid && editContractForm.get('dateMakeContract').touched">
+          <span *ngIf="editContractForm.get('dateMakeContract').hasError('required')">
+            Ngày làm hợp đồng không được để trống</span>
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="editContractForm.hasError('date')">
+          <span>Ngày làm hợp đồng không được lớn hơn ngày kết thúc hợp đồng</span>
+        </div>
+
+        <div class="form-group row">
+          <label class="col">
+            Ngày kết thúc hợp đồng
+          </label>
+        </div>
+        <mat-form-field>
+          <input matInput [matDatepicker]="myDatepicker1" class="form-control" formControlName="dateEndContract" placeholder="dd/mm/yyyy">
+          <mat-datepicker-toggle matSuffix [for]="myDatepicker1"></mat-datepicker-toggle>
+          <mat-datepicker #myDatepicker1></mat-datepicker>
+        </mat-form-field>
+        <div class="alert alert-danger" role="alert"
+             *ngIf="editContractForm.get('dateEndContract').invalid && editContractForm.get('dateEndContract').touched">
+          <span *ngIf="editContractForm.get('dateEndContract').hasError('required')">
+            Ngày kết thúc hợp đồng không được để trống</span>
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="editContractForm.hasError('date')">
+          <span>Ngày kết thúc hợp đồng không được nhỏ hơn ngày làm hợp đồng</span>
+        </div>
+
+        <div class="form-group row">
+          <label class="col">
+            Tiền đặt cọc
+            <input class="form-control" formControlName="deposit">
+          </label>
+        </div>
+        <div class="alert alert-danger" role="alert"
+             *ngIf="editContractForm.get('deposit').invalid && editContractForm.get('deposit').touched">
+          <span *ngIf="editContractForm.get('deposit').hasError('required')">
+            Tiền cọc không được để trống</span>
+          <span *ngIf="editContractForm.get('deposit').hasError('pattern')">
+           Tiền cọc phải là số dương</span>
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Tổng tiền
+            <input class="form-control" formControlName="totalAmount" (click)="totalMoney()">
+          </label>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-info" type="submit" [disabled]="editContractForm.invalid">Chỉnh sửa</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

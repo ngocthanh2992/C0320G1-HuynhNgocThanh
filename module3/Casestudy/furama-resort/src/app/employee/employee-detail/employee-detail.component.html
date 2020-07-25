@@ -1,0 +1,55 @@
+<h1 class="title">Chi tiết nhân viên</h1>
+<table>
+  <tr>
+    <th scope="col">ID: </th>
+    <td>{{employeeDetail.id}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Mã Nhân Viên: </th>
+    <td>{{employeeDetail.employeeCode}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Tên Nhân Viên: </th>
+    <td>{{employeeDetail.name}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Số chứng minh thư: </th>
+    <td>{{employeeDetail.idCard}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Số điện thoại: </th>
+    <td>{{employeeDetail.phoneNumber}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Địa chỉ: </th>
+    <td>{{employeeDetail.address}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Ngày sinh: </th>
+    <td>{{employeeDetail.birthday |date: 'dd/MM/yyyy'}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Email: </th>
+    <td>{{employeeDetail.email}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Bộ Phận: </th>
+    <td>{{employeeDetail.position}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Trình Độ: </th>
+    <td>{{employeeDetail.level}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Vị Trí: </th>
+    <td>{{employeeDetail.part}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Lương: </th>
+    <td>{{employeeDetail.salary}}</td>
+  </tr>
+</table>
+<div class="wrapper d-flex justify-content-center">
+  <button mat-dialog-close class="btn btn-primary " >Close</button>
+</div>
+

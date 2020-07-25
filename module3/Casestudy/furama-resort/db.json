@@ -1,36 +1,40 @@
 {
   "customers": [
     {
-      "id": 1,
       "customerCode": "KH-1111",
-      "name": "A",
-      "birthday": "12-03-1990",
+      "name": "Abc",
+      "birthday": "1990-12-03T17:00:00.000Z",
       "idCard": "123456789",
-      "phoneNumber": "0922017369",
-      "email": "A@gmail.com",
-      "address": "11 Hùng Vương"
+      "phoneNumber": "0912017369",
+      "email": "Aa@gmail.com",
+      "address": "11 Hùng Vương",
+      "typeCustomer": "Platinum",
+      "id": 1
     },
     {
-      "id": 2,
+      "typeCustomer": "Gold",
       "customerCode": "KH-1112",
-      "name": "B",
-      "birthday": "12-05-1992",
+      "name": "Bac",
+      "birthday": "1992-12-03T17:00:00.000Z",
       "idCard": "113456789",
-      "phoneNumber": "0932017369",
-      "email": "B@gmail.com",
-      "address": "12 Hùng Vương"
+      "phoneNumber": "0912017369",
+      "email": "Ba@gmail.com",
+      "address": "12 Hùng Vương",
+      "id": 2
     },
     {
-      "id": 3,
+      "typeCustomer": "Gold",
       "customerCode": "KH-1113",
-      "name": "C",
-      "birthday": "15-03-1980",
+      "name": "Cc",
+      "birthday": "2020-06-30T17:00:00.000Z",
       "idCard": "123456788",
-      "phoneNumber": "0921017369",
-      "email": "C@gmail.com",
-      "address": "15 Hùng Vương"
+      "phoneNumber": "0911017369",
+      "email": "Ca@gmail.com",
+      "address": "15 Hùng Vương",
+      "id": 3
     },
     {
+      "typeCustomer": "Gold",
       "id": 4,
       "customerCode": "KH-1114",
       "name": "D",
@@ -41,6 +45,7 @@
       "address": "11 Hùng Vương"
     },
     {
+      "typeCustomer": "Gold",
       "id": 5,
       "customerCode": "KH-1115",
       "name": "E",
@@ -51,87 +56,222 @@
       "address": "11 Hùng Vương"
     },
     {
-      "id": 6,
+      "typeCustomer": "Gold",
       "customerCode": "KH-1116",
       "name": "Thành",
+      "birthday": "2020-07-01T17:00:00.000Z",
+      "idCard": "123456789",
+      "phoneNumber": "0912017369",
+      "email": "Ea@gmail.com",
+      "address": "11 Hùng Vương",
+      "id": 6
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "employeeCode": "NV-1234",
+      "name": "Lan",
       "birthday": "12-03-1990",
       "idCard": "123456789",
       "phoneNumber": "0922017369",
       "email": "E@gmail.com",
-      "address": "11 Hùng Vương"
+      "address": "11 Hùng Vương",
+      "position": "Phục Vụ",
+      "level": "2",
+      "part": "3",
+      "salary": "5000000"
     },
     {
-      "customerCode": "KH-1119",
-      "name": "",
-      "birthday": "",
-      "idCard": "",
-      "phoneNumber": "",
-      "email": "",
-      "address": "",
-      "id": 7
+      "employeeCode": "NV-1234",
+      "name": "Lan",
+      "birthday": "2020-07-06T17:00:00.000Z",
+      "idCard": "123456789",
+      "phoneNumber": "0912017369",
+      "email": "Ea@gmail.com",
+      "address": "11 Hùng Vương",
+      "position": "Phục Vụ",
+      "level": "Cao Đẳng",
+      "part": "Hành Chính",
+      "salary": "5000000",
+      "id": 2
     },
     {
-      "customerCode": "KH-1118",
-      "name": "",
-      "birthday": "",
-      "idCard": "",
-      "phoneNumber": "",
-      "email": "",
-      "address": "",
-      "id": 8
+      "id": 3,
+      "employeeCode": "NV-1234",
+      "name": "Lan",
+      "birthday": "12-03-1990",
+      "idCard": "123456789",
+      "phoneNumber": "0922017369",
+      "email": "E@gmail.com",
+      "address": "11 Hùng Vương",
+      "position": "Phục Vụ",
+      "level": "2",
+      "part": "3",
+      "salary": "5000000"
     },
     {
-      "customerCode": "KH-1234",
-      "name": "Tùng",
-      "birthday": "",
-      "idCard": "",
-      "phoneNumber": "",
-      "email": "",
-      "address": "",
-      "id": 9
+      "id": 4,
+      "employeeCode": "NV-1234",
+      "name": "Lan",
+      "birthday": "12-03-1990",
+      "idCard": "123456789",
+      "phoneNumber": "0922017369",
+      "email": "E@gmail.com",
+      "address": "11 Hùng Vương",
+      "position": "Phục Vụ",
+      "level": "2",
+      "part": "3",
+      "salary": "5000000"
     },
     {
-      "id": 10,
-      "customerCode": "KH-1324",
-      "name": "",
-      "birthday": "",
-      "idCard": "",
-      "phoneNumber": "",
-      "email": "",
-      "address": ""
+      "id": 5,
+      "employeeCode": "NV-1234",
+      "name": "Lan",
+      "birthday": "12-03-1990",
+      "idCard": "123456789",
+      "phoneNumber": "0922017369",
+      "email": "E@gmail.com",
+      "address": "11 Hùng Vương",
+      "position": "Phục Vụ",
+      "level": "2",
+      "part": "3",
+      "salary": "5000000"
     },
     {
-      "customerCode": "KH-3333",
-      "name": "",
-      "birthday": "",
-      "idCard": "",
-      "phoneNumber": "",
-      "email": "",
-      "address": "",
-      "idTypeCustomer": "",
-      "id": 11
+      "id": 6,
+      "employeeCode": "NV-1234",
+      "name": "Lan",
+      "birthday": "12-03-1990",
+      "idCard": "123456789",
+      "phoneNumber": "0922017369",
+      "email": "E@gmail.com",
+      "address": "11 Hùng Vương",
+      "position": "Phục Vụ",
+      "level": "2",
+      "part": "3",
+      "salary": "5000000"
+    }
+  ],
+  "accompaniedServices": [
+    {
+      "id": 1,
+      "nameAccompaniedService": "Massage",
+      "cost": "300000",
+      "turn": "1 lượt",
+      "status": "Có thể sử dụng"
     },
     {
-      "customerCode": "KH-1456",
-      "name": "Ngân",
-      "birthday": "",
-      "idCard": "",
-      "phoneNumber": "",
-      "email": "",
-      "address": "",
-      "idTypeCustomer": "",
-      "id": 12
+      "id": 2,
+      "nameAccompaniedService": "Karaoke",
+      "cost": "60000",
+      "turn": "1 giờ",
+      "status": "Có thể sử dụng"
     },
     {
-      "customerCode": "KH-1123",
-      "name": "",
-      "birthday": "",
-      "idCard": "",
-      "phoneNumber": "",
-      "email": "",
-      "address": "",
-      "idTypeCustomer": "",
-      "id": 13
+      "id": 3,
+      "nameAccompaniedService": "Thức ăn",
+      "cost": "100000",
+      "turn": "1 phần",
+      "status": "Có thể sử dụng"
+    },
+    {
+      "id": 4,
+      "nameAccompaniedService": "Nước uống",
+      "cost": "40000",
+      "turn": "1 phần",
+      "status": "Có thể sử dụng"
+    },
+    {
+      "id": 5,
+      "nameAccompaniedService": "Thuê xe tham quan",
+      "cost": "200000",
+      "turn": "1 lượt",
+      "status": "Có thể sử dụng"
+    }
+  ],
+  "services": [
+    {
+      "serviceCode": "DV-0000",
+      "name": "Villa thuê theo ngày",
+      "area": "1000",
+      "numberOfFloor": "4",
+      "maximumPeople": "10",
+      "rent": "1500000",
+      "typeRent": "huê theo ngày",
+      "status": "Còn phòng",
+      "typeService": "Villa",
+      "id": 1
+    },
+    {
+      "serviceCode": "DV-0001",
+      "name": "House thuê theo ngày",
+      "area": "500",
+      "numberOfFloor": "3",
+      "maximumPeople": "5",
+      "rent": "1000000",
+      "typeRent": "thuê theo ngày",
+      "status": "Còn phòng",
+      "typeService": "House",
+      "id": 2
+    },
+    {
+      "serviceCode": "DV-0002",
+      "name": "Room thuê theo ngày",
+      "area": "400",
+      "numberOfFloor": "2",
+      "maximumPeople": "10",
+      "rent": "800000",
+      "typeRent": "huê theo ngày",
+      "status": "Còn phòng",
+      "typeService": "Room",
+      "id": 4
+    }
+  ],
+  "contracts": [
+    {
+      "employeeCode": "NV-1234",
+      "customerCode": "KH-1113",
+      "serviceCode": "DV-0002",
+      "dateMakeContract": "2020-07-02",
+      "dateEndContract": "2020-07-14T17:00:00.000Z",
+      "deposit": "11111111",
+      "totalAmount": "888889",
+      "id": 1
+    },
+    {
+      "employeeCode": "NV-1234",
+      "customerCode": "KH-1112",
+      "serviceCode": "DV-0000",
+      "dateMakeContract": "2020-07-15T17:00:00.000Z",
+      "dateEndContract": "2020-07-17T17:00:00.000Z",
+      "deposit": "500000",
+      "totalAmount": "2000000",
+      "id": 2
+    },
+    {
+      "employeeCode": "NV-1234",
+      "customerCode": "KH-1114",
+      "serviceCode": "DV-0001",
+      "dateMakeContract": "2020-07-02",
+      "dateEndContract": "2020-07-17",
+      "deposit": "11111111",
+      "totalAmount": "888889",
+      "id": 3
+    }
+  ],
+  "contractdetails": [
+    {
+      "id": 1,
+      "idContract": "HD-0001",
+      "accompaniedService": "1",
+      "amount": 4
+    },
+    {
+      "id": 2,
+      "idContract": "HD-0001",
+      "accompaniedService": "2",
+      "amount": 2
     }
   ]
 }

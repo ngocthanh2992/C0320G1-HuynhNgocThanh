@@ -1,0 +1,46 @@
+<h1 class="title">Chi tiết hợp đồng</h1>
+<table>
+  <tr>
+    <th scope="col">Mã khách hàng: </th>
+    <td>{{contractDetail.customerCode}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Tên khách hàng: </th>
+    <td>{{customerName}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Mã nhân viên: </th>
+    <td>{{contractDetail.employeeCode}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Tên nhân viên: </th>
+    <td>{{employeeName}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Mã dịch vụ: </th>
+    <td>{{contractDetail.serviceCode}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Tên dịch vụ: </th>
+    <td>{{serviceName}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Ngày làm hợp đồng: </th>
+    <td>{{contractDetail.dateMakeContract |date: 'dd/MM/yyyy'}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Ngày kết thúc hợp đồng: </th>
+    <td>{{contractDetail.dateEndContract |date: 'dd/MM/yyyy'}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Tạm ứng: </th>
+    <td>{{contractDetail.deposit}}</td>
+  </tr>
+  <tr>
+    <th scope="col">Tổng tiền: </th>
+    <td>{{contractDetail.totalAmount}}</td>
+  </tr>
+</table>
+<div class="wrapper d-flex justify-content-center">
+  <button mat-dialog-close class="btn btn-primary " >Close</button>
+</div>

@@ -17,13 +17,14 @@
         <div class="form-group row">
           <label class="col">
             Mã nhân viên
-            <input class="form-control" formControlName="id">
+            <input class="form-control" formControlName="employeeCode">
           </label>
         </div>
         <div class="alert alert-danger" role="alert"
-             *ngIf="createEmployeeForm.get('id').invalid && createEmployeeForm.get('id').touched">
-          <span *ngIf="createEmployeeForm.get('id').hasError('required')">Mã nhân viên không được để trống</span>
-          <span *ngIf="createEmployeeForm.get('id').hasError('pattern')">Mã nhân viên có dạng NV-XXXX</span>
+             *ngIf="createEmployeeForm.get('employeeCode').invalid && createEmployeeForm.get('employeeCode').touched">
+          <span
+            *ngIf="createEmployeeForm.get('employeeCode').hasError('required')">Mã nhân viên không được để trống</span>
+          <span *ngIf="createEmployeeForm.get('employeeCode').hasError('pattern')">Mã nhân viên có dạng NV-XXXX</span>
         </div>
         <div class="form-group row">
           <label class="col">
@@ -38,15 +39,19 @@
         <div class="form-group row">
           <label class="col">
             Ngày sinh
-            <input class="form-control" type="date" formControlName="birthday">
           </label>
         </div>
+        <mat-form-field>
+          <input  [min]="minDate" [max]="maxDate" matInput [matDatepicker]="myDatepicker" class="form-control" formControlName="birthday" placeholder="dd/mm/yyyy">
+          <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+          <mat-datepicker #myDatepicker></mat-datepicker>
+        </mat-form-field>
         <div class="alert alert-danger" role="alert"
              *ngIf="createEmployeeForm.get('birthday').invalid && createEmployeeForm.get('birthday').touched">
           <span *ngIf="createEmployeeForm.get('birthday').hasError('required')">
             Ngày sinh phải đúng với số ngày trong tháng hoặc số tháng trong năm và không được để trống</span>
-          <span *ngIf="createEmployeeForm.get('birthday').hasError('pattern')">
-            Ngày sinh khách hàng không đúng định dạng dd/MM/yyyy</span>
+          <!--          <span *ngIf="createCustomerForm.get('birthday').hasError('pattern')">-->
+          <!--            Ngày sinh khách hàng không đúng định dạng dd/MM/yyyy</span>-->
         </div>
         <div class="form-group row">
           <label class="col">
@@ -114,50 +119,55 @@
         <div class="form-group row">
           <label class="col">
             Vị trí
-            <select formControlName="idPosition" class="form-control">
-              <option value="">Chọn</option>
-              <ng-container *ngFor="let employeePos of EmployeePosList">
-                <option value="{{employeePos.id}}">{{employeePos.namePosition}}</option>
-              </ng-container>
+            <select formControlName="position" class="form-control">
+              <option value="" disable>Chọn</option>
+              <option value="Lễ Tân">Lễ Tân</option>
+              <option value="Phục Vụ">Phục Vụ</option>
+              <option value="Chuyên Viên">Chuyên Viên</option>
+              <option value="Giám Sát">Giám Sát</option>
+              <option value="Quản Lý">Quản Lý</option>
+              <option value="Giám Đốc">Giám Đốc</option>
             </select>
           </label>
         </div>
         <div class="alert alert-danger" role="alert"
-             *ngIf="createEmployeeForm.get('idPosition').invalid && createEmployeeForm.get('idPosition').touched">
+             *ngIf="createEmployeeForm.get('position').invalid && createEmployeeForm.get('position').touched">
           Vị trí không được để trống
         </div>
         <div class="form-group row">
           <label class="col">
             Trình độ
-            <select formControlName="idLevel" class="form-control">
-              <option value="">Chọn</option>
-              <ng-container *ngFor="let levelEmployee of LevelList">
-                <option value="{{levelEmployee.id}}">{{levelEmployee.nameLevel}}</option>
-              </ng-container>
+            <select formControlName="level" class="form-control">
+              <option value="" disable>Chọn</option>
+              <option value="Trung Cấp">Trung Cấp</option>
+              <option value="Cao Đẳng">Cao Đẳng</option>
+              <option value="Đại Học">Đại Học</option>
+              <option value="Sau Đại Học">Sau Đại Học</option>
             </select>
           </label>
         </div>
         <div class="alert alert-danger" role="alert"
-             *ngIf="createEmployeeForm.get('idLevel').invalid && createEmployeeForm.get('idLevel').touched">
+             *ngIf="createEmployeeForm.get('level').invalid && createEmployeeForm.get('level').touched">
           Trình độ không được để trống
         </div>
         <div class="form-group row">
           <label class="col">
             Bộ phận làm việc
-            <select formControlName="idPart" class="form-control">
-              <option value="">Chọn</option>
-              <ng-container *ngFor="let part of PartList">
-                <option value="{{part.id}}">{{part.namePart}}</option>
-              </ng-container>
+            <select formControlName="part" class="form-control">
+              <option value="" disable>Chọn</option>
+              <option value="Sale – Marketing">Sale – Marketing</option>
+              <option value="Hành Chính">Hành Chính</option>
+              <option value="Phục vụ">Phục vụ</option>
+              <option value="Quản lý">Quản lý</option>
             </select>
           </label>
         </div>
         <div class="alert alert-danger" role="alert"
-             *ngIf="createEmployeeForm.get('idPart').invalid && createEmployeeForm.get('idPart').touched">
+             *ngIf="createEmployeeForm.get('part').invalid && createEmployeeForm.get('part').touched">
           Bộ phận làm việc không được để trống
         </div>
         <div class="form-group">
-          <button class="btn btn-info" type="submit">Thêm Mới</button>
+          <button class="btn btn-info" type="submit" [disabled] ="createEmployeeForm.invalid">Thêm Mới</button>
         </div>
       </form>
     </div>
