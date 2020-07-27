@@ -1,0 +1,41 @@
+<div class="container">
+  <h1 class="title">Danh sách tin</h1>
+  <div class="d-flex bd-highlight mb-3">
+    <div class="p-2 bd-highlight">
+      <input class="form-control search p-2 bd-highlight" type="search"
+             placeholder="Nhập tên dịch vụ"
+             aria-label="Search" [(ngModel)]="term">
+    </div>
+    <div class="p-2 bd-highlight">
+      <button class="btn btn-outline-primary" type="submit" (click)="openDialog()">Tìm kiếm</button>
+    </div>
+  </div>
+</div>
+<table class="table">
+  <thead class="thead-light">
+  <tr>
+    <th scope="col">STT</th>
+    <th scope="col">Tiêu đề</th>
+    <th scope="col">Loại bài viết</th>
+    <th scope="col">Danh mục</th>
+    <th scope="col">Trạng thái</th>
+    <th scope="col" class="text-center">Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let post of posts |filter:term |paginate: { itemsPerPage: 5, currentPage: p }">
+    <th>{{posts.indexOf(post)+1}}</th>
+    <td>{{post.title}}</td>
+    <td>{{post.typeService}}</td>
+    <td>{{post.type}}</td>
+    <td>{{post.status}}</td>
+    <td class="text-center">
+      <a><i class="material-icons text-warning mr-3" title="Edit">create</i></a>
+      <i class="material-icons text-danger" title="Delete">delete_outline</i>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<div class="d-flex justify-content-center">
+  <pagination-controls (pageChange)="p = $event" ></pagination-controls>
+</div>

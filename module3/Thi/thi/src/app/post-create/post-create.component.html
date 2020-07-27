@@ -1,0 +1,155 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4 mt-2">
+      <a [routerLink]="'/post/list'" class="btn btn-primary">
+        <span class="badge badge-light">< </span> Trở về trang danh sách
+      </a>
+    </div>
+    <div class="col-8">
+      <div class="col-md-12 col-lg-12 col-sm-12">
+        <h1 class="title">Thêm Mới Tin</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 col-lg-12 col-sm-12">
+      <form [formGroup]="createPostForm" (ngSubmit)="onSubmit()" class="col-md-6 offset-md-3">
+        <div class="form-group row">
+          <label class="col">
+            Danh mục
+            <select formControlName="type" class="form-control">
+              <option value="">Chọn</option>
+              <option value="Nhà Đất">Nhà Đất</option>
+              <option value="Nhà Ở">Nhà Ở</option>
+              <option value="Nhà Cho Thuê">Nhà Cho Thuê</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Vùng miền
+            <select formControlName="country" class="form-control">
+              <option value="">Chọn</option>
+              <option value="Hà Nội">Hà Nội</option>
+              <option value="Đà Nẵng">Đà Nẵng</option>
+              <option value="Tp HCM">Tp HCM</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Bạn là
+            <select formControlName="personal" class="form-control">
+              <option value="">Chọn</option>
+              <option value="Cá nhân">Cá nhân</option>
+              <option value="Công ty">Công ty</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Bạn đăng tin
+            <select formControlName="typeService" class="form-control">
+              <option value="">Chọn</option>
+              <option value="Cần bán">Cần bán</option>
+              <option value="Cần mua">Cần mua</option>
+              <option value="Cho thuê">Cho thuê</option>
+              <option value="Cần thuê">Cần thuê</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Tình trạng
+            <select formControlName="status" class="form-control">
+              <option value="">Chọn</option>
+              <option value="Mới">Mới</option>
+              <option value="Đã sử dụng">Đã sử dụng</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Địa chỉ
+            <input class="form-control" formControlName="address">
+          </label>
+        </div>
+        <div class="alert alert-danger" role="alert"
+             *ngIf="createPostForm.get('address').invalid && createPostForm.get('address').touched">
+          <span *ngIf="createPostForm.get('rent').hasError('required')">
+            Địa chỉ không được để trống</span>
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Diện tích
+            <input class="form-control" formControlName="area" type="number">
+          </label>
+        </div>
+        <div class="alert alert-danger" role="alert"
+             *ngIf="createPostForm.get('area').invalid && createPostForm.get('area').touched">
+          <span *ngIf="createPostForm.get('area').hasError('required')">
+            Diện tích không được để trống</span>
+          <span *ngIf="createPostForm.get('area').hasError('min')">
+           Diện tích lớn hơn 20m2</span>
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Hướng
+            <select formControlName="where" class="form-control">
+              <option value="" >Chọn</option>
+              <option value="Đông">Đông</option>
+              <option value="Tây">Tây</option>
+              <option value="Nam">Nam</option>
+              <option value="Bắc">Bắc</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Tựa đề
+            <input class="form-control" formControlName="title">
+          </label>
+        </div>
+        <div class="alert alert-danger" role="alert"
+             *ngIf="createPostForm.get('title').invalid && createPostForm.get('title').touched">
+          <span *ngIf="createPostForm.get('title').hasError('required')">
+            Tựa đề không được để trống</span>
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Nội dung
+            <input class="form-control" formControlName="comment">
+          </label>
+        </div>
+        <div class="alert alert-danger" role="alert"
+             *ngIf="createPostForm.get('comment').invalid && createPostForm.get('comment').touched">
+          <span *ngIf="createPostForm.get('comment').hasError('required')">
+            Nội dung không được để trống</span>
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Giá
+            <input class="form-control" formControlName="price" type="number">
+          </label>
+        </div>
+        <div class="alert alert-danger" role="alert"
+             *ngIf="createPostForm.get('price').invalid && createPostForm.get('price').touched">
+          <span *ngIf="createPostForm.get('price').hasError('required')">
+            Giá không được để trống</span>
+          <span *ngIf="createPostForm.get('price').hasError('min')">
+           Giá lớn hơn 100.000.000</span>
+        </div>
+        <div class="form-group row">
+          <label class="col">
+            Hình ảnh
+            <input class="form-control" formControlName="image">
+          </label>
+        </div>
+        <div class="form-group">
+          <button [disabled]="createPostForm.invalid" class="btn btn-info" type="submit">Đăng tin</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+

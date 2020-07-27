@@ -45,6 +45,6 @@ import {ContractModule} from "./contract/contract.module";
     ContractModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

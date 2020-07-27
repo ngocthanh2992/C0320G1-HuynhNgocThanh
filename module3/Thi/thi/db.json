@@ -1,0 +1,64 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "type": "Nhà đất",
+      "country": "Hà Nội",
+      "personal": "Cá nhân",
+      "typeService": "Cần bán",
+      "status": "Mới",
+      "address": "114 Hùng Vương",
+      "area": 30,
+      "where": "Đông",
+      "title": "Nhà cần bán",
+      "comment": "Nhà đẹp, nội thất đầy đủ, giá cả phải chăng",
+      "price": 100000000,
+      "image": ""
+    },
+    {
+      "type": "Nhà Cho Thuê",
+      "country": "Đà Nẵng",
+      "personal": "Cá nhân",
+      "typeService": "Cho thuê",
+      "status": "Mới",
+      "address": "113 Nguyễn Chí Thanh",
+      "area": 25,
+      "where": "Tây",
+      "title": "Cần cho thuê nhà ",
+      "comment": "Nhà đẹp, sạch sẽ, phù hợp học sinh, sinh viên",
+      "price": 150000000,
+      "image": "",
+      "id": 2
+    },
+    {
+      "type": "Nhà Cho Thuê",
+      "country": "Tp HCM",
+      "personal": "Công ty",
+      "typeService": "Cần mua",
+      "status": "Mới",
+      "address": "13 Hùng Vương",
+      "area": 35,
+      "where": "Bắc",
+      "title": "Nhà cho thuê",
+      "comment": "Cho thuê nhà",
+      "price": 200000000,
+      "image": "",
+      "id": 3
+    },
+    {
+      "type": "Nhà Cho Thuê",
+      "country": "Tp HCM",
+      "personal": "Công ty",
+      "typeService": "Cần mua",
+      "status": "Mới",
+      "address": "13 Hùng Vương",
+      "area": 35,
+      "where": "Bắc",
+      "title": "Nhà cho thuê",
+      "comment": "Cho thuê nhà",
+      "price": 500000000,
+      "image": "",
+      "id": 4
+    }
+  ]
+}
